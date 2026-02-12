@@ -6,6 +6,7 @@ export default function HomePage() {
   return (
     <div>
       <Hero
+        badge="Trusted by 200+ Brands Worldwide"
         heading="Build Your Agency Website"
         description="We create modern, scalable and beautiful web applications."
         image={{
