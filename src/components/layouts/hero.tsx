@@ -67,15 +67,15 @@ const Hero = ({
         <div className="absolute bottom-0 left-0 h-72 w-72 bg-blue-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-0">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16 grid-rows-2 lg:grid-rows-1">
+      <div className="container mx-auto px-2 sm:px-0">
+        <div className="grid items-center md:gap-8 lg:grid-cols-2 lg:gap-16 grid-rows-2 lg:grid-rows-1">
           {/* Right Image (Mobile first) */}
-          <div className="relative mt-8 lg:mt-0 order-1 lg:order-2">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative  order-1 lg:order-2">
+            <div className="relative rounded-md overflow-hidden shadow-2xl">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-[400px] sm:h-[500px] lg:h-[545px]  w-full object-cover transition-transform duration-700 hover:scale-105"
                 loading="eager"
               />
             </div>
