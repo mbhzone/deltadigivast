@@ -1,5 +1,6 @@
 import BrandLogoSection from '@/components/layouts/BrandLogoSection';
 import { Hero } from '@/components/layouts/hero';
+import HeroVideo from '@/components/layouts/HeroVideo';
 import React from 'react';
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
         }}
       />
       <BrandLogoSection></BrandLogoSection>
+      <HeroVideo></HeroVideo>
     </div>
   );
 }
