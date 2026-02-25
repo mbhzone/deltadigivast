@@ -98,7 +98,7 @@ const Blog = ({
             </a>
           </Button>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid gap-6 grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {posts.map(post => (
             <Card
               key={post.id}
@@ -125,7 +125,9 @@ const Blog = ({
                 </h3>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">{post.summary}</p>
+                <p className="text-muted-foreground line-clamp-2 md:line-clamp-none">
+                  {post.summary}
+                </p>
               </CardContent>
               <CardFooter>
                 <a
