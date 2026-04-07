@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 import { uploadImage } from '@/utils/uploadImage';
 import EditPortfolioModal from '@/components/module/admin/EditPortfolioModal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PortfolioItem } from '@/types/portfolio';
 import {
   Plus,
   X,
@@ -27,18 +28,6 @@ import {
 } from 'lucide-react';
 import Loading from '@/components/module/shared/loading';
 
-interface PortfolioItem {
-  id: string;
-  title: string;
-  category:
-    | 'Video Content'
-    | 'Graphical Content'
-    | 'Campaign Result'
-    | 'Website';
-  type: 'image' | 'video content';
-  url: string;
-  description?: string;
-}
 const getYouTubeId = (url: string) => {
   const regExp =
     /(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^?&]+)/;

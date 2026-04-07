@@ -3,15 +3,7 @@ import { useState } from 'react';
 import { uploadImage } from '@/utils/uploadImage';
 import { toast } from 'sonner';
 import axios from 'axios';
-
-interface PortfolioItem {
-  id: string;
-  title: string;
-  category: 'design' | 'video' | 'web' | 'Frontend Design';
-  type: 'image' | 'video';
-  url: string;
-  description?: string;
-}
+import { PortfolioItem } from '@/types/portfolio';
 
 interface EditModalProps {
   item: PortfolioItem;
@@ -55,7 +47,7 @@ export default function EditPortfolioModal({
 
   const handleUpdate = async () => {
     if (!formData.title) return toast.error('Title is required');
-    if (formData.type === 'video' && !formData.url)
+    if (formData.type === 'video content' && !formData.url)
       return toast.error('Video URL is required');
     if (formData.type === 'image' && !formData.url && !file)
       return toast.error('Image required');
@@ -75,7 +67,7 @@ export default function EditPortfolioModal({
         category: formData.category,
         description: formData.description,
         imageUrl: formData.type === 'image' ? imageUrl : null,
-        videoUrl: formData.type === 'video' ? formData.url : null,
+        videoUrl: formData.type === 'video content' ? formData.url : null,
       };
 
       const res = await axios.patch(API_BASE, body, {
@@ -132,10 +124,10 @@ export default function EditPortfolioModal({
               onChange={handleInputChange}
               className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
             >
-              <option value="design">Graphic Design</option>
-              <option value="Frontend Design">Frontend Design</option>
-              <option value="video">Video Production</option>
-              <option value="web">Web Development</option>
+              <option value="Graphical Content">Graphical Content</option>
+              <option value="Video Content">Video Content</option>
+              <option value="Campaign Result">Campaign Result</option>
+              <option value="Website">Website</option>
             </select>
           </div>
 
