@@ -36,7 +36,7 @@ export default async function HomePage() {
   return (
     <div>
       <Hero
-        badge="Trusted by 200+ Brands Worldwide"
+        badge="Trusted by 50+ Brands In Rajshahi"
         heading={hero?.title}
         // description={hero?.description}
         image={{
