@@ -21,10 +21,10 @@ export default function BrandLogoSection() {
         {/* Section Title */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
-            Trusted by Top Enterprises
+            Trusted by Rajshahi's Leading Brands
           </h2>
           <p className="mt-2 text-gray-500 dark:text-gray-400">
-            We collaborate with leading brands across industries
+            Powering success for brands across various industries
           </p>
         </div>
 
