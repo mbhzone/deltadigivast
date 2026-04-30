@@ -106,7 +106,7 @@ export default function ServicePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
             <Sparkles size={16} />
-            Our Services
+            আমাদের Services
           </span>
 
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
