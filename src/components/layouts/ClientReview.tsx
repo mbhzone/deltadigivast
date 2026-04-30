@@ -8,60 +8,61 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const fakeReviews = [
+const realReviews = [
   {
-    text: 'Amazing service! Highly recommend.',
-    author: 'John Doe',
-    position: 'CEO, Company',
+    text: 'আমাদের রিয়েল এস্টেট প্রজেক্টের ভিডিওগুলো অত্যন্ত প্রফেশনাল ছিল। তাদের কাজের মান এবং ডিটেইলস আমাদের ব্র্যান্ড ভ্যালু অনেক বাড়িয়ে দিয়েছে। আমরা তাদের সার্ভিসে খুবই সন্তুষ্ট',
+    author: 'Mahbud Hasan Sobuj',
+    position: 'MD, Perfect Living Properties Ltd.',
     rating: 5,
-    image:
-      'https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
   {
-    text: 'Amazing service! Highly recommend.',
-    author: 'John Doe',
-    position: 'CEO, Company',
+    text: 'খুবই ভালো উদ্যোগ ভাই,,দোয়া করি সামনে এগিয়ে যান। পাশে আছি...🥰 ইনশাআল্লাহ। ❤️',
+    author: 'MD Minhaj Rahman',
+    position: 'Satisfied Client',
     rating: 5,
-    image:
-      'https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg',
+    image: 'https://randomuser.me/api/portraits/men/2.jpg',
   },
   {
-    text: 'Professional team and quick support.',
-    author: 'Sarah Smith',
-    position: 'Marketing Manager',
-    rating: 4,
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
-  },
-  {
-    text: 'Great experience working with them!',
-    author: 'Michael Brown',
-    position: 'Product Owner',
+    text: 'শিক্ষামূলক ভিডিওগুলোকে এতো সুন্দরভাবে প্রেজেন্ট করার জন্য ধন্যবাদ। জটিল বিষয়গুলো ভিজ্যুয়ালের মাধ্যমে খুব সহজ হয়ে উঠেছে, যা স্টুডেন্টদের কাছে অনেক জনপ্রিয় হয়েছে',
+    author: 'Nahid Hasan',
+    position: 'Founder, Nahid Biology',
     rating: 5,
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: 'https://randomuser.me/api/portraits/men/3.jpg',
   },
   {
-    text: 'Great experience working with them!',
-    author: 'Michael Brown',
-    position: 'Product Owner',
+    text: 'অনেক অনেক শুভকামনা Delta Digivast এর সাথে আপনাদের পথচলা সুন্দর হোক❤️',
+    author: 'Nafiul Chowdhury',
+    position: 'Satisfied Client',
     rating: 5,
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: 'https://randomuser.me/api/portraits/men/4.jpg',
   },
   {
-    text: 'Delivered project on time and with quality.',
-    author: 'Emma Johnson',
-    position: 'Project Manager',
-    rating: 4,
-    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    text: 'আমাদের সার্ভিস প্রোমো ভিডিওটি এক কথায় চমৎকার হয়েছে। তারা আমাদের ব্যবসার মূল বিষয়গুলো খুব দারুণভাবে ফুটিয়ে তুলেছে। হাইলি রেকমেন্ডেড',
+    author: 'Md Nayeem Hasan',
+    position: 'Owner, Rajshahi Cooling Refrigeration',
+    rating: 5,
+    image: 'https://randomuser.me/api/portraits/women/1.jpg',
+  },
+  {
+    text: 'আরো এগিয়ে যান সফলতার পথে সবসময় অফুরন্ত ভালোবাসা থাকবে ❤️',
+    author: 'Abid Hasan Rakib',
+    position: 'Satisfied Client',
+    rating: 5,
+    image: 'https://randomuser.me/api/portraits/men/5.jpg',
   },
 ];
 
 const ClientReview = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <div className="text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+    <div className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-colors duration-300">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           Client Reviews
-        </h1>
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            আমাদের কাজের মান সম্পর্কে ক্লায়েন্টরা যা বলছেন
+        </p>
       </div>
 
       <Swiper
@@ -70,26 +71,27 @@ const ClientReview = () => {
         slidesPerView={1}
         slidesPerGroup={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        speed={700}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        speed={800}
         loop={true}
         breakpoints={{
           480: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          1024: { slidesPerView: 3 },
         }}
         className="client-review-swiper"
       >
-        {fakeReviews.map((review, idx) => (
-          <SwiperSlide key={idx} className="md:pt-16">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative border border-gray-200 dark:border-gray-700 h-full flex flex-col justify-between min-h-[350px] shadow-md dark:shadow-none transition-colors duration-300">
-              <FaQuoteLeft className="absolute top-4 left-4 text-[1.3rem] text-gray-400 dark:text-gray-300" />
+        {realReviews.map((review, idx) => (
+          <SwiperSlide key={idx} className="pb-12">
+            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-2xl relative border border-gray-100 dark:border-white/10 h-full flex flex-col justify-between min-h-[380px] transition-all hover:border-[#6efd0b]/30">
+              
+              <FaQuoteLeft className="absolute top-6 left-6 text-2xl text-[#6efd0b]/30" />
 
-              <div className="flex justify-center">
+              <div className="flex justify-center mb-6">
                 <img
                   src={review.image}
                   alt={review.author}
-                  className="w-[100px] h-[100px] object-cover rounded-full border-4 border-gray-300 dark:border-gray-600"
+                  className="w-[90px] h-[90px] object-cover rounded-full border-4 border-[#6efd0b]/20"
                   onError={e => {
                     e.currentTarget.src =
                       'https://randomuser.me/api/portraits/lego/1.jpg';
@@ -97,56 +99,47 @@ const ClientReview = () => {
                 />
               </div>
 
-              <p className="text-gray-600 dark:text-gray-300 text-[0.9rem] mt-6 text-center">
-                {review.text}
+              <p className="text-gray-700 dark:text-gray-300 text-[0.95rem] leading-relaxed text-center italic">
+                "{review.text}"
               </p>
 
-              <div className="flex items-start mt-5 justify-between">
-                <div>
-                  <h2 className="text-[1.2rem] font-[600] text-gray-900 dark:text-white">
+              <div className="mt-8 text-center border-t border-gray-100 dark:border-gray-800 pt-6">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                     {review.author}
-                  </h2>
-                  <p className="text-gray-500 dark:text-gray-400 text-[1rem]">
+                  </h3>
+                  <p className="text-[#6efd0b] text-sm font-medium mb-3">
                     {review.position}
                   </p>
-                </div>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, index) =>
-                    index < review.rating ? (
+                <div className="flex items-center justify-center gap-1">
+                  {Array.from({ length: 5 }).map((_, index) => (
                       <FaStar
                         key={index}
-                        className="text-[1.3rem] text-yellow-400"
+                        className="text-sm text-yellow-400"
                       />
-                    ) : (
-                      <FaRegStar
-                        key={index}
-                        className="text-[1.3rem] text-yellow-400"
-                      />
-                    ),
-                  )}
+                  ))}
                 </div>
               </div>
 
-              <FaQuoteLeft className="absolute bottom-4 right-4 rotate-180 text-[1.3rem] text-gray-400 dark:text-gray-300" />
+              <FaQuoteLeft className="absolute bottom-6 right-6 rotate-180 text-2xl text-[#6efd0b]/30" />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
       <style jsx>{`
-        .swiper-horizontal
-          > .swiper-pagination-bullets
-          .swiper-pagination-bullet,
-        .swiper-pagination-horizontal.swiper-pagination-bullets
-          .swiper-pagination-bullet {
-          background: #00b795;
+        :global(.client-review-swiper .swiper-pagination-bullet) {
+          background: #6efd0b !important;
+          opacity: 0.3;
+        }
+        :global(.client-review-swiper .swiper-pagination-bullet-active) {
+          background: #6efd0b !important;
           opacity: 1;
+          width: 25px;
+          border-radius: 5px;
+          transition: width 0.3s ease;
         }
-        .client-review-swiper .swiper-pagination-bullet-active {
-          background: #00b795;
-        }
-        .swiper-pagination {
-          margin-top: 20px;
+        :global(.swiper-pagination) {
+          margin-top: 30px;
           position: relative !important;
         }
       `}</style>
