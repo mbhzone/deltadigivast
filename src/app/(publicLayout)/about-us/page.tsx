@@ -9,6 +9,9 @@ import {
   Camera,
   Code,
   TrendingUp,
+  MapPin,
+  Zap,
+  CheckCircle,
 } from 'lucide-react';
 
 type TeamMember = {
@@ -39,28 +42,28 @@ export default async function AboutUs() {
 
   const values = [
     {
-      icon: Target,
-      title: 'Innovation First',
-      description:
-        'We push boundaries and embrace new technologies to deliver cutting-edge solutions.',
-    },
-    {
-      icon: Heart,
-      title: 'Passion Driven',
-      description:
-        'Our team pours heart and soul into every project, ensuring exceptional results.',
-    },
-    {
       icon: Award,
-      title: 'Excellence Always',
+      title: '🏆 Quality-এ কোনো Compromise নেই',
       description:
-        'We never settle for good when great is possible. Quality is our signature.',
+        'প্রতিটি video, প্রতিটি graphic, প্রতিটি campaign-এ আমরা সর্বোচ্চ মান বজায় রাখি। এই কারণেই আমরা 100% quality guarantee দিতে পারি।',
     },
     {
       icon: Users,
-      title: 'Client Partnership',
+      title: '🤝 Client Partnership',
       description:
-        'Your success is our success. We build lasting relationships through trust.',
+        'আপনার business-এর success মানেই আমাদের success। আমরা vendor না — আমরা আপনার digital partner।',
+    },
+    {
+      icon: MapPin,
+      title: '📍 রাজশাহী-First Approach',
+      description:
+        'রাজশাহীর market, রাজশাহীর মানুষ, রাজশাহীর business culture — এই সব আমরা ভেতর থেকে জানি। এই local knowledge-ই আমাদের সবচেয়ে বড় শক্তি।',
+    },
+    {
+      icon: Zap,
+      title: '⚡ Result-Driven কাজ',
+      description:
+        'সুন্দর কথা বলা সহজ। কিন্তু আমরা result দিয়ে কথা বলি। প্রতিটা project-এ measurable outcome আমাদের লক্ষ্য।',
     },
   ];
 
@@ -71,118 +74,79 @@ export default async function AboutUs() {
         <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
 
-        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-gray-50 to-transparent dark:from-gray-800/30 dark:to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-gray-50 to-transparent dark:from-gray-800/30 dark:to-transparent"></div>
-
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 -left-20 w-72 h-72 bg-[#6efd0b]/5 rounded-full blur-3xl opacity-30"></div>
-          <div className="absolute bottom-20 -right-20 w-72 h-72 bg-[#4fd100]/5 rounded-full blur-3xl opacity-30"></div>
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
-            Welcome to Our Agency
+            আমাদের সম্পর্কে
           </span>
 
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            We Create Digital
+            রাজশাহীর Business-এর Digital Partner — 
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
-              Experiences That Matter
+               Delta Digivast
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
-            We help brands grow with creative design, powerful marketing
-            strategies, and modern digital solutions that drive real results.
+          <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
+            আমরা শুধু একটা agency না। আমরা রাজশাহীর business owner-দের সেই মানুষগুলো যারা আপনার sales বাড়াতে রাতদিন কাজ করি।
           </p>
         </div>
       </section>
 
-      {/* Stats */}
-      {/* <section className="bg-gray-50 dark:bg-black py-16 border-y border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: '500+', label: 'Projects Completed', icon: Briefcase },
-              { number: '300+', label: 'Happy Clients', icon: Users },
-              { number: '10+', label: 'Years Experience', icon: Award },
-              { number: team.length, label: 'Team Members', icon: Star },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#6efd0b]/10 rounded-xl mb-3">
-                  <stat.icon className="w-5 h-5 text-[#6efd0b]" />
-                </div>
-
-                <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                  {stat.number}
-                </div>
-
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* About Section */}
+      {/* About Section / Who We Are */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-[#6efd0b] font-semibold text-sm uppercase tracking-wider">
-                Who We Are
+                আমরা কারা
               </span>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mt-2 mb-6">
-                We're More Than Just a
-                <span className="text-[#6efd0b]"> Creative Agency</span>
+                রাজশাহীর মাটিতে জন্ম, রাজশাহীর 
+                <span className="text-[#6efd0b]"> Business-এর জন্য কাজ</span>
               </h2>
 
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                Our agency specializes in videography, photography, digital
-                marketing, and web development. We work with businesses to
-                create powerful digital experiences that attract customers and
-                grow revenue.
+                Delta Digivast ২০২৫ সালের মে মাসে রাজশাহীতে প্রতিষ্ঠিত হয়েছে। আমাদের লক্ষ্য একটাই — রাজশাহীর প্রতিটি ভালো business-কে online-এ সেভাবে present করা যেভাবে সে deserve করে।
+              </p>
+
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                আমাদের কাছে আছে নিজস্ব professional studio, experienced video production team, creative graphics designers, এবং certified digital marketing specialists। রাজশাহীতে বসে রাজশাহীর business-এর জন্য কাজ করি — এটাই আমাদের পরিচয়।
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                With a talented team of designers, developers, and marketing
-                strategists, we bring ideas to life and help brands stand out in
-                the digital world.
+                আমরা বিশ্বাস করি — ভালো product বা service থাকলেই হয় না, সেটা মানুষের কাছে সঠিকভাবে পৌঁছাতে হয়। আমরা সেই সেতুবন্ধনটাই তৈরি করি।
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
+              {/* Tags/Skills Pills */}
+              <div className="flex flex-wrap gap-2">
                 {[
-                  { icon: Camera, label: 'Photography' },
-                  { icon: Play, label: 'Videography' },
-                  { icon: TrendingUp, label: 'Marketing' },
-                  { icon: Code, label: 'Development' },
-                ].map((item, index) => (
+                  'Video Production',
+                  'Graphics Design',
+                  'Facebook Ads',
+                  'Social Media Marketing',
+                  'Content Strategy',
+                  'Brand Building',
+                ].map((tag, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 rounded-full text-gray-700 dark:text-gray-300 transition-all hover:border-[#6efd0b]/50"
                   >
-                    <div className="p-2 bg-[#6efd0b]/10 rounded-lg">
-                      <item.icon className="w-4 h-4 text-[#6efd0b]" />
-                    </div>
-                    <span className="text-sm font-medium">{item.label}</span>
+                    <CheckCircle className="w-3 h-3 text-[#6efd0b]" />
+                    <span className="text-xs font-semibold">{tag}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10">
                 <img
                   src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000"
-                  alt="agency team"
+                  alt="Delta Digivast Team Rajshahi"
                   className="w-full h-auto object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#6efd0b]/20 to-transparent"></div>
               </div>
-
-              {/* Decorative element */}
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-[#6efd0b]/10 rounded-full blur-2xl"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#4fd100]/10 rounded-full blur-2xl"></div>
             </div>
@@ -191,11 +155,11 @@ export default async function AboutUs() {
       </section>
 
       {/* Values */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50 dark:bg-black border-y border-gray-100 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-              Our Core Values
+               আমাদের যে Values আমাদের আলাদা করে
             </h2>
           </div>
 
@@ -213,7 +177,7 @@ export default async function AboutUs() {
                   {value.title}
                 </h3>
 
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -223,7 +187,7 @@ export default async function AboutUs() {
       </section>
 
       {/* Team Section (API DATA) */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-[#6efd0b] font-semibold text-sm uppercase tracking-wider">
@@ -235,7 +199,7 @@ export default async function AboutUs() {
             </h2>
 
             <p className="text-xl text-gray-600 dark:text-gray-400">
-              The talented people behind our success
+              The talented people behind our success in Rajshahi
             </p>
           </div>
 
@@ -263,12 +227,12 @@ export default async function AboutUs() {
                     {member.designation}
                   </p>
 
-                  <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-2">
-                    Experience: {member.experience} Years
+                  <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-1">
+                    অভিজ্ঞতা: {member.experience} বছর
                   </p>
 
                   <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
-                    Skills: {member.skills}
+                    দক্ষতা: {member.skills}
                   </p>
                 </div>
               </div>
