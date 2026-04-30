@@ -22,14 +22,16 @@ import {
   Users2,
   Image as ImageIcon,
   ChevronRight,
+  Palette,
+  Layers,
+  Layout,
 } from 'lucide-react';
 
 export default function PhotographyPage() {
   const services = [
     {
       icon: ShoppingBag,
-      title: 'Social Media Poster Design
-',
+      title: 'Social Media Poster Design', // Fixed: Line break removed
       description:
         'Facebook ও Instagram-এর জন্য scroll-stopping graphic posts। Regular post, promotional offer, event announcement — সব ধরনের social media design',
       features: [
@@ -42,7 +44,7 @@ export default function PhotographyPage() {
     },
     {
       icon: Calendar,
-      title: '✏️  Logo Design',
+      title: '✏️ Logo Design',
       description:
         'আপনার business-এর জন্য unique এবং professional logo। রাজশাহীর clothing shop থেকে শুরু করে restaurant, NGO পর্যন্ত সব sector-এ logo বানিয়েছি।',
       features: [
@@ -55,7 +57,7 @@ export default function PhotographyPage() {
     },
     {
       icon: Briefcase,
-      title: '🖼️  Banner, Poster & Flyer Design',
+      title: '🖼️ Banner, Poster & Flyer Design',
       description:
         'Eid offer, seasonal promotion, event poster, business banner — print এবং digital দুই ধরনের design',
       features: [
@@ -68,7 +70,7 @@ export default function PhotographyPage() {
     },
     {
       icon: Heart,
-      title: '📦  Product & Packaging Design',
+      title: '📦 Product & Packaging Design',
       description:
         "আপনার product-এর packaging, label, tag design। Organic food, clothing, gift item — সব ধরনের product packaging",
       features: [
@@ -81,7 +83,7 @@ export default function PhotographyPage() {
     },
     {
       icon: PartyPopper,
-      title: '📊  Facebook Ad Creative',
+      title: '📊 Facebook Ad Creative',
       description:
         'High-converting ad creative design। Boost করলে result পেতে হলে creative ভালো হতে হবে — এটাই আমরা করি',
       features: [
@@ -94,9 +96,9 @@ export default function PhotographyPage() {
     },
     {
       icon: Users2,
-      title: 'Brand Idendity Design',
+      title: 'Brand Identity Design',
       description:
-        'শুধুমাত্র লোগো তৈরি নয়, বরং গ্রাহকের মনে ব্র্যান্ডের একটি অনন্য ও স্মরণীয় ছবি তৈরি করে, যা প্রতিযোগীদের থেকে আলাদা করে ',
+        'শুধুমাত্র লোগো তৈরি নয়, বরং গ্রাহকের মনে ব্র্যান্ডের একটি অনন্য ও স্মরণীয় ছবি তৈরি করে, যা প্রতিযোগীদের থেকে আলাদা করে',
       features: [
         'Complete brand manual',
         'Business card & Letterhead',
@@ -110,16 +112,16 @@ export default function PhotographyPage() {
   const stats = [
     { label: 'Years Experience', value: '1+', icon: Award },
     { label: 'Happy Clients', value: '80+', icon: Users },
-    { label: 'Graphics Design', value: '500+', icon: Camera },
-    { label: 'Logo Design', value: '40+', icon: Calendar },
+    { label: 'Graphic Designs', value: '500+', icon: Palette },
+    { label: 'Logo Designs', value: '40+', icon: Layout },
   ];
 
   const whyChooseUs = [
     {
-      title: ' Creative & Unique Concepts',
+      title: 'Creative & Unique Concepts',
       description:
-        ' আমরা গতানুগতিক ডিজাইন করি না। প্রতিটি প্রজেক্টে আমরা একদম ইউনিক এবং ক্রিয়েটিভ আইডিয়া নিয়ে কাজ করি যা আপনার ব্র্যান্ডকে আলাদা করে',
-      icon: Camera,
+        'আমরা গতানুগতিক ডিজাইন করি না। প্রতিটি প্রজেক্টে আমরা একদম ইউনিক এবং ক্রিয়েটিভ আইডিয়া নিয়ে কাজ করি যা আপনার ব্র্যান্ডকে আলাদা করে',
+      icon: Palette,
     },
     {
       title: 'Result-Oriented Design',
@@ -155,7 +157,7 @@ export default function PhotographyPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
-            <Camera size={16} />
+            <Palette size={16} />
             Professional Graphics Design
           </span>
 
@@ -170,46 +172,17 @@ export default function PhotographyPage() {
           <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
             Logo থেকে social media post, banner থেকে packaging — আপনার business-এর visual identity 
             আমরাই তৈরি করি। রাজশাহীর সব ধরনের business-এর জন্য।
-            extraordinary memories.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 transform hover:scale-105 shadow-lg shadow-[#6efd0b]/25 flex items-center gap-2">
-              <Camera size={18} />
+              <Palette size={18} />
               Design Project শুরু করুন →
             </button>
             <button className="px-8 py-4 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 border border-gray-200 dark:border-gray-700 flex items-center gap-2">
               <ImageIcon size={18} />
               View Portfolio
             </button>
-          </div>
-
-          {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map(i => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-white dark:border-gray-800"
-                  ></div>
-                ))}
-              </div>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
-                Trusted by 100+ clients
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-gray-600 dark:text-gray-400 ml-1">
-                (4.9/5 from 300+ reviews)
-              </span>
-            </div>
           </div>
         </div>
       </section>
@@ -246,9 +219,6 @@ export default function PhotographyPage() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               কোন ধরনের Design আমরা করি
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Professional Graphics Design  to your specific needs
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -280,10 +250,6 @@ export default function PhotographyPage() {
                     </li>
                   ))}
                 </ul>
-
-                <button className="mt-4 text-[#6efd0b] hover:text-[#4fd100] font-medium text-sm flex items-center gap-1 transition-colors">
-                  Learn More <ChevronRight size={14} />
-                </button>
               </div>
             ))}
           </div>
@@ -323,38 +289,35 @@ export default function PhotographyPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* How It Works Section */}
       <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Simple and straightforward process from start to finish
-            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
               {
                 step: '01',
-                title: ' Project Brief ',
+                title: 'Project Brief',
                 description: 'শুরুতে আমরা আপনার ব্যবসার লক্ষ্য, টার্গেট অডিয়েন্স এবং ডিজাইনের প্রয়োজনীয়তাগুলো বিস্তারিতভাবে জেনে নেই',
               },
               {
                 step: '02',
-                title: 'Concept Design ',
+                title: 'Concept Design',
                 description: 'আপনার ব্রিফ অনুযায়ী আমরা কয়েকটি ইউনিক ডিজাইন কনসেপ্ট বা ড্রাফট তৈরি করি এবং আপনার মতামতের জন্য পাঠাই',
               },
               {
                 step: '03',
-                title: 'Revisions & Finalization ',
+                title: 'Revisions & Finalization',
                 description: 'আপনার ফিডব্যাক অনুযায়ী আমরা ডিজাইনটিতে প্রয়োজনীয় পরিবর্তন আনি এবং সেটিকে চূড়ান্ত রূপ দেওয়ার কাজ করি',
               },
               {
                 step: '04',
-                title: 'Final Delivery ',
+                title: 'Final Delivery',
                 description: 'ডিজাইন পছন্দ হলে আমরা সেটির সব ধরণের ফাইল ফরম্যাট (AI, EPS, PNG, PDF) এবং হাই-কোয়ালিটি ভার্সন আপনাকে বুঝিয়ে দেই',
               },
             ].map((item, index) => (
@@ -370,48 +333,24 @@ export default function PhotographyPage() {
                     {item.description}
                   </p>
                 </div>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 text-[#6efd0b]">
-                    <ChevronRight size={20} />
-                  </div>
-                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Note */}
-      <section className="py-12 bg-[#6efd0b]/5 dark:bg-[#6efd0b]/10">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Package className="w-12 h-12 text-[#6efd0b] mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-            Custom Packages Available
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-            Every project is unique. Contact us for a personalized quote
-            tailored to your specific needs.
-          </p>
-          <button className="px-6 py-3 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200">
-            Request a Quote
-          </button>
-        </div>
-      </section>
-
-      {/* Contact Section */}
+      {/* Contact Section - Updated for Graphics */}
       <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 rounded-3xl p-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Capture Your Moments?
+                  Ready to Elevate Your Brand?
                 </h2>
                 <p className="text-lg text-gray-300 mb-8">
-                  Let's discuss your photography needs. Get in touch with us
-                  today for a free consultation.
+                  Let's discuss your design needs. Get in touch with us today for a free consultation.
                 </p>
-
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-gray-300">
                     <Phone className="w-5 h-5 text-[#6efd0b]" />
@@ -419,11 +358,7 @@ export default function PhotographyPage() {
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Mail className="w-5 h-5 text-[#6efd0b]" />
-                    <span>photography@agency.com</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <MapPin className="w-5 h-5 text-[#6efd0b]" />
-                    <span>123 Creative Agency Street, Dhaka, Bangladesh</span>
+                    <span>design@agency.com</span>
                   </div>
                 </div>
               </div>
@@ -433,20 +368,15 @@ export default function PhotographyPage() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white"
                   />
                   <textarea
-                    placeholder="Your Message"
+                    placeholder="Describe your project"
                     rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
+                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white"
                   ></textarea>
-                  <button className="w-full py-3 px-6 bg-[#6efd0b] text-gray-900 font-semibold rounded-md hover:bg-[#4fd100] transition-all duration-200">
-                    Send Message
+                  <button className="w-full py-3 px-6 bg-[#6efd0b] text-gray-900 font-semibold rounded-md hover:bg-[#4fd100] transition-all">
+                    Get Free Quote
                   </button>
                 </form>
               </div>
