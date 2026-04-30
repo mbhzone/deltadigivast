@@ -13,15 +13,17 @@ interface Contact2Props {
   phone?: string;
   email?: string;
   web?: { label: string; url: string };
+  address?: string; // New prop added
   className?: string;
 }
 
 const Contact2 = ({
-  title = 'Contact Us',
-  description = 'We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!',
-  phone = '(123) 34567890',
-  email = 'email@example.com',
-  web = { label: 'shadcnblocks.com', url: 'https://shadcnblocks.com' },
+  title = 'যোগাযোগ করুন',
+  description = 'আপনার ব্যবসা বা প্রজেক্ট নিয়ে আমাদের সাথে সরাসরি কথা বলুন। রাজশাহীতে আপনার ডিজিটাল যাত্রা শুরু করতে আমরা সর্বদা প্রস্তুত।',
+  phone = '+88016 3236 3235',
+  email = 'help@deltadigivast.com',
+  web = { label: 'deltadigivast.vercel.app', url: 'https://deltadigivast.vercel.app' },
+  address = '৪৯/২ রাজিব চত্ত্বর, ওল্ড শিমলা, বোয়ালিয়া, রাজশাহী।',
   className,
 }: Contact2Props) => {
   const [loading, setLoading] = useState(false);
@@ -38,7 +40,7 @@ const Contact2 = ({
       email: formData.get('email'),
       phone: formData.get('phone'),
       from: 'Homepage Contact Form',
-      company: formData.get('message'), // message goes to company
+      company: formData.get('message'), 
       date: new Date().toISOString(),
     };
 
@@ -54,51 +56,56 @@ const Contact2 = ({
 
       if (!res.ok) throw new Error('Failed to submit');
 
-      const result = await res.json();
       if (res.ok) {
-        toast.success('Message sent successfully!');
+        toast.success('ধন্যবাদ! আপনার মেসেজটি সফলভাবে পাঠানো হয়েছে।');
         form.reset();
       } else {
-        toast.error(
-          result.message || 'Failed to send message. Please try again.',
-        );
+        toast.error('দুঃখিত, মেসেজ পাঠানো সম্ভব হয়নি। আবার চেষ্টা করুন।');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      toast.error('Failed to send message. Please try again.');
+      toast.error('সার্ভারে সমস্যা হচ্ছে। আবার চেষ্টা করুন।');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section className={cn('py-20', className)}>
+    <section className={cn('py-20 bg-white dark:bg-black transition-colors duration-300', className)}>
       <div className="container mx-auto px-4">
         <div className="mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:gap-20">
-          {/* Left Side */}
+          
+          {/* Left Side - Contact Details */}
           <div className="flex max-w-md flex-col gap-10">
             <div>
-              <h1 className="mb-3 text-4xl font-semibold lg:text-5xl">
+              <h1 className="mb-4 text-4xl font-bold lg:text-5xl text-gray-900 dark:text-white">
                 {title}
               </h1>
-              <p className="text-muted-foreground">{description}</p>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                {description}
+              </p>
             </div>
 
-            <div>
-              <h3 className="mb-4 text-xl font-semibold">Contact Details</h3>
-              <ul className="space-y-2">
-                <li>
-                  <span className="font-bold">Phone: </span> {phone}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white border-l-4 border-[#6efd0b] pl-4">কন্টাক্ট ডিটেইলস</h3>
+              <ul className="space-y-4">
+                <li className="flex flex-col">
+                  <span className="font-bold text-sm text-[#6efd0b] uppercase tracking-wider">Phone & WhatsApp</span>
+                  <span className="text-gray-700 dark:text-gray-300 font-medium">{phone}</span>
                 </li>
-                <li>
-                  <span className="font-bold">Email: </span>
-                  <a href={`mailto:${email}`} className="underline ml-1">
+                <li className="flex flex-col">
+                  <span className="font-bold text-sm text-[#6efd0b] uppercase tracking-wider">Email</span>
+                  <a href={`mailto:${email}`} className="text-gray-700 dark:text-gray-300 hover:text-[#6efd0b] transition-colors">
                     {email}
                   </a>
                 </li>
-                <li>
-                  <span className="font-bold">Web: </span>
-                  <a href={web.url} target="_blank" className="underline ml-1">
+                <li className="flex flex-col">
+                  <span className="font-bold text-sm text-[#6efd0b] uppercase tracking-wider">Address</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{address}</span>
+                </li>
+                <li className="flex flex-col">
+                  <span className="font-bold text-sm text-[#6efd0b] uppercase tracking-wider">Website</span>
+                  <a href={web.url} target="_blank" className="text-gray-700 dark:text-gray-300 hover:text-[#6efd0b] transition-colors text-sm">
                     {web.label}
                   </a>
                 </li>
@@ -106,101 +113,90 @@ const Contact2 = ({
             </div>
           </div>
 
-          {/* Form */}
+          {/* Form Side */}
           <form
             onSubmit={handleSubmit}
-            className="grid w-full max-w-3xl grid-cols-2 gap-6 rounded-lg border p-6 md:p-10"
+            className="grid w-full max-w-3xl grid-cols-2 gap-6 rounded-2xl border border-gray-100 dark:border-gray-800 p-6 md:p-10 bg-gray-50/50 dark:bg-white/5 shadow-sm"
           >
             {/* Name */}
-            <div className="grid gap-1.5">
-              <Label htmlFor="name">Name</Label>
+            <div className="grid gap-2 col-span-2 md:col-span-1">
+              <Label htmlFor="name" className="text-sm font-semibold">আপনার নাম</Label>
               <Input
                 name="name"
                 type="text"
                 id="name"
-                placeholder="Your Name"
+                placeholder="নাম লিখুন"
                 required
+                className="bg-white dark:bg-black"
               />
             </div>
 
             {/* Email */}
-            <div className="grid gap-1.5">
-              <Label htmlFor="email">Email</Label>
+            <div className="grid gap-2 col-span-2 md:col-span-1">
+              <Label htmlFor="email" className="text-sm font-semibold">ইমেইল</Label>
               <Input
                 name="email"
                 type="email"
                 id="email"
-                placeholder="Your Email"
+                placeholder="example@mail.com"
                 required
+                className="bg-white dark:bg-black"
               />
             </div>
 
             {/* Phone */}
-            <div className="grid gap-1.5">
-              <Label htmlFor="phone">Phone</Label>
+            <div className="grid gap-2 col-span-2 md:col-span-1">
+              <Label htmlFor="phone" className="text-sm font-semibold">ফোন নম্বর</Label>
               <Input
                 name="phone"
                 type="text"
                 id="phone"
-                placeholder="Your Phone"
+                placeholder="017XXXXXXXX"
                 required
+                className="bg-white dark:bg-black"
               />
             </div>
 
-            {/* Address */}
-            <div className="grid gap-1.5">
-              <Label htmlFor="address">Address</Label>
+            {/* Address Input */}
+            <div className="grid gap-2 col-span-2 md:col-span-1">
+              <Label htmlFor="address" className="text-sm font-semibold">ঠিকানা (ঐচ্ছিক)</Label>
               <Input
                 name="address"
                 type="text"
                 id="address"
-                placeholder="Your Address"
+                placeholder="আপনার শহর/এলাকা"
+                className="bg-white dark:bg-black"
               />
             </div>
 
-            {/* Message full width */}
-            <div className="grid gap-1.5 col-span-2">
-              <Label htmlFor="message">Message</Label>
+            {/* Message */}
+            <div className="grid gap-2 col-span-2">
+              <Label htmlFor="message" className="text-sm font-semibold">মেসেজ / প্রজেক্ট ডিটেইলস</Label>
               <Textarea
                 name="message"
                 id="message"
-                placeholder="Type your message here."
+                placeholder="আপনার প্রজেক্ট সম্পর্কে লিখুন..."
                 required
+                className="bg-white dark:bg-black min-h-[120px]"
               />
             </div>
 
-            {/* Button full width with spinner */}
+            {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full col-span-2"
+              className="w-full col-span-2 py-6 bg-[#6efd0b] text-gray-900 font-bold text-lg hover:bg-[#4fd100] transition-all shadow-lg shadow-[#6efd0b]/20"
               disabled={loading}
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
-                  <svg
-                    className="w-5 h-5 animate-spin text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8v8H4z"
-                    ></path>
+                  <svg className="w-5 h-5 animate-spin text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
                   </svg>
-                  Sending...
+                  পাঠানো হচ্ছে...
                 </span>
               ) : (
-                'Send Message'
+                'মেসেজ পাঠান →'
               )}
             </Button>
           </form>
