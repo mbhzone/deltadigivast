@@ -19,50 +19,51 @@ import {
 export default function ServicePage() {
   const services = [
     {
-      title: 'Videography',
+      title: 'Promotional Video Production',
       description:
-        'Professional video production services for commercials, events, corporate shoots, and creative storytelling.',
+        'রাজশাহীতে নিজস্ব professional studio ও professional ক্যামেরা সেটাপে তৈরি promotional video আপনার product, service বা brand-কে নিয়ে যাবে Next Level-এ ',
       href: '/services/videography',
+  
       icon: Video,
       features: [
-        'Commercials & Promos',
-        'Event Coverage',
-        'Corporate Videos',
+        'Promotional & Commercial Video',
+        'Product Showcase Video',
+        'Educational & Explainer Video',
         'Creative Storytelling',
       ],
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20',
       iconColor: 'text-blue-600',
-      stats: '200+ videos produced',
+      stats: '100+ Videos Produced in Rajshahi',
     },
     {
-      title: 'Photography',
+      title: 'Graphics Design',
       description:
-        'High-quality photography services including product, event, corporate, and lifestyle shoots.',
+        'Brand-এর visual identity তৈরি থেকে শুরু করে প্রতিদিনের social media post পর্যন্ত — সব ধরনের graphic design service ও রাজশাহীর business-দের জন্য affordable মাসিক package',
       href: '/services/photography',
       icon: Camera,
       features: [
-        'Product Photography',
-        'Event Photography',
-        'Corporate Headshots',
-        'Lifestyle Shoots',
+        'Social Media Post Design',
+        'Logo Design',
+        'Ad Creative ',
+        'Monthly Design Package',
       ],
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-50 dark:bg-purple-900/20',
       iconColor: 'text-purple-600',
-      stats: '5000+ photos delivered',
+      stats: 'মাসিক Package থেকে Single Design',
     },
     {
       title: 'Digital Marketing',
       description:
-        'Result-driven digital marketing strategies including SEO, social media marketing, and paid advertising.',
+        'সঠিক মানুষের কাছে সঠিক সময়ে আপনার business পৌঁছে দিন। রাজশাহীর local audience targeting-এ আমরা expert। Boost management থেকে শুরু করে full ad campaign — সব handle করি',
       href: '/services/digital-marketing',
       icon: TrendingUp,
       features: [
-        'SEO Optimization',
+        'Facebook Page Boost/Ad Managemen',
         'Social Media Marketing',
-        'Paid Advertising',
-        'Analytics & Reporting',
+        'Funnel Based Marketing',
+        'Data Driven Digital Marketing',
       ],
       color: 'from-green-500 to-emerald-500',
       bgColor: 'bg-green-50 dark:bg-green-900/20',
@@ -77,22 +78,22 @@ export default function ServicePage() {
       icon: Code2,
       features: [
         'Custom Website Design',
-        'Responsive Development',
+        'Landing Page Design',
         'E-Commerce Solutions',
         'CMS Integration',
       ],
       color: 'from-orange-500 to-red-500',
       bgColor: 'bg-orange-50 dark:bg-orange-900/20',
       iconColor: 'text-orange-600',
-      stats: '150+ websites launched',
+      stats: '20+ Website launched In Rajshahi',
     },
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '500+', icon: Award },
-    { label: 'Happy Clients', value: '300+', icon: Users },
-    { label: 'Years Experience', value: '12+', icon: Clock },
-    { label: 'Satisfaction Rate', value: '98%', icon: Star },
+    { label: 'Projects Completed', value: '100+', icon: Award },
+    { label: 'Happy Clients', value: '50+', icon: Users },
+    { label: 'Years Experience in Rajshahi', value: '1+', icon: Clock },
+    { label: 'Satisfaction Rate', value: '85%', icon: Star },
   ];
 
   return (
@@ -110,16 +111,17 @@ export default function ServicePage() {
           </span>
 
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Creative Solutions for
+            রাজশাহীর Business-এর জন্য যা যা প্রয়োজন
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
               {' '}
-              Your Business
+              সব এক ছাদের নিচে
             </span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
-            We offer comprehensive creative services to help your brand stand
-            out, connect with audiences, and achieve your business goals.
+            Video Production, Graphics Design, Facebook Ads, Website , Full Marketing — রাজশাহীর প্রতিটি business-এর জন্য আ
+            মাদের কাছে আছে সঠিক solution 
+            
           </p>
 
           {/* Trust Badges */}
@@ -194,8 +196,9 @@ export default function ServicePage() {
                 </div>
 
                 {/* Learn More Link */}
-                <div className="flex items-center gap-2 text-[#6efd0b] font-medium group-hover:gap-3 transition-all">
-                  <span>Learn More</span>
+                <div className="
+                  flex items-center gap-2 text-[#6efd0b] font-medium group-hover:gap-3 transition-all">
+                  <span>আরো জানুন</span>
                   <ArrowRight size={16} />
                 </div>
               </div>
