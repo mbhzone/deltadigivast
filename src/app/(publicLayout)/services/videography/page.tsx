@@ -25,30 +25,30 @@ export default function VideographyPage() {
   const services = [
     {
       icon: Film,
-      title: 'Commercials',
+      title: '📣 Promotional & Commercial Video',
       description:
-        'High-impact commercial videos that tell your brand story and drive engagement.',
+        'আপনার product বা service-এর জন্য high-impact promotional video। Facebook ও Instagram-এ run করার জন্য optimized। রাজশাহীর clothing shop, restaurant, real estate — সব sector-এ কাজ করেছি।',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Video,
-      title: 'Event Coverage',
+      title: '🥭 Product Showcase & Food Video',
       description:
-        'Professional coverage of weddings, conferences, concerts, and special events.',
+        'আপনার product সুন্দরভাবে present করুন। Organic food, mango, restaurant খাবার, clothing — product video দেখে মানুষ কিনতে উৎসাহিত হয়।',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Camera,
-      title: 'Corporate Videos',
+      title: '🎓 Educational & Explainer Video',
       description:
-        'Polished corporate content including interviews, testimonials, and company profiles.',
+        'Coaching centre, medical institute, school — educational institution-এর জন্য explainer ও promotional video। Enrollment বাড়াতে সাহায্য করে।',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: Clapperboard,
-      title: 'Creative Storytelling',
+      title: '📱 Social Media Reels & Short Video',
       description:
-        'Artistic and narrative-driven videos that captivate and inspire audiences.',
+        'Facebook Reel, Instagram Reel — short-form video content যা scroll থামিয়ে দেয়। রাজশাহীর local audience-এর জন্য Bangla-তে তৈরি',
       color: 'from-orange-500 to-red-500',
     },
   ];
@@ -115,7 +115,7 @@ export default function VideographyPage() {
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
                 <Camera size={16} />
-                Professional Video Production
+                Professional Video Production — রাজশাহী 
               </span>
 
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
@@ -127,19 +127,19 @@ export default function VideographyPage() {
               </h1>
 
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                Professional video production services for commercials, events,
-                corporate shoots, and creative storytelling.
+                একটি ভালো video আপনার business-এর গল্প বদলে দিতে পারে। আমাদের নিজস্ব studio বা Outdoor shoot,
+                professional editing এবং result driven
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-xl font-semibold hover:bg-[#4fd100] transition flex items-center gap-2">
                   <Play size={18} />
-                  Watch Showreel
+                  আমাদের Video Portfolio দেখুন
                 </button>
 
                 <button className="px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition flex items-center gap-2">
                   <Calendar size={18} />
-                  Book Consultation
+                  Video Project শুরু করুন →
                 </button>
               </div>
             </div>
@@ -193,7 +193,7 @@ export default function VideographyPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Services
+              VIDEO SERVICES WE OFFER
             </h2>
           </div>
 
@@ -278,11 +278,11 @@ export default function VideographyPage() {
       <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to Start Your Project?
+            আপনার Business-এর Video বানাতে Ready?
           </h2>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-            Let's discuss your vision and create something amazing together.
+            রাজশাহীতে বসে কথা বলুন। Studio visit করুন। আমরা আপনার vision বুঝে সেরা video তৈরি করব
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -299,7 +299,7 @@ export default function VideographyPage() {
               className="px-6 py-3 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl font-semibold flex items-center justify-center gap-2"
             >
               <Mail size={18} />
-              Email Us
+              Whatsapp
             </a>
           </div>
         </div>
