@@ -1,19 +1,21 @@
-import Link from 'next/link';
+import Link from 'next/image';
 import {
   Calendar,
   ArrowLeft,
   Clock,
   Users,
   BookOpen,
-  DollarSign,
   User,
   Tag,
   Star,
   Play,
   Award,
   ChevronRight,
+  CheckCircle,
+  Zap,
 } from 'lucide-react';
 import Image from 'next/image';
+import LinkNext from 'next/link';
 
 interface Course {
   id: string;
@@ -56,43 +58,26 @@ export default async function CoursesDetailPage({ params }: Props) {
 
   if (!course) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center p-4">
         <div className="text-center">
-          <div className="relative">
-            <div className="absolute inset-0 blur-3xl bg-gradient-to-r from-[#6efd0b]/20 to-blue-500/20 rounded-full" />
-            <div className="relative w-32 h-32 bg-gradient-to-br from-[#6efd0b] to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-8 transform rotate-6 shadow-2xl">
-              <BookOpen className="w-16 h-16 text-white" />
-            </div>
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Course Not Found
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md">
-            Oops! The course you're looking for doesn't exist or has been
-            removed.
-          </p>
-          <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-2xl font-semibold hover:bg-[#4fd100] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <ArrowLeft size={20} />
-            Browse All Courses
-          </Link>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">কোর্সটি পাওয়া যায়নি</h1>
+          <LinkNext href="/courses" className="text-[#6efd0b] flex items-center gap-2 justify-center">
+            <ArrowLeft size={16} /> সব কোর্স দেখুন
+          </LinkNext>
         </div>
       </div>
     );
   }
 
-  // Safe formatter with fallback values
   const formatNumber = (num: number | undefined | null) => {
     if (num === undefined || num === null) return '0';
     return num.toLocaleString();
   };
 
   const formatDate = (date: string | undefined) => {
-    if (!date) return 'Not scheduled';
+    if (!date) return 'শিঘ্রই শুরু হবে';
     try {
-      return new Date(date).toLocaleDateString('en-US', {
+      return new Date(date).toLocaleDateString('bn-BD', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -103,225 +88,180 @@ export default async function CoursesDetailPage({ params }: Props) {
   };
 
   return (
-    <div className="min-h-screen  dark:bg-black">
-      {/* Hero Section with Modern Design */}
-      <div className="relative overflow-hidden">
-        {/* Background Pattern */}
-        {/* <div className="absolute inset-0 bg-grid-gray-900/[0.02] dark:bg-grid-white/[0.02] bg-[size:50px_50px]" /> */}
+    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
+      {/* Top Navigation */}
+      <div className="max-w-7xl mx-auto px-4 pt-8">
+        <LinkNext
+          href="/courses"
+          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#6efd0b] transition-colors group text-sm font-medium"
+        >
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+          সব কোর্স দেখুন
+        </LinkNext>
+      </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-          <Link
-            href="/courses"
-            className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] transition-colors mb-8 group"
-          >
-            <ArrowLeft
-              size={18}
-              className="group-hover:-translate-x-1 transition-transform"
-            />
-            Back to Courses
-          </Link>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-6">
-              {/* Status Badge */}
-              <div className="flex flex-wrap gap-3">
-                <span
-                  className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium ${
-                    course.status === 'PUBLISHED'
-                      ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                      : course.status === 'DRAFT'
-                        ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
-                        : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400'
-                  }`}
-                >
-                  {course.status === 'PUBLISHED'
-                    ? '● Live Now'
-                    : course.status === 'DRAFT'
-                      ? '● In Development'
-                      : '● Archived'}
+      {/* Main Content & Sales Funnel Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid lg:grid-cols-3 gap-12">
+          
+          {/* Left Column: Course Details */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-xs font-bold uppercase tracking-wider">
+                  {course.category || 'Professional Course'}
                 </span>
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 rounded-full text-sm font-medium">
-                  <Tag size={14} />
-                  {course.category || 'Uncategorized'}
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-bold">
+                  {course.status === 'PUBLISHED' ? '● ভর্তি চলছে' : '● আপকামিং'}
                 </span>
               </div>
-
-              {/* Title */}
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                {course.title || 'Untitled Course'}
+              
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                {course.title}
               </h1>
-
-              {/* Description */}
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                {course.description || 'No description available'}
+              
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed italic border-l-4 border-[#6efd0b] pl-4">
+                "{course.description}"
               </p>
+            </div>
 
-              {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <div className="p-2 bg-[#6efd0b]/10 rounded-lg">
-                    <Clock size={20} className="text-[#6efd0b]" />
+            {/* Course Features - Sales Booster */}
+            <div className="bg-gray-50 dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/10">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <Zap className="text-[#6efd0b]" size={20} /> এই কোর্সে আপনি যা যা পাবেন:
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  'লাইফটাইম এক্সেস',
+                  'প্রফেশনাল সার্টিফিকেট',
+                  'লাইভ সাপোর্ট সেশন',
+                  'প্র্যাকটিক্যাল প্রজেক্ট',
+                  'আপডেটেড কারিকুলাম',
+                  'ক্যারিয়ার গাইডলাইন',
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <CheckCircle className="text-[#6efd0b]" size={18} />
+                    <span className="text-sm font-medium">{item}</span>
                   </div>
-                  <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Duration
-                    </p>
-                    <p className="font-semibold text-gray-900 dark:text-white">
-                      {course.duration || 'TBD'}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <div className="p-2 bg-[#6efd0b]/10 rounded-lg">
-                    <Users size={20} className="text-[#6efd0b]" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Students
-                    </p>
-                    <p className="font-semibold text-gray-900 dark:text-white">
-                      {formatNumber(course.students)}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <div className="p-2 bg-[#6efd0b]/10 rounded-lg">
-                    <User size={20} className="text-[#6efd0b]" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Instructor
-                    </p>
-                    <p className="font-semibold text-gray-900 dark:text-white">
-                      {course.instructor || 'Unknown'}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <div className="p-2 bg-[#6efd0b]/10 rounded-lg">
-                    <Calendar size={20} className="text-[#6efd0b]" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                      Start Date
-                    </p>
-                    <p className="font-semibold text-gray-900 dark:text-white">
-                      {formatDate(course.startDate)}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Price & CTA */}
-              <div className="flex items-center justify-between pt-4">
-                <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
-                    Course Price
-                  </p>
-                  <div className="flex items-baseline gap-1">
-                    {/* <DollarSign size={32} className="text-[#6efd0b]" /> */}
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">
-                      {course.price !== undefined && course.price !== null
-                        ? course.price
-                        : '0'}
-                    </span>
-                    <span className="text-gray-500 dark:text-gray-400">Tk</span>
-                  </div>
-                </div>
-                {/* <button
-                  className={`group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 overflow-hidden ${
-                    course.status === 'PUBLISHED'
-                      ? 'bg-gradient-to-r from-[#6efd0b] to-green-500 text-gray-900 hover:scale-105 shadow-lg hover:shadow-xl'
-                      : 'bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-                  }`}
-                  disabled={course.status !== 'PUBLISHED'}
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    {course.status === 'PUBLISHED' ? (
-                      <>
-                        Enroll Now
-                        <ChevronRight
-                          size={18}
-                          className="group-hover:translate-x-1 transition-transform"
-                        />
-                      </>
-                    ) : (
-                      'Coming Soon'
-                    )}
-                  </span>
-                  {course.status === 'PUBLISHED' && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#4fd100] to-green-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  )}
-                </button> */}
+                ))}
               </div>
             </div>
 
-            {/* Right Content - Image */}
-
-            <div className="relative w-full h-80 lg:h-[28rem] rounded-md overflow-hidden shadow-lg">
-              {course.imageUrl ? (
-                <Image
-                  src={course.imageUrl}
-                  alt={course.title || 'Course preview'}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              ) : (
-                <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center p-12">
-                  <BookOpen
-                    size={80}
-                    className="text-gray-400 dark:text-gray-600 mb-4"
-                  />
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Course preview image
-                  </p>
-                </div>
-              )}
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="p-4 bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl text-center">
+                <Clock className="mx-auto mb-2 text-[#6efd0b]" size={20} />
+                <p className="text-xs text-gray-500">সময়সীমা</p>
+                <p className="font-bold text-gray-900 dark:text-white">{course.duration}</p>
+              </div>
+              <div className="p-4 bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl text-center">
+                <Users className="mx-auto mb-2 text-[#6efd0b]" size={20} />
+                <p className="text-xs text-gray-500">শিক্ষার্থী</p>
+                <p className="font-bold text-gray-900 dark:text-white">{formatNumber(course.students)}+</p>
+              </div>
+              <div className="p-4 bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl text-center">
+                <User className="mx-auto mb-2 text-[#6efd0b]" size={20} />
+                <p className="text-xs text-gray-500">ইন্সট্রাক্টর</p>
+                <p className="font-bold text-gray-900 dark:text-white truncate">{course.instructor}</p>
+              </div>
+              <div className="p-4 bg-white dark:bg-black border border-gray-100 dark:border-gray-800 rounded-xl text-center">
+                <Calendar className="mx-auto mb-2 text-[#6efd0b]" size={20} />
+                <p className="text-xs text-gray-500">শুরু হবে</p>
+                <p className="font-bold text-gray-900 dark:text-white">{formatDate(course.startDate)}</p>
+              </div>
             </div>
           </div>
+
+          {/* Right Column: Pricing & Image (Sales Card) */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-6">
+              <div className="bg-white dark:bg-black rounded-2xl shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800">
+                <div className="relative aspect-video">
+                  {course.imageUrl ? (
+                    <Image
+                      src={course.imageUrl}
+                      alt={course.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
+                      <Play size={48} className="text-gray-400" />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity cursor-pointer">
+                    <div className="w-16 h-16 bg-[#6efd0b] rounded-full flex items-center justify-center shadow-lg">
+                      <Play fill="black" size={24} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 space-y-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-black text-gray-900 dark:text-white">
+                      ৳{course.price || 'Free'}
+                    </span>
+                    {course.price > 0 && (
+                        <span className="text-gray-400 line-through text-lg">৳{course.price + 500}</span>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <button 
+                      className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${
+                        course.status === 'PUBLISHED'
+                        ? 'bg-[#6efd0b] text-gray-900 hover:bg-[#4fd100] shadow-lg shadow-[#6efd0b]/20'
+                        : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                      }`}
+                      disabled={course.status !== 'PUBLISHED'}
+                    >
+                      {course.status === 'PUBLISHED' ? 'এনরোল করুন' : 'শিঘ্রই আসছে'}
+                      <ChevronRight size={18} />
+                    </button>
+                    <p className="text-center text-xs text-gray-500">৩ দিনের মানি ব্যাক গ্যারান্টি</p>
+                  </div>
+
+                  <div className="pt-4 border-t border-gray-100 dark:border-gray-800 space-y-3">
+                    <p className="text-sm font-bold text-gray-900 dark:text-white">কোর্সটি কেন কিনবেন?</p>
+                    <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                        <Award size={14} className="text-[#6efd0b]" /> ইন্ডাস্ট্রি এক্সপার্ট গাইডেন্স
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
+                        <BookOpen size={14} className="text-[#6efd0b]" /> হ্যান্ডস-অন প্র্যাকটিক্যাল লার্নিং
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* Additional Course Info Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
-            <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-xl flex items-center justify-center mb-4">
-              <Play size={24} className="text-[#6efd0b]" />
+      {/* Trust Badges - User Friendly Info */}
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-[#6efd0b]/20 transition-all">
+                <div className="w-16 h-16 bg-[#6efd0b]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Play size={32} className="text-[#6efd0b]" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">শিখুন নিজের গতিতে</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">যেকোনো সময়, যেকোনো ডিভাইস থেকে ক্লাসগুলো দেখার সুবিধা।</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Learn at Your Pace
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Self-paced learning with lifetime access to all course materials
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
-            <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-xl flex items-center justify-center mb-4">
-              <Star size={24} className="text-[#6efd0b]" />
+            <div className="text-center p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-[#6efd0b]/20 transition-all">
+                <div className="w-16 h-16 bg-[#6efd0b]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Star size={32} className="text-[#6efd0b]" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">সেরা ইন্সট্রাক্টর</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">ইন্ডাস্ট্রিতে কাজ করার বাস্তব অভিজ্ঞতা সম্পন্ন মেন্টরদের গাইডেন্স।</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Expert Instruction
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Learn from industry experts with years of real-world experience
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800/50 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
-            <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-xl flex items-center justify-center mb-4">
-              <Award size={24} className="text-[#6efd0b]" />
+            <div className="text-center p-8 bg-gray-50 dark:bg-white/5 rounded-3xl border border-transparent hover:border-[#6efd0b]/20 transition-all">
+                <div className="w-16 h-16 bg-[#6efd0b]/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <Award size={32} className="text-[#6efd0b]" />
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">সার্টিফিকেট</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">সফলভাবে কোর্স শেষ করার পর প্রফেশনাল সার্টিফিকেট অর্জনের সুযোগ।</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Certificate of Completion
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Earn a certificate to showcase your new skills
-            </p>
-          </div>
         </div>
       </div>
     </div>
