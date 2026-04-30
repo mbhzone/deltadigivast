@@ -78,7 +78,7 @@ export default function VideographyPage() {
       image: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
-      name: 'Nayeem Hasan',
+      name: 'Md Nayeem Hasan',
       role: 'Owner, Rajshahi Cooling Refrigeration',
       content:
         'আমাদের সার্ভিস প্রোমো ভিডিওটি এক কথায় চমৎকার হয়েছে। তারা আমাদের ব্যবসার মূল বিষয়গুলো খুব দারুণভাবে ফুটিয়ে তুলেছে। হাইলি রেকমেন্ডেড',
