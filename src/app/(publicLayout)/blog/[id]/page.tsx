@@ -55,17 +55,17 @@ export default async function BlogDetailPage({ params }: Props) {
             <Calendar className="w-8 h-8 text-[#6efd0b]" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-            Blog Post Not Found
+            ব্লগটি খুঁজে পাওয়া যায়নি
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            The blog post you're looking for doesn't exist or has been removed.
+            দুঃখিত, আপনি যে ব্লগ পোস্টটি খুঁজছেন তা বর্তমানে নেই অথবা সরিয়ে ফেলা হয়েছে।
           </p>
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#6efd0b] text-gray-900 rounded-xl font-semibold hover:bg-[#4fd100] transition-all duration-200"
           >
             <ArrowLeft size={18} />
-            Back to Blog
+            ব্লগ পেজে ফিরে যান
           </Link>
         </div>
       </div>
@@ -79,7 +79,6 @@ export default async function BlogDetailPage({ params }: Props) {
       year: 'numeric',
     });
 
-  // Calculate estimated read time (rough estimate based on description length)
   const readTime = Math.max(
     1,
     Math.ceil(blog.description.split(' ').length / 200),
@@ -97,20 +96,18 @@ export default async function BlogDetailPage({ params }: Props) {
             size={16}
             className="group-hover:-translate-x-1 transition-transform"
           />
-          Back to all articles
+          সব ব্লগ দেখুন
         </Link>
       </div>
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Category/Tag (optional - you can add category to your blog type) */}
         <div className="flex items-center gap-2 text-[#6efd0b] mb-4">
           <span className="text-sm font-medium uppercase tracking-wider">
-            Article
+            ব্লগ আর্টিকেল
           </span>
         </div>
 
-        {/* Title */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
           {blog.title}
         </h1>
@@ -123,10 +120,7 @@ export default async function BlogDetailPage({ params }: Props) {
           </div>
           <div className="flex items-center gap-1">
             <Clock size={16} />
-            <span>{readTime} min read</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span>Last updated: {formatDate(blog.updatedAt)}</span>
+            <span>{readTime} মিনিট পড়ার সময়</span>
           </div>
         </div>
 
@@ -138,10 +132,6 @@ export default async function BlogDetailPage({ params }: Props) {
               <span className="text-sm">Like</span>
             </button>
             <button className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
-              <Bookmark size={18} />
-              <span className="text-sm">Save</span>
-            </button>
-            <button className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
               <Share2 size={18} />
               <span className="text-sm">Share</span>
             </button>
@@ -150,53 +140,32 @@ export default async function BlogDetailPage({ params }: Props) {
           {/* Social Share */}
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-500 dark:text-gray-500 hidden sm:block">
-              Share:
+              Share on:
             </span>
-            <a
-              href="#"
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            >
+            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
               <Twitter size={16} className="text-gray-600 dark:text-gray-400" />
             </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            >
-              <Facebook
-                size={16}
-                className="text-gray-600 dark:text-gray-400"
-              />
+            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
+              <Facebook size={16} className="text-gray-600 dark:text-gray-400" />
             </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            >
-              <Linkedin
-                size={16}
-                className="text-gray-600 dark:text-gray-400"
-              />
-            </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-            >
-              <Mail size={16} className="text-gray-600 dark:text-gray-400" />
+            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
+              <Linkedin size={16} className="text-gray-600 dark:text-gray-400" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Featured Image */}
+      {/* Featured Image - Ratio fixed to 1:1 Square (1080x1080 style) */}
       {blog.imageUrl && (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-center">
+          <div className="relative aspect-square w-full max-w-[600px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src={blog.imageUrl}
               alt={blog.title}
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 1200px) 100vw, 1200px"
+              sizes="(max-width: 600px) 100vw, 600px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
@@ -206,8 +175,7 @@ export default async function BlogDetailPage({ params }: Props) {
       {/* Content Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          {/* Description as main content */}
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line">
             {blog.description}
           </p>
         </div>
