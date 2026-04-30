@@ -148,9 +148,17 @@ export default function MarketingPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* Hero Section with Glowing Background Effects */}
+      <section className="relative overflow-hidden bg-white dark:bg-black py-24">
+        {/* Background Gradients & Glowing Circles */}
+        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/10 to-transparent dark:from-[#6efd0b]/20 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/10 to-transparent dark:from-[#6efd0b]/20 pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-10 dark:opacity-20 pointer-events-none">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#6efd0b] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
@@ -166,12 +174,12 @@ export default function MarketingPage() {
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                 Facebook Ads, Instagram Boost, Social Media Marketing — রাজশাহীর local audience targeting-এ আমরা specialist। সঠিকভাবে করলে result আসেই।
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 flex items-center gap-2">
+                <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 transform hover:scale-105 shadow-lg shadow-[#6efd0b]/25 flex items-center gap-2">
                   <Rocket size={18} />
                   Free Consultation নিন →
                 </button>
@@ -179,7 +187,7 @@ export default function MarketingPage() {
             </div>
 
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10">
                 <Image
                   src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000"
                   alt="Digital Marketing Team"
@@ -187,6 +195,16 @@ export default function MarketingPage() {
                   height={400}
                   className="w-full h-auto object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#6efd0b]/10 to-transparent"></div>
+              </div>
+              
+              {/* Floating Social Badge */}
+              <div className="absolute -top-4 -right-4 bg-white dark:bg-black rounded-lg shadow-xl p-4 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-2">
+                  <Facebook className="w-5 h-5 text-blue-600" />
+                  <Instagram className="w-5 h-5 text-pink-600" />
+                  <span className="text-sm font-bold text-gray-900 dark:text-white">Active Socials</span>
+                </div>
               </div>
             </div>
           </div>
@@ -203,7 +221,7 @@ export default function MarketingPage() {
                   <stat.icon className="w-5 h-5 text-[#6efd0b]" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -211,24 +229,28 @@ export default function MarketingPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               আমরা কোন Digital Marketing Services দিই
             </h2>
+            <p className="text-gray-600 dark:text-gray-400">রাজশাহীর ব্যবসায়ীদের জন্য আমাদের কার্যকরী সার্ভিসসমূহ</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="p-6 bg-white dark:bg-black rounded-md shadow-lg border border-gray-200 dark:border-gray-700">
-                <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center mb-4`}>
+              <div key={index} className="p-6 bg-white dark:bg-black rounded-md shadow-lg border border-gray-200 dark:border-gray-700 hover:border-[#6efd0b]/50 transition-colors">
+                <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center mb-4 shadow-inner`}>
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{service.description}</p>
                 <div className="grid grid-cols-2 gap-2">
                   {service.features.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-gray-500"><CheckCircle className="w-3 h-3 text-[#6efd0b]" />{f}</div>
+                    <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
+                      <CheckCircle className="w-3 h-3 text-[#6efd0b]" />
+                      {f}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -243,10 +265,12 @@ export default function MarketingPage() {
           <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">কেন আমরা — অন্য agency কেন না?</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="p-6 bg-white dark:bg-black rounded-md shadow-lg text-center">
-                <item.icon className="w-10 h-10 text-[#6efd0b] mx-auto mb-4" />
+              <div key={index} className="p-6 bg-white dark:bg-black rounded-md shadow-lg text-center hover:-translate-y-1 transition-transform">
+                <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-6 h-6 text-[#6efd0b]" />
+                </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-xs text-gray-500">{item.description}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -254,15 +278,18 @@ export default function MarketingPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">আমরা কীভাবে কাজ করি</h2>
           <div className="grid md:grid-cols-4 gap-6">
             {process.map((item, index) => (
-              <div key={index} className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-700">
-                <div className="text-3xl font-bold text-[#6efd0b] mb-2">{item.step}</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-                <p className="text-xs text-gray-500">{item.description}</p>
+              <div key={index} className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-700 shadow-sm relative">
+                <div className="text-4xl font-bold text-[#6efd0b]/20 absolute top-2 right-4">
+                  {item.step}
+                </div>
+                <div className="text-2xl font-bold text-[#6efd0b] mb-2">{item.step}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
