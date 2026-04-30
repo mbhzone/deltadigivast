@@ -66,7 +66,7 @@ export default function VideographyPage() {
       role: 'Managing Director, Perfect Living Properties Ltd.',
       content:
         'আমাদের রিয়েল এস্টেট প্রজেক্টের ভিডিওগুলো অত্যন্ত প্রফেশনাল ছিল। তাদের কাজের মান এবং ডিটেইলস আমাদের ব্র্যান্ড ভ্যালু অনেক বাড়িয়ে দিয়েছে। আমরা তাদের সার্ভিসে খুবই সন্তুষ্ট',
-      rating: 4.5,
+      rating: 5,
       image: 'https://randomuser.me/api/portraits/women/44.jpg',
     },
     {
@@ -74,7 +74,7 @@ export default function VideographyPage() {
       role: 'Founder, Nahid Biology',
       content:
         'শিক্ষামূলক ভিডিওগুলোকে এতো সুন্দরভাবে প্রেজেন্ট করার জন্য ধন্যবাদ। জটিল বিষয়গুলো ভিজ্যুয়ালের মাধ্যমে খুব সহজ হয়ে উঠেছে, যা স্টুডেন্টদের কাছে অনেক জনপ্রিয় হয়েছে',
-      rating: 4,
+      rating: 5,
       image: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
