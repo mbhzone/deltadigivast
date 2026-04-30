@@ -28,114 +28,115 @@ export default function PhotographyPage() {
   const services = [
     {
       icon: ShoppingBag,
-      title: 'Product Photography',
+      title: 'Social Media Poster Design
+',
       description:
-        'High-quality product shots for e-commerce, catalogs, and marketing materials. We make your products look their absolute best.',
+        'Facebook ও Instagram-এর জন্য scroll-stopping graphic posts। Regular post, promotional offer, event announcement — সব ধরনের social media design',
       features: [
-        'White background shots',
-        'Lifestyle product photos',
-        '360-degree views',
-        'Fast turnaround',
+        'Platform optimized sizes',
+        'High-engagement visuals',
+        'Modern typography',
+        'Quick 24h delivery',
       ],
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Calendar,
-      title: 'Event Photography',
+      title: '✏️  Logo Design',
       description:
-        'Capture every moment of your special events with professional coverage that tells your story.',
+        'আপনার business-এর জন্য unique এবং professional logo। রাজশাহীর clothing shop থেকে শুরু করে restaurant, NGO পর্যন্ত সব sector-এ logo বানিয়েছি।',
       features: [
-        'Corporate events',
-        'Conferences & seminars',
-        'Product launches',
-        'Award ceremonies',
+        'Unique & original concepts',
+        'Vector source files (AI/EPS)',
+        'High-resolution PNG/JPG',
+        'Brand color palette',
       ],
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Briefcase,
-      title: 'Corporate Photography',
+      title: '🖼️  Banner, Poster & Flyer Design',
       description:
-        'Professional imagery for your business including headshots, office environments, and team photos.',
+        'Eid offer, seasonal promotion, event poster, business banner — print এবং digital দুই ধরনের design',
       features: [
-        'Executive portraits',
-        'Team photos',
-        'Office environment',
-        'Brand storytelling',
+        'Print-ready CMYK files',
+        'High-quality graphics',
+        'Custom size options',
+        'Digital marketing banners',
       ],
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: Heart,
-      title: 'Lifestyle Photography',
+      title: '📦  Product & Packaging Design',
       description:
-        "Authentic, candid shots that capture real moments and tell your brand's human story.",
+        "আপনার product-এর packaging, label, tag design। Organic food, clothing, gift item — সব ধরনের product packaging",
       features: [
-        'Brand lifestyle',
-        'Fashion shoots',
-        'Family portraits',
-        'Authentic moments',
+        'Custom label & box design',
+        '3D mockup presentation',
+        'Die-cut technical files',
+        'Premium brand aesthetics',
       ],
       color: 'from-orange-500 to-red-500',
     },
     {
       icon: PartyPopper,
-      title: 'Wedding Photography',
+      title: '📊  Facebook Ad Creative',
       description:
-        'Beautiful, timeless wedding photography that preserves your special day forever.',
+        'High-converting ad creative design। Boost করলে result পেতে হলে creative ভালো হতে হবে — এটাই আমরা করি',
       features: [
-        'Engagement sessions',
-        'Full-day coverage',
-        'Second shooter',
-        'Wedding albums',
+        'Conversion focused design',
+        'Less than 20% text rule',
+        'Strong CTA placement',
+        'A/B testing variants',
       ],
       color: 'from-pink-500 to-rose-500',
     },
     {
       icon: Users2,
-      title: 'Portrait Photography',
+      title: 'Brand Idendity Design',
       description:
-        'Stunning portraits for individuals, families, and professionals in our studio or on location.',
+        'শুধুমাত্র লোগো তৈরি নয়, বরং গ্রাহকের মনে ব্র্যান্ডের একটি অনন্য ও স্মরণীয় ছবি তৈরি করে, যা প্রতিযোগীদের থেকে আলাদা করে ',
       features: [
-        'Studio portraits',
-        'Outdoor sessions',
-        'Family portraits',
-        'Professional headshots',
+        'Complete brand manual',
+        'Business card & Letterhead',
+        'Typography guidelines',
+        'Consistent visual story',
       ],
       color: 'from-indigo-500 to-blue-500',
     },
   ];
 
   const stats = [
-    { label: 'Years Experience', value: '12+', icon: Award },
-    { label: 'Happy Clients', value: '850+', icon: Users },
-    { label: 'Photos Taken', value: '50K+', icon: Camera },
-    { label: 'Events Covered', value: '300+', icon: Calendar },
+    { label: 'Years Experience', value: '1+', icon: Award },
+    { label: 'Happy Clients', value: '80+', icon: Users },
+    { label: 'Graphics Design', value: '500+', icon: Camera },
+    { label: 'Logo Design', value: '40+', icon: Calendar },
   ];
 
   const whyChooseUs = [
     {
-      title: 'Professional Equipment',
+      title: ' Creative & Unique Concepts',
       description:
-        'We use state-of-the-art cameras and lighting equipment for the highest quality results.',
+        ' আমরা গতানুগতিক ডিজাইন করি না। প্রতিটি প্রজেক্টে আমরা একদম ইউনিক এবং ক্রিয়েটিভ আইডিয়া নিয়ে কাজ করি যা আপনার ব্র্যান্ডকে আলাদা করে',
       icon: Camera,
     },
     {
-      title: 'Experienced Team',
+      title: 'Result-Oriented Design',
       description:
-        'Our photographers have years of experience across multiple photography genres.',
+        'আমাদের ডিজাইনগুলো কেবল দেখতে সুন্দর নয়, বরং এগুলো এমনভাবে তৈরি করা যাতে আপনার সেলস এবং ব্র্যান্ড ভ্যালু বৃদ্ধি পায়',
       icon: Award,
     },
     {
-      title: 'Quick Turnaround',
+      title: 'Fast & Timely Delivery',
       description:
-        'Get your edited photos within 48-72 hours, ready for immediate use.',
+        'আমরা সময়ের মূল্য বুঝি। আপনার ডেডলাইনের কথা মাথায় রেখে আমরা দ্রুততম সময়ে হাই-কোয়ালিটি ডিজাইন ডেলিভারি নিশ্চিত করি',
       icon: Clock,
     },
     {
-      title: 'Custom Packages',
+      title: 'Flexible Revisions',
       description:
-        'Flexible packages tailored to your specific needs and budget.',
+        'আপনার শতভাগ সন্তুষ্টি আমাদের লক্ষ্য। আপনি যতক্ষণ না ডিজাইনটি নিয়ে পুরোপুরি খুশি হচ্ছেন, আমরা প্রয়োজনীয় পরিবর্তন করে দেই',
       icon: Package,
     },
   ];
@@ -155,20 +156,20 @@ export default function PhotographyPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
             <Camera size={16} />
-            Professional Photography Services
+            Professional Graphics Design
           </span>
 
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Capturing Life's
+            আপনার Brand-এর জন্য Creative 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
               {' '}
-              Beautiful Moments
+              Graphics Design 
             </span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
-            High-quality photography services including product, event,
-            corporate, and lifestyle shoots. We turn ordinary moments into
+            Logo থেকে social media post, banner থেকে packaging — আপনার business-এর visual identity 
+            আমরাই তৈরি করি। রাজশাহীর সব ধরনের business-এর জন্য।
             extraordinary memories.
           </p>
 
@@ -176,7 +177,7 @@ export default function PhotographyPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 transform hover:scale-105 shadow-lg shadow-[#6efd0b]/25 flex items-center gap-2">
               <Camera size={18} />
-              Book a Session
+              Design Project শুরু করুন →
             </button>
             <button className="px-8 py-4 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 border border-gray-200 dark:border-gray-700 flex items-center gap-2">
               <ImageIcon size={18} />
@@ -196,7 +197,7 @@ export default function PhotographyPage() {
                 ))}
               </div>
               <span className="text-sm text-gray-600 dark:text-gray-400">
-                Trusted by 850+ clients
+                Trusted by 100+ clients
               </span>
             </div>
             <div className="flex items-center gap-1">
@@ -243,10 +244,10 @@ export default function PhotographyPage() {
               Our Services
             </span>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Photography Services We Offer
+              কোন ধরনের Design আমরা করি
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Professional photography tailored to your specific needs
+              Professional Graphics Design  to your specific needs
             </p>
           </div>
 
@@ -297,7 +298,7 @@ export default function PhotographyPage() {
               Why Choose Us
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              What sets our photography services apart
+              What sets our graphics services apart
             </p>
           </div>
 
@@ -338,23 +339,23 @@ export default function PhotographyPage() {
             {[
               {
                 step: '01',
-                title: 'Consultation',
-                description: 'We discuss your vision, requirements, and goals',
+                title: ' Project Brief ',
+                description: 'শুরুতে আমরা আপনার ব্যবসার লক্ষ্য, টার্গেট অডিয়েন্স এবং ডিজাইনের প্রয়োজনীয়তাগুলো বিস্তারিতভাবে জেনে নেই',
               },
               {
                 step: '02',
-                title: 'Planning',
-                description: 'We create a detailed shot list and schedule',
+                title: 'Concept Design ',
+                description: 'আপনার ব্রিফ অনুযায়ী আমরা কয়েকটি ইউনিক ডিজাইন কনসেপ্ট বা ড্রাফট তৈরি করি এবং আপনার মতামতের জন্য পাঠাই',
               },
               {
                 step: '03',
-                title: 'Photoshoot',
-                description: 'Professional photography session',
+                title: 'Revisions & Finalization ',
+                description: 'আপনার ফিডব্যাক অনুযায়ী আমরা ডিজাইনটিতে প্রয়োজনীয় পরিবর্তন আনি এবং সেটিকে চূড়ান্ত রূপ দেওয়ার কাজ করি',
               },
               {
                 step: '04',
-                title: 'Delivery',
-                description: 'Edited photos delivered within 48-72 hours',
+                title: 'Final Delivery ',
+                description: 'ডিজাইন পছন্দ হলে আমরা সেটির সব ধরণের ফাইল ফরম্যাট (AI, EPS, PNG, PDF) এবং হাই-কোয়ালিটি ভার্সন আপনাকে বুঝিয়ে দেই',
               },
             ].map((item, index) => (
               <div key={index} className="relative">
