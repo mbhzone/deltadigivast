@@ -12,7 +12,7 @@ const realReviews = [
   {
     text: 'আমাদের রিয়েল এস্টেট প্রজেক্টের ভিডিওগুলো অত্যন্ত প্রফেশনাল ছিল। তাদের কাজের মান এবং ডিটেইলস আমাদের ব্র্যান্ড ভ্যালু অনেক বাড়িয়ে দিয়েছে। আমরা তাদের সার্ভিসে খুবই সন্তুষ্ট',
     author: 'Mahbud Hasan Sobuj',
-    position: 'MD, Perfect Living Properties Ltd.',
+    position: 'Senior Manager, Perfect Living Properties Ltd.',
     rating: 5,
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
