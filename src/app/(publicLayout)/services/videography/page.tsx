@@ -54,34 +54,34 @@ export default function VideographyPage() {
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '500+', icon: Film },
-    { label: 'Happy Clients', value: '300+', icon: Users },
-    { label: 'Years Experience', value: '12+', icon: Award },
-    { label: 'Awards Won', value: '25+', icon: Star },
+    { label: 'Projects Completed', value: '100+', icon: Film },
+    { label: 'Happy Clients', value: '80+', icon: Users },
+    { label: 'Years Experience', value: '1+', icon: Award },
+    { label: 'Awards Won', value: '1+', icon: Star },
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Marketing Director, Nike',
+      name: 'Mahbud Hasan Sobuj',
+      role: 'Managing Director, Perfect Living Properties Ltd.',
       content:
-        'The team delivered exceptional quality. Our commercial exceeded expectations.',
-      rating: 5,
+        'আমাদের রিয়েল এস্টেট প্রজেক্টের ভিডিওগুলো অত্যন্ত প্রফেশনাল ছিল। তাদের কাজের মান এবং ডিটেইলস আমাদের ব্র্যান্ড ভ্যালু অনেক বাড়িয়ে দিয়েছে। আমরা তাদের সার্ভিসে খুবই সন্তুষ্ট',
+      rating: 4.5,
       image: 'https://randomuser.me/api/portraits/women/44.jpg',
     },
     {
-      name: 'Michael Chen',
-      role: 'CEO, Tech Innovators',
+      name: 'Nahid Hasan',
+      role: 'Founder, Nahid Biology',
       content:
-        'Professional, creative, and incredibly talented. They captured our brand perfectly.',
-      rating: 5,
+        'শিক্ষামূলক ভিডিওগুলোকে এতো সুন্দরভাবে প্রেজেন্ট করার জন্য ধন্যবাদ। জটিল বিষয়গুলো ভিজ্যুয়ালের মাধ্যমে খুব সহজ হয়ে উঠেছে, যা স্টুডেন্টদের কাছে অনেক জনপ্রিয় হয়েছে',
+      rating: 4,
       image: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Event Coordinator',
+      name: 'Nayeem Hasan',
+      role: 'Owner, Rajshahi Cooling Refrigeration',
       content:
-        'Our wedding video is absolutely beautiful. They captured every moment.',
+        'আমাদের সার্ভিস প্রোমো ভিডিওটি এক কথায় চমৎকার হয়েছে। তারা আমাদের ব্যবসার মূল বিষয়গুলো খুব দারুণভাবে ফুটিয়ে তুলেছে। হাইলি রেকমেন্ডেড',
       rating: 5,
       image: 'https://randomuser.me/api/portraits/women/68.jpg',
     },
@@ -119,10 +119,10 @@ export default function VideographyPage() {
               </span>
 
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                Bringing Your Vision to
+                বাস্তবে রূপদিন আপনার
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
                   {' '}
-                  Life
+                   সপ্নকে
                 </span>
               </h1>
 
