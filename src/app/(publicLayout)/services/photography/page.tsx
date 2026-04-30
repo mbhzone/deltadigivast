@@ -354,11 +354,11 @@ export default function PhotographyPage() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-gray-300">
                     <Phone className="w-5 h-5 text-[#6efd0b]" />
-                    <span>+880 1234 567890</span>
+                    <span>+880 1632 363235</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <Mail className="w-5 h-5 text-[#6efd0b]" />
-                    <span>design@agency.com</span>
+                    <span>help@deltadigivast.com</span>
                   </div>
                 </div>
               </div>
