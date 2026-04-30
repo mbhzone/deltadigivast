@@ -44,14 +44,14 @@ export default async function ProjectDetailPage({ params }: Props) {
       <div className="min-h-screen bg-white dark:bg-gray-900 flex items-center justify-center p-4">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Project Not Found
+            প্রজেক্টটি খুঁজে পাওয়া যায়নি
           </h1>
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b] text-gray-900 rounded-lg hover:bg-[#4fd100] transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#6efd0b] text-gray-900 rounded-xl hover:bg-[#4fd100] transition-all font-semibold"
           >
             <ArrowLeft size={16} />
-            Back to Portfolio
+            পোর্টফোলিওতে ফিরে যান
           </Link>
         </div>
       </div>
@@ -73,27 +73,27 @@ export default async function ProjectDetailPage({ params }: Props) {
       project.videoUrl.includes('vimeo'));
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 py-12">
+    <div className="min-h-screen bg-white dark:bg-black py-12 transition-colors duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <Link
           href="/portfolio"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors mb-8 group"
         >
-          <ArrowLeft size={16} />
-          Back to Portfolio
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+          সব প্রজেক্ট দেখুন
         </Link>
 
         {/* Project Header */}
         <div className="mb-8">
           <div className="flex items-center gap-2 text-[#6efd0b] mb-3">
             <Tag size={14} />
-            <span className="text-sm font-medium">
-              {project.category || 'Uncategorized'}
+            <span className="text-sm font-semibold uppercase tracking-wider">
+              {project.category || 'Portfolio'}
             </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {project.title}
           </h1>
 
@@ -105,11 +105,11 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </div>
 
-        {/* Project Media */}
+        {/* Project Media Section */}
         {(project.imageUrl || project.videoUrl) && (
-          <div className="mb-8 rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800">
+          <div className="mb-12 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-950 flex justify-center shadow-xl">
             {isVideo ? (
-              <div className="aspect-video">
+              <div className="aspect-video w-full">
                 <iframe
                   src={
                     project.videoUrl?.includes('youtu.be')
@@ -125,12 +125,14 @@ export default async function ProjectDetailPage({ params }: Props) {
               </div>
             ) : (
               project.imageUrl && (
-                <div className="relative aspect-video">
+                /* Square Ratio (1080x1080 style) applied here */
+                <div className="relative aspect-square w-full max-w-[600px] mx-auto">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
               )
@@ -139,25 +141,27 @@ export default async function ProjectDetailPage({ params }: Props) {
         )}
 
         {/* Project Description */}
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-            About this project
+        <div className="max-w-4xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-l-4 border-[#6efd0b] pl-4">
+            প্রজেক্ট সম্পর্কে বিস্তারিত
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-line">
             {project.description}
           </p>
         </div>
 
         {/* Action Button */}
-        <a
-          href={project.videoUrl || project.imageUrl || '#'}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b] text-gray-900 rounded-lg hover:bg-[#4fd100] transition-colors font-medium"
-        >
-          <ExternalLink size={16} />
-          View {isVideo ? 'Video' : 'Image'}
-        </a>
+        <div className="mt-10 pt-10 border-t border-gray-100 dark:border-gray-800">
+            <a
+            href={project.videoUrl || project.imageUrl || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-xl hover:bg-[#4fd100] transition-all font-bold shadow-lg shadow-[#6efd0b]/20"
+            >
+            <ExternalLink size={18} />
+            {isVideo ? 'ভিডিওটি দেখুন' : 'ছবিটি বড় করে দেখুন'}
+            </a>
+        </div>
       </div>
     </div>
   );
