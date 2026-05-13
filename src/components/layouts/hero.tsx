@@ -73,7 +73,7 @@ const Hero = ({
         <div className="grid items-center  lg:grid-cols-2  grid-rows-2 lg:grid-rows-1">
           {/* Right Image (Mobile first) */}
           <div className="relative  order-1 lg:order-2">
-            <div className="relative rounded-md overflow-hidden ">
+            <div className="relative rounded-md overflow-hidden animate-slow-spin">
               <Image
                 src={image.src}
                 alt={image?.alt || 'Hero banner image'}
