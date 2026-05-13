@@ -102,7 +102,10 @@ const Navbar = ({ className }: NavbarProps) => {
 
   return (
     <section
-      className={cn('py-4 bg-background border-b sticky top-0 z-50', className)}
+      className={cn(
+        'py-4 bg-[#F6FFF0] dark:bg-gray-950 border-b sticky top-0 z-50',
+        className,
+      )}
     >
       <div className="container mx-auto px-2 md:px-0">
         <nav className="flex items-center justify-between">

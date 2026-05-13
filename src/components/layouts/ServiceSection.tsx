@@ -26,7 +26,11 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
       title: 'ডিজিটাল মার্কেটিং',
       description:
         'সঠিক অডিয়েন্সের কাছে আপনার পণ্য পৌঁছে দিয়ে আমরা আপনার সেলস বৃদ্ধি নিশ্চিত করি।',
-      items: ['ফেসবুক অ্যাডস', 'সোশ্যাল মিডিয়া ম্যানেজমেন্ট', 'টার্গেটেড মার্কেটিং'],
+      items: [
+        'ফেসবুক অ্যাডস',
+        'সোশ্যাল মিডিয়া ম্যানেজমেন্ট',
+        'টার্গেটেড মার্কেটিং',
+      ],
     },
     {
       icon: <Code2 className="h-6 w-6 text-[#6efd0b]" />,
@@ -38,7 +42,7 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
   ];
 
   return (
-    <section className={cn('py-20 bg-white dark:bg-black', className)}>
+    <section className={cn('py-20 ', className)}>
       <div className="container mx-auto px-4">
         <div className="space-y-12">
           <div className="space-y-4 text-center">
@@ -46,7 +50,8 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
               আমাদের সার্ভিসসমূহ
             </h2>
             <p className="mx-auto max-w-2xl text-lg tracking-tight text-gray-600 dark:text-gray-400 md:text-xl">
-              রাজশাহীর local business-এর ডিজিটাল গ্রোথ নিশ্চিত করতে আমরা দিচ্ছি আধুনিক ও কার্যকরী সব ডিজিটাল সার্ভিস।
+              রাজশাহীর local business-এর ডিজিটাল গ্রোথ নিশ্চিত করতে আমরা দিচ্ছি
+              আধুনিক ও কার্যকরী সব ডিজিটাল সার্ভিস।
             </p>
           </div>
 
@@ -60,14 +65,19 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
                   <div className="rounded-xl bg-[#6efd0b]/10 p-3 group-hover:scale-110 transition-transform">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                    {service.title}
+                  </h3>
                 </div>
                 <p className="leading-relaxed text-gray-600 dark:text-gray-400 text-sm">
                   {service.description}
                 </p>
                 <div className="space-y-2 pt-2">
                   {service.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
+                    <div
+                      key={itemIndex}
+                      className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                    >
                       <div className="h-1.5 w-1.5 rounded-full bg-[#6efd0b]" />
                       <span className="text-sm font-medium">{item}</span>
                     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoSection = () => {
   return (
-    <section className="py-0 md:py-8 text-center ">
+    <section className="py-0 md:py-8 text-center">
       <div className="relative w-full container mx-auto">
         <video
           className="w-full md:rounded-md shadow-lg"

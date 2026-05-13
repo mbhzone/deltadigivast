@@ -55,13 +55,13 @@ const realReviews = [
 
 const ClientReview = () => {
   return (
-    <div className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-colors duration-300">
+    <div className="container mx-auto px-4 py-20  transition-colors duration-300">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           Client Reviews
         </h2>
         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            আমাদের কাজের মান সম্পর্কে ক্লায়েন্টরা যা বলছেন
+          আমাদের কাজের মান সম্পর্কে ক্লায়েন্টরা যা বলছেন
         </p>
       </div>
 
@@ -84,7 +84,6 @@ const ClientReview = () => {
         {realReviews.map((review, idx) => (
           <SwiperSlide key={idx} className="pb-12">
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-2xl relative border border-gray-100 dark:border-white/10 h-full flex flex-col justify-between min-h-[380px] transition-all hover:border-[#6efd0b]/30">
-              
               <FaQuoteLeft className="absolute top-6 left-6 text-2xl text-[#6efd0b]/30" />
 
               <div className="flex justify-center mb-6">
@@ -100,22 +99,19 @@ const ClientReview = () => {
               </div>
 
               <p className="text-gray-700 dark:text-gray-300 text-[0.95rem] leading-relaxed text-center italic">
-                "{review.text}"
+                &quot;{review.text}&quot;
               </p>
 
               <div className="mt-8 text-center border-t border-gray-100 dark:border-gray-800 pt-6">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                    {review.author}
-                  </h3>
-                  <p className="text-[#6efd0b] text-sm font-medium mb-3">
-                    {review.position}
-                  </p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                  {review.author}
+                </h3>
+                <p className="text-[#6efd0b] text-sm font-medium mb-3">
+                  {review.position}
+                </p>
                 <div className="flex items-center justify-center gap-1">
                   {Array.from({ length: 5 }).map((_, index) => (
-                      <FaStar
-                        key={index}
-                        className="text-sm text-yellow-400"
-                      />
+                    <FaStar key={index} className="text-sm text-yellow-400" />
                   ))}
                 </div>
               </div>

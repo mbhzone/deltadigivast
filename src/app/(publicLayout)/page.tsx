@@ -34,7 +34,7 @@ export default async function HomePage() {
   const projects = await getProjects();
   const hero = data?.data;
   return (
-    <div>
+    <div className="bg-[#FAFFF7] dark:bg-gray-950">
       <Hero
         badge="Trusted by 50+ Brands In Rajshahi"
         heading={hero?.title}

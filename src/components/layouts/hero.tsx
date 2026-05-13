@@ -2,6 +2,7 @@ import { ArrowRight, ArrowUpRight, Sparkles, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface HeroProps {
   badge?: string;
@@ -56,7 +57,8 @@ const Hero = ({
   return (
     <section
       className={cn(
-        'relative overflow-hidden bg-gradient-to-br from-background via-background to-secondary/20',
+        'relative overflow-hidden',
+        'bg-[#FAFFF7] dark:bg-gray-950',
         'pb-5 md:py-16 lg:py-24',
         className,
       )}
@@ -68,15 +70,17 @@ const Hero = ({
       </div>
 
       <div className="container mx-auto px-2 sm:px-0">
-        <div className="grid items-center md:gap-8 lg:grid-cols-2 lg:gap-16 grid-rows-2 lg:grid-rows-1">
+        <div className="grid items-center  lg:grid-cols-2  grid-rows-2 lg:grid-rows-1">
           {/* Right Image (Mobile first) */}
           <div className="relative  order-1 lg:order-2">
-            <div className="relative rounded-md overflow-hidden shadow-2xl">
-              <img
+            <div className="relative rounded-md overflow-hidden ">
+              <Image
                 src={image.src}
-                alt={image.alt}
-                className="h-[400px] sm:h-[500px]  w-full object-cover transition-transform duration-700 hover:scale-105"
-                loading="eager"
+                alt={image?.alt || 'Hero banner image'}
+                width={1920}
+                height={1080}
+                className="h-[400px] sm:h-[500px] w-full object-cover"
+                priority
               />
             </div>
 
@@ -102,7 +106,7 @@ const Hero = ({
             )}
 
             {/* Main Heading */}
-            <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl  bg-gradient-to-r from-lime-100 to-[#4fd100] bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-lime-300 dark:from-lime-100 to-[#4fd100] bg-clip-text text-transparent">
               {heading}
               {/* <span className="block mt-2 bg-gradient-to-r from-lime-100 to-[#4fd100] bg-clip-text text-transparent">
                 Your Success Partner
