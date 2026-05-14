@@ -55,7 +55,7 @@ const realReviews = [
 
 const ClientReview = () => {
   return (
-    <div className="container mx-auto px-4 py-20  transition-colors duration-300">
+    <div className="container mx-auto px-4   transition-colors duration-300">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           Client Reviews
@@ -82,7 +82,7 @@ const ClientReview = () => {
         className="client-review-swiper"
       >
         {realReviews.map((review, idx) => (
-          <SwiperSlide key={idx} className="pb-12">
+          <SwiperSlide key={idx} className="">
             <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-2xl relative border border-gray-100 dark:border-white/10 h-full flex flex-col justify-between min-h-[380px] transition-all hover:border-[#6efd0b]/30">
               <FaQuoteLeft className="absolute top-6 left-6 text-2xl text-[#6efd0b]/30" />
 
@@ -135,7 +135,6 @@ const ClientReview = () => {
           transition: width 0.3s ease;
         }
         :global(.swiper-pagination) {
-          margin-top: 30px;
           position: relative !important;
         }
       `}</style>

@@ -30,7 +30,7 @@ export default function ProjectCardHome({ projects }: Props) {
             href={`/portfolio/${project.id}`}
             className="group block bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-border"
           >
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-52 md:h-72 overflow-hidden">
               {project.imageUrl ? (
                 <Image
                   src={project.imageUrl}
@@ -54,18 +54,6 @@ export default function ProjectCardHome({ projects }: Props) {
                   No Preview
                 </div>
               )}
-              <span className="absolute top-3 left-3 px-2 py-1 bg-[#6efd0b] text-gray-900 dark:text-gray-900 rounded-full text-xs font-medium">
-                {project.category}
-              </span>
-            </div>
-
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#6efd0b] transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                {project.description}
-              </p>
             </div>
           </Link>
         ))}

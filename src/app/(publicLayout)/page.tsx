@@ -26,6 +26,7 @@ async function getProjects(): Promise<Project[]> {
     },
   );
   const data = await res.json();
+
   return data.data;
 }
 
@@ -34,7 +35,7 @@ export default async function HomePage() {
   const projects = await getProjects();
   const hero = data?.data;
   return (
-    <div className="bg-[#FAFFF7] dark:bg-gray-950">
+    <div className="bg-[#FAFFF7] dark:bg-gray-950 space-y-10 md:space-y-20">
       <Hero
         badge="Trusted by 50+ Brands In Rajshahi"
         heading={hero?.title}

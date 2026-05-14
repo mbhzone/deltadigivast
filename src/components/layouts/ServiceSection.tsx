@@ -42,7 +42,7 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
   ];
 
   return (
-    <section className={cn('py-20 ', className)}>
+    <section className={cn(' ', className)}>
       <div className="container mx-auto px-4">
         <div className="space-y-12">
           <div className="space-y-4 text-center">

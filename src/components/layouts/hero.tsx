@@ -59,7 +59,7 @@ const Hero = ({
       className={cn(
         'relative overflow-hidden',
         'bg-[#FAFFF7] dark:bg-gray-950',
-        'pb-5 md:py-16 lg:py-24',
+        'pb-5 md:pt-16 lg:pt-24',
         className,
       )}
     >
