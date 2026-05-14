@@ -27,7 +27,7 @@ const categories = [
 ];
 
 export default function ProjectGrid({ projects }: Props) {
-  const [filter, setFilter] = React.useState<'all' | string>('all');
+  const [filter, setFilter] = React.useState<string>('Video Content');
 
   const filteredProjects =
     filter === 'all' ? projects : projects.filter(p => p.category === filter);
@@ -64,9 +64,9 @@ export default function ProjectGrid({ projects }: Props) {
           //   className="group block bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-border"
           // >
           <div key={project.id} className="">
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative  overflow-hidden">
               {project.imageUrl ? (
-                <div className="relative w-full max-w-[1080px] aspect-square">
+                <div className="relative w-full  aspect-square">
                   <Image
                     src={project.imageUrl}
                     alt={project.title}
@@ -75,16 +75,18 @@ export default function ProjectGrid({ projects }: Props) {
                   />
                 </div>
               ) : project.videoUrl ? (
-                <iframe
-                  src={
-                    project.videoUrl.includes('youtu.be')
-                      ? `https://www.youtube.com/embed/${project.videoUrl.split('/').pop()}`
-                      : project.videoUrl
-                  }
-                  title={project.title}
-                  className="w-full h-full"
-                  allowFullScreen
-                />
+                <div className="h-52 md:h-72">
+                  <iframe
+                    src={
+                      project.videoUrl.includes('youtu.be')
+                        ? `https://www.youtube.com/embed/${project.videoUrl.split('/').pop()}`
+                        : project.videoUrl
+                    }
+                    title={project.title}
+                    className="w-full h-full "
+                    allowFullScreen
+                  />
+                </div>
               ) : (
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400">
                   No Preview
@@ -93,15 +95,6 @@ export default function ProjectGrid({ projects }: Props) {
               <span className="absolute top-3 left-3 px-2 py-1 bg-[#6efd0b] text-gray-900 dark:text-gray-900 rounded-full text-xs font-medium">
                 {project.category}
               </span>
-            </div>
-
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-[#6efd0b] transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                {project.description}
-              </p>
             </div>
           </div>
           // </Link>
