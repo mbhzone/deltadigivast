@@ -2,7 +2,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { Layers } from 'lucide-react';
-import Link from 'next/link';
 
 type Project = {
   id: string;
@@ -33,26 +32,34 @@ export default function ProjectGrid({ projects }: Props) {
     filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-0">
-      {/* Filter */}
-      <div className="flex flex-wrap items-center gap-3 my-8">
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">
-          <Layers size={16} className="inline mr-1" />
-          Filter:
-        </span>
-        {categories.map(category => (
-          <button
-            key={category}
-            onClick={() => setFilter(category)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-              filter === category
-                ? 'bg-[#6efd0b] text-gray-900 shadow-lg shadow-[#6efd0b]/25'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-            }`}
-          >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </button>
-        ))}
+    <section className="max-w-7xl mx-auto ">
+      {/* Filter - Clean One Line */}
+      <div className="my-8">
+        <div className="flex items-start gap-3 flex-wrap lg:flex-nowrap">
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-1 pt-2">
+            <Layers size={16} />
+            Filter:
+          </span>
+
+          <div className="flex-1 overflow-x-auto overflow-y-hidden scrollbar-hide">
+            <div className="flex gap-2 min-w-max">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  onClick={() => setFilter(category)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap
+              ${
+                filter === category
+                  ? 'bg-[#6efd0b] text-gray-900 shadow-lg shadow-[#6efd0b]/25'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+                >
+                  {category.charAt(0).toUpperCase() + category.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Grid */}

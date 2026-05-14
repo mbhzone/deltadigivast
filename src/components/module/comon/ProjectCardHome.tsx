@@ -25,9 +25,9 @@ export default function ProjectCardHome({ projects }: Props) {
       {/* Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pb-3">
         {projects.slice(0, 6).map(project => (
-          <Link
+          <div
             key={project.id}
-            href={`/portfolio/${project.id}`}
+            // href={`/portfolio/${project.id}`}
             className="group block bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-border"
           >
             <div className="relative h-52 md:h-72 overflow-hidden">
@@ -55,7 +55,7 @@ export default function ProjectCardHome({ projects }: Props) {
                 </div>
               )}
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>
