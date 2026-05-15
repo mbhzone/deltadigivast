@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import {
   Play,
   Camera,
@@ -12,9 +11,12 @@ import {
   Users,
   Star,
   Award,
+  Sparkles,
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function VideographyPage() {
+  const [isPlaying, setIsPlaying] = React.useState(false);
   const services = [
     {
       icon: Film,
@@ -47,16 +49,16 @@ export default function VideographyPage() {
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '100+', icon: Film },
-    { label: 'Happy Clients', value: '80+', icon: Users },
-    { label: 'Years Experience', value: '1+', icon: Award },
-    { label: 'Awards Won', value: '1+', icon: Star },
+    { label: 'Projects ', value: '100+', icon: Film },
+    { label: ' Clients', value: '80+', icon: Users },
+    { label: ' Experience', value: '1+', icon: Award },
+    { label: 'Awards ', value: '1+', icon: Star },
   ];
 
   return (
     <div className="min-h-screen  transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative overflow-hidden  py-24">
+      <section className="relative overflow-hidden py-7 md:py-20">
         <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/5 to-transparent"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/5 to-transparent"></div>
 
@@ -65,15 +67,18 @@ export default function VideographyPage() {
           <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="relative container mx-auto px-3 lg:px-0">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
-                <Camera size={16} />
-                Professional Video Production — রাজশাহী
-              </span>
+              {/* Premium Badge */}
+              <div className="inline-flex mb-2 md:mb-5">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6efd0b]/10 to-transparent border-l-4 border-[#6efd0b] rounded-r-lg text-sm font-medium text-lime-500 dark:text-[#6efd0b]">
+                  <Sparkles size={16} />
+                  Professional Video Production — রাজশাহী
+                </span>
+              </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-2xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
                 বাস্তবে রূপদিন আপনার
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
                   {' '}
@@ -81,40 +86,42 @@ export default function VideographyPage() {
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+              <p className=" text-gray-600 dark:text-gray-400 mb-8">
                 একটি ভালো video আপনার business-এর গল্প বদলে দিতে পারে। আমাদের
                 নিজস্ব studio বা Outdoor shoot, professional editing এবং result
                 driven
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-xl font-semibold hover:bg-[#4fd100] transition flex items-center gap-2">
-                  <Play size={18} />
-                  আমাদের Video Portfolio দেখুন
-                </button>
+                <Link href={'/portfolio'}>
+                  <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-xl font-semibold hover:bg-[#4fd100] transition flex items-center gap-2">
+                    <Play size={18} />
+                    আমাদের Video Portfolio দেখুন
+                  </button>
+                </Link>
 
-                <button className="px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition flex items-center gap-2">
-                  <Calendar size={18} />
-                  Video Project শুরু করুন →
-                </button>
+                <Link href={'/contact'}>
+                  <button className="px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-xl font-semibold transition flex items-center gap-2">
+                    <Calendar size={18} />
+                    Video Project শুরু করুন →
+                  </button>
+                </Link>
               </div>
             </div>
 
-            {/* Video */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
-                <Image
-                  src="https://images.unsplash.com/photo-1574717024453-354056afaffc?q=80&w=1000"
-                  alt="Video"
-                  fill
-                  className="object-cover"
+            <div className="">
+              <div className="relative w-full overflow-hidden rounded-sm md:rounded-2xl">
+                <video
+                  id="heroVideo"
+                  src="/videos/hero-video.mp4"
+                  poster="https://images.unsplash.com/photo-1536240474400-5ddbcd0a1b56?q=80&w=1000"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
                 />
-
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <button className="w-20 h-20 bg-[#6efd0b] rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-gray-900 ml-1" />
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -123,21 +130,30 @@ export default function VideographyPage() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6efd0b]/30 to-transparent"></div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 ">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Stats - Optimized Colors */}
+      <section className="py-12 md:py-16 lg:py-20 bg-[#FAFFF7] dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
+          <div className="grid grid-cols-4 gap-0">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#6efd0b]/10 rounded-xl mb-3">
-                  <stat.icon className="w-5 h-5 text-[#6efd0b]" />
+              <div
+                key={index}
+                className={`
+            text-center  sm:p-3 md:p-4 transition-all duration-300
+            ${index < 3 ? 'border-r border-gray-200 dark:border-gray-800' : ''}
+          `}
+              >
+                {/* Icon with proper light/dark colors */}
+                <div className="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-[#6efd0b]/10 dark:bg-[#6efd0b]/10 rounded-md sm:rounded-lg mb-1 sm:mb-2 transition-all duration-300 group-hover:scale-110">
+                  <stat.icon className="w-10 h-10 sm:w-4 sm:h-4 md:w-5 md:h-5 text-[#2e7d00] dark:text-[#6efd0b]" />
                 </div>
 
-                <div className="text-3xl font-bold text-gray-900 dark:text-white">
+                {/* Value */}
+                <div className="text-sm md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
                   {stat.value}
                 </div>
 
-                <div className="text-sm text-gray-500 dark:text-gray-400">
+                {/* Label - Improved visibility */}
+                <div className="text-sm text-gray-600 dark:text-gray-400 leading-tight mt-0.5 sm:mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -150,7 +166,7 @@ export default function VideographyPage() {
       <section className="pb-10 md:pb-20 ">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               VIDEO SERVICES WE OFFER
             </h2>
           </div>

@@ -152,7 +152,7 @@ export default function MarketingPage() {
             <div className="space-y-6 md:space-y-8">
               {/* Premium Badge */}
               <div className="inline-flex">
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6efd0b]/10 to-transparent border-l-4 border-[#6efd0b] rounded-r-lg text-sm font-medium text-[#6efd0b]">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6efd0b]/10 to-transparent border-l-4 border-[#6efd0b] rounded-r-lg text-sm font-medium text-lime-500 dark:text-[#6efd0b]">
                   <Sparkles size={16} />
                   Digital Marketing Agency — রাজশাহী
                 </span>
