@@ -72,8 +72,10 @@ const Footer = ({
   ];
 
   return (
-    <section className={cn('pt-5 md:mt-7 bg-background', className)}>
-      <div className="container mx-auto px-2 md:px-0">
+    <section className={cn(' bg-[#f4ffe8] dark:bg-[#020817]', className)}>
+      {/* Premium Bottom Decorative Line */}
+      <div className="h-px bg-gradient-to-r from-transparent via-[#6efd0b]/30 to-transparent"></div>
+      <div className="container mx-auto px-2 md:px-0 md:mt-7 pt-5">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           {/* Logo & description */}
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">

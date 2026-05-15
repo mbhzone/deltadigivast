@@ -29,7 +29,7 @@ export default async function PortfolioPage() {
 
   return (
     <div className="min-h-screen bg-[#FAFFF7] dark:bg-gray-950 transition-colors duration-500">
-      {/* Hero Section - Premium Design */}
+      {/* Hero Section  */}
       <section className="relative bg-[#FAFFF7] dark:bg-gray-950 overflow-hidden">
         {/* Premium Background Elements */}
         <div className="absolute inset-0">

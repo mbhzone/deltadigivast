@@ -28,7 +28,7 @@ export default function BlogCard({ blog }: Props) {
   return (
     <Link
       href={`/blog/${blog.id}`}
-      className="group block bg-white dark:bg-black rounded-md shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
+      className="group block  rounded-md shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
     >
       <div className="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-900">
         {blog.imageUrl ? (

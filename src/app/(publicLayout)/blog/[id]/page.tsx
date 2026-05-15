@@ -6,11 +6,9 @@ import {
   ArrowLeft,
   Share2,
   Heart,
-  Bookmark,
   Twitter,
   Facebook,
   Linkedin,
-  Mail,
 } from 'lucide-react';
 
 type Blog = {
@@ -58,7 +56,8 @@ export default async function BlogDetailPage({ params }: Props) {
             ব্লগটি খুঁজে পাওয়া যায়নি
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            দুঃখিত, আপনি যে ব্লগ পোস্টটি খুঁজছেন তা বর্তমানে নেই অথবা সরিয়ে ফেলা হয়েছে।
+            দুঃখিত, আপনি যে ব্লগ পোস্টটি খুঁজছেন তা বর্তমানে নেই অথবা সরিয়ে ফেলা
+            হয়েছে।
           </p>
           <Link
             href="/blog"
@@ -142,14 +141,29 @@ export default async function BlogDetailPage({ params }: Props) {
             <span className="text-sm text-gray-500 dark:text-gray-500 hidden sm:block">
               Share on:
             </span>
-            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
+            <a
+              href="#"
+              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            >
               <Twitter size={16} className="text-gray-600 dark:text-gray-400" />
             </a>
-            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
-              <Facebook size={16} className="text-gray-600 dark:text-gray-400" />
+            <a
+              href="#"
+              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            >
+              <Facebook
+                size={16}
+                className="text-gray-600 dark:text-gray-400"
+              />
             </a>
-            <a href="#" className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors">
-              <Linkedin size={16} className="text-gray-600 dark:text-gray-400" />
+            <a
+              href="#"
+              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+            >
+              <Linkedin
+                size={16}
+                className="text-gray-600 dark:text-gray-400"
+              />
             </a>
           </div>
         </div>
@@ -158,14 +172,13 @@ export default async function BlogDetailPage({ params }: Props) {
       {/* Featured Image - Ratio fixed to 1:1 Square (1080x1080 style) */}
       {blog.imageUrl && (
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex justify-center">
-          <div className="relative aspect-square w-full max-w-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative aspect-square w-full max-w-[600px]  overflow-hidden shadow-2xl">
             <Image
               src={blog.imageUrl}
               alt={blog.title}
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 600px) 100vw, 600px"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>

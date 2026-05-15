@@ -82,7 +82,7 @@ export default function ProjectGrid({ projects }: Props) {
                   />
                 </div>
               ) : project.videoUrl ? (
-                <div className="h-52 md:h-72">
+                <div className="h-52 md:h-60 ">
                   <iframe
                     src={
                       project.videoUrl.includes('youtu.be')
@@ -90,7 +90,7 @@ export default function ProjectGrid({ projects }: Props) {
                         : project.videoUrl
                     }
                     title={project.title}
-                    className="w-full h-full "
+                    className="w-full h-full rounded-md "
                     allowFullScreen
                   />
                 </div>
@@ -99,9 +99,6 @@ export default function ProjectGrid({ projects }: Props) {
                   No Preview
                 </div>
               )}
-              <span className="absolute top-3 left-3 px-2 py-1 bg-[#6efd0b] text-gray-900 dark:text-gray-900 rounded-full text-xs font-medium">
-                {project.category}
-              </span>
             </div>
           </div>
           // </Link>
