@@ -5,25 +5,16 @@ import {
   TrendingUp,
   Search,
   Share2,
-  MousePointer,
   BarChart3,
   Target,
   Users,
-  Globe,
-  Mail,
-  Phone,
   MapPin,
   CheckCircle,
   Sparkles,
   Rocket,
   Award,
-  Clock,
-  PieChart,
   Instagram,
   Facebook,
-  Linkedin,
-  Twitter,
-  ChevronRight,
   ShieldCheck,
   Video,
   MessageSquare,
@@ -117,8 +108,7 @@ export default function MarketingPage() {
     },
     {
       title: 'Direct Communication',
-      description:
-        'সরাসরি আমাদের team-এর সাথে কথা বলতে পারবেন। কোনো আড়াল নেই।',
+      description: 'সরাসরি আমাদের team-এর সাথে কথা বলতে পারবেন। কোনো আড়াল নেই।',
       icon: MessageSquare,
     },
   ];
@@ -127,113 +117,128 @@ export default function MarketingPage() {
     {
       step: '01',
       title: 'Discovery',
-      description: 'আপনার business, target customer, এবং goal বুঝি। রাজশাহীর market-এ আপনার position analyze করি।',
+      description:
+        'আপনার business, target customer, এবং goal বুঝি। রাজশাহীর market-এ আপনার position analyze করি।',
     },
     {
       step: '02',
       title: 'Strategy',
-      description: 'আপনার জন্য specific marketing plan তৈরি করি। Platform, audience এবং budget plan করি।',
+      description:
+        'আপনার জন্য specific marketing plan তৈরি করি। Platform, audience এবং budget plan করি।',
     },
     {
       step: '03',
       title: 'Execution',
-      description: 'Campaign launch করি। Content তৈরি করি। Ads চালাই এবং Page manage করি।',
+      description:
+        'Campaign launch করি। Content তৈরি করি। Ads চালাই এবং Page manage করি।',
     },
     {
       step: '04',
       title: 'Report & Optimize',
-      description: 'Result দেখি। ভালো কাজ করছে সেটা scale করি। কম result দিচ্ছে সেটা optimize করি।',
+      description:
+        'Result দেখি। ভালো কাজ করছে সেটা scale করি। কম result দিচ্ছে সেটা optimize করি।',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
+    <div className="min-h-screen  transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#FAFFF7] to-white dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        {/* Premium Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,#6efd0b02_25%,transparent_25%,transparent_75%,#6efd0b02_75%,#6efd0b02),linear-gradient(45deg,#6efd0b02_25%,transparent_25%,transparent_75%,#6efd0b02_75%,#6efd0b02)] bg-[size:60px_60px] bg-[position:0_0,30px_30px] opacity-30"></div>
+        <div className="container mx-auto px-4 md:px-0 py-10 md:py-20 ">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
-            <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
-                <Sparkles size={16} />
-                Digital Marketing Agency — রাজশাহী
-              </span>
+            <div className="space-y-6 md:space-y-8">
+              {/* Premium Badge */}
+              <div className="inline-flex">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#6efd0b]/10 to-transparent border-l-4 border-[#6efd0b] rounded-r-lg text-sm font-medium text-[#6efd0b]">
+                  <Sparkles size={16} />
+                  Digital Marketing Agency — রাজশাহী
+                </span>
+              </div>
 
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              {/* Main Heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight">
                 রাজশাহীর সঠিক Customer-এর কাছে পৌঁছে দিই আপনার
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
-                  {' '}
+                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
                   Business
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                Facebook Ads, Instagram Boost, Social Media Marketing — রাজশাহীর local audience targeting-এ আমরা specialist। সঠিকভাবে করলে result আসেই।
+              {/* Description */}
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+                Facebook Ads, Instagram Boost, Social Media Marketing — রাজশাহীর
+                local audience targeting-এ আমরা specialist।
               </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 transform hover:scale-105 shadow-lg shadow-[#6efd0b]/25 flex items-center gap-2">
-                  <Rocket size={18} />
-                  Free Consultation নিন →
-                </button>
-              </div>
-
-              {/* Trust Badges */}
-              <div className="flex items-center gap-6 mt-8">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map(i => (
-                      <div
-                        key={i}
-                        className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 border-2 border-white dark:border-gray-800"
-                      ></div>
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
-                    Trusted by local brands
-                  </span>
-                </div>
-              </div>
             </div>
 
-            {/* Right Content - Hero Image */}
+            {/* Right Content - Premium Image Card */}
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000"
-                  alt="Digital Marketing Team"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#6efd0b]/20 to-transparent"></div>
-              </div>
+              {/* Decorative blurred circle */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#6efd0b]/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#2e9e00]/20 rounded-full blur-3xl"></div>
 
-              {/* Floating Platform Card */}
-              <div className="absolute -top-6 -right-6 bg-white dark:bg-black rounded-md shadow-xl p-4 border border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-1">
-                    <Facebook className="w-6 h-6 text-blue-600" />
-                    <Instagram className="w-6 h-6 text-pink-600" />
+              {/* Main Image Card */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 dark:ring-gray-800">
+                <div className="aspect-[4/3] relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000"
+                    alt="Digital Marketing Team"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#6efd0b]/10 via-transparent to-transparent"></div>
+
+                {/* Floating trust badge */}
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-[#6efd0b]/10 rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-[#6efd0b]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-900 dark:text-white">
+                        Trusted by 30+ Businesses
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                        in Rajshahi
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-sm font-medium text-gray-900 dark:text-white">
-                    Social Media
-                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Premium Bottom Decorative Line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6efd0b]/50 to-transparent"></div>
+
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6efd0b]/5 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2e9e00]/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-50 dark:bg-black py-16 border-y border-gray-200 dark:border-gray-700">
+      <section className=" py-16 border-y border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#6efd0b]/10 rounded-md mb-3">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#6efd0b]/10 rounded-xs mb-3">
                   <stat.icon className="w-5 h-5 text-[#6efd0b]" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">
@@ -249,7 +254,7 @@ export default function MarketingPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="pt-10 md:pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-4">
@@ -268,12 +273,12 @@ export default function MarketingPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:-translate-y-1 overflow-hidden"
+                className="group  rounded-xs shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:-translate-y-1 overflow-hidden"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div
-                      className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center group-hover:scale-110 transition-transform`}
+                      className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-xs flex items-center justify-center group-hover:scale-110 transition-transform`}
                     >
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
@@ -308,7 +313,7 @@ export default function MarketingPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-50 dark:bg-black">
+      <section className="pt-10 md:pt-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -316,13 +321,13 @@ export default function MarketingPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-800 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-14 h-14 bg-[#6efd0b]/10 rounded-md flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 bg-[#6efd0b]/10 rounded-xs flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-[#6efd0b]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
@@ -349,7 +354,7 @@ export default function MarketingPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {process.map((item, index) => (
               <div key={index} className="relative">
-                <div className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                <div className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-700 h-full">
                   <div className="text-4xl font-bold text-[#6efd0b] mb-2">
                     {item.step}
                   </div>

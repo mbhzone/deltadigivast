@@ -49,6 +49,7 @@ interface NavbarProps {
 const Navbar = ({ className }: NavbarProps) => {
   const [user, setUser] = useState<any>(null);
   const [mounted, setMounted] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
@@ -111,9 +112,13 @@ const Navbar = ({ className }: NavbarProps) => {
         <nav className="flex items-center justify-between">
           {/* mobile menu */}
           <div className=" sm:hidden block">
-            <Sheet>
+            <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button
+                  onClick={() => setSheetOpen(true)}
+                  variant="outline"
+                  size="icon"
+                >
                   <MenuIcon className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
@@ -139,23 +144,43 @@ const Navbar = ({ className }: NavbarProps) => {
                 <div className="flex flex-col p-4">
                   {/* Main Menu */}
                   <div className="flex flex-col gap-5 mt-6 text-base font-medium">
-                    <Link href="/" className="hover:text-primary">
+                    <Link
+                      onClick={() => setSheetOpen(false)}
+                      href="/"
+                      className="hover:text-primary"
+                    >
                       Home
                     </Link>
 
-                    <Link href="/portfolio" className="hover:text-primary">
+                    <Link
+                      onClick={() => setSheetOpen(false)}
+                      href="/portfolio"
+                      className="hover:text-primary"
+                    >
                       Portfolio
                     </Link>
 
-                    <Link href="/blog" className="hover:text-primary">
+                    <Link
+                      onClick={() => setSheetOpen(false)}
+                      href="/blog"
+                      className="hover:text-primary"
+                    >
                       Blog
                     </Link>
 
-                    <Link href="/about-us" className="hover:text-primary">
+                    <Link
+                      onClick={() => setSheetOpen(false)}
+                      href="/about-us"
+                      className="hover:text-primary"
+                    >
                       About Us
                     </Link>
 
-                    <Link href="/contact" className="hover:text-primary">
+                    <Link
+                      onClick={() => setSheetOpen(false)}
+                      href="/contact"
+                      className="hover:text-primary"
+                    >
                       Contact
                     </Link>
                   </div>
@@ -171,6 +196,7 @@ const Navbar = ({ className }: NavbarProps) => {
                         <div className="flex flex-col gap-3 mt-2">
                           {features.map(feature => (
                             <Link
+                              onClick={() => setSheetOpen(false)}
                               key={feature.title}
                               href={feature.href}
                               className="rounded-md p-2 hover:bg-muted/70"

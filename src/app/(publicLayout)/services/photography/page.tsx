@@ -1,18 +1,14 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import {
-  Camera,
   Sparkles,
   Calendar,
   Users,
-  Star,
   Award,
   Clock,
   Phone,
   Mail,
-  MapPin,
   CheckCircle,
   Package,
   Heart,
@@ -21,10 +17,9 @@ import {
   ShoppingBag,
   Users2,
   Image as ImageIcon,
-  ChevronRight,
   Palette,
-  Layers,
   Layout,
+  ArrowUpRight,
 } from 'lucide-react';
 
 export default function PhotographyPage() {
@@ -72,7 +67,7 @@ export default function PhotographyPage() {
       icon: Heart,
       title: '📦 Product & Packaging Design',
       description:
-        "আপনার product-এর packaging, label, tag design। Organic food, clothing, gift item — সব ধরনের product packaging",
+        'আপনার product-এর packaging, label, tag design। Organic food, clothing, gift item — সব ধরনের product packaging',
       features: [
         'Custom label & box design',
         '3D mockup presentation',
@@ -144,51 +139,62 @@ export default function PhotographyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-black py-24">
-        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
-
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#6efd0b] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
+    <div className="min-h-screen  transition-colors duration-300">
+      {/* Hero Section  */}
+      <section className="relative bg-[#FAFFF7] dark:bg-gray-950 overflow-hidden ">
+        {/* Premium Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#6efd0b]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#6efd0b]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#6efd0b]/[0.02] rounded-full blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
-            <Palette size={16} />
-            Professional Graphics Design
-          </span>
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#6efd0b08_1px,transparent_1px),linear-gradient(to_bottom,#6efd0b08_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            আপনার Brand-এর জন্য Creative 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
-              {' '}
-              Graphics Design 
-            </span>
-          </h1>
+        <div className="relative px-4 sm:px-6 lg:px-8 py-10 md:py-28 lg:py-36">
+          <div className="text-center">
+            {/* Premium Badge with Animation */}
+            <div className="inline-flex mb-8 group cursor-pointer">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#6efd0b]/20 blur-xl rounded-full group-hover:blur-2xl transition-all duration-500"></div>
+                <span className="relative inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-900/50 backdrop-blur-sm border border-[#6efd0b]/30 rounded-full text-sm font-medium text-[#2e9e00] dark:text-[#6efd0b] shadow-lg">
+                  <Sparkles size={14} className="text-[#6efd0b]" />
+                  Professional Graphics Design
+                  <ArrowUpRight size={14} className="opacity-70" />
+                </span>
+              </div>
+            </div>
+            {/* Premium Responsive Heading */}
+            <div className="mb-4 md:mb-8">
+              <h1 className="font-bold tracking-tight leading-[1.1] text-center">
+                <span className="block text-gray-800 dark:text-gray-100 text-xl sm:text-4xl md:text-5xl lg:text-6xl">
+                  আপনার Brand-এর জন্য Creative
+                </span>
 
-          <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
-            Logo থেকে social media post, banner থেকে packaging — আপনার business-এর visual identity 
-            আমরাই তৈরি করি। রাজশাহীর সব ধরনের business-এর জন্য।
-          </p>
+                <span className="block mt-2 text-xl sm:text-5xl md:text-6xl">
+                  <span className="bg-gradient-to-r from-[#6efd0b] via-[#8bff3a] to-[#2e9e00] bg-clip-text text-transparent">
+                    Graphics Design
+                  </span>
+                </span>
+              </h1>
+            </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-md font-semibold hover:bg-[#4fd100] transition-all duration-200 transform hover:scale-105 shadow-lg shadow-[#6efd0b]/25 flex items-center gap-2">
-              <Palette size={18} />
-              Design Project শুরু করুন →
-            </button>
-            <button className="px-8 py-4 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300 rounded-md font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 border border-gray-200 dark:border-gray-700 flex items-center gap-2">
-              <ImageIcon size={18} />
-              View Portfolio
-            </button>
+            {/* Premium Description */}
+            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+              Logo থেকে social media post, banner থেকে packaging — আপনার
+              business-এর visual identity আমরাই তৈরি করি। রাজশাহীর সব ধরনের
+              business-এর জন্য।
+            </p>
           </div>
         </div>
+
+        {/* Premium Bottom Decorative Line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6efd0b]/30 to-transparent"></div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white dark:bg-black py-16 border-y border-gray-200 dark:border-gray-700">
+      <section className=" py-16 border-y border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -209,7 +215,7 @@ export default function PhotographyPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white dark:bg-black">
+      <section className="py-10 md:py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-4">
@@ -225,7 +231,7 @@ export default function PhotographyPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-black p-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
+                className="group  p-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-300 dark:border-gray-800 hover:-translate-y-1"
               >
                 <div
                   className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
@@ -257,7 +263,7 @@ export default function PhotographyPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white dark:bg-black">
+      <section className="">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -268,11 +274,11 @@ export default function PhotographyPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 text-center"
+                className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-800 text-center"
               >
                 <div className="w-14 h-14 bg-[#6efd0b]/10 rounded-md flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-[#6efd0b]" />
@@ -290,7 +296,7 @@ export default function PhotographyPage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-white dark:bg-black">
+      <section className="py-10 md:py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -298,31 +304,35 @@ export default function PhotographyPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 gap-4">
             {[
               {
                 step: '01',
                 title: 'Project Brief',
-                description: 'শুরুতে আমরা আপনার ব্যবসার লক্ষ্য, টার্গেট অডিয়েন্স এবং ডিজাইনের প্রয়োজনীয়তাগুলো বিস্তারিতভাবে জেনে নেই',
+                description:
+                  'শুরুতে আমরা আপনার ব্যবসার লক্ষ্য, টার্গেট অডিয়েন্স এবং ডিজাইনের প্রয়োজনীয়তাগুলো বিস্তারিতভাবে জেনে নেই',
               },
               {
                 step: '02',
                 title: 'Concept Design',
-                description: 'আপনার ব্রিফ অনুযায়ী আমরা কয়েকটি ইউনিক ডিজাইন কনসেপ্ট বা ড্রাফট তৈরি করি এবং আপনার মতামতের জন্য পাঠাই',
+                description:
+                  'আপনার ব্রিফ অনুযায়ী আমরা কয়েকটি ইউনিক ডিজাইন কনসেপ্ট বা ড্রাফট তৈরি করি এবং আপনার মতামতের জন্য পাঠাই',
               },
               {
                 step: '03',
                 title: 'Revisions & Finalization',
-                description: 'আপনার ফিডব্যাক অনুযায়ী আমরা ডিজাইনটিতে প্রয়োজনীয় পরিবর্তন আনি এবং সেটিকে চূড়ান্ত রূপ দেওয়ার কাজ করি',
+                description:
+                  'আপনার ফিডব্যাক অনুযায়ী আমরা ডিজাইনটিতে প্রয়োজনীয় পরিবর্তন আনি এবং সেটিকে চূড়ান্ত রূপ দেওয়ার কাজ করি',
               },
               {
                 step: '04',
                 title: 'Final Delivery',
-                description: 'ডিজাইন পছন্দ হলে আমরা সেটির সব ধরণের ফাইল ফরম্যাট (AI, EPS, PNG, PDF) এবং হাই-কোয়ালিটি ভার্সন আপনাকে বুঝিয়ে দেই',
+                description:
+                  'ডিজাইন পছন্দ হলে আমরা সেটির সব ধরণের ফাইল ফরম্যাট (AI, EPS, PNG, PDF) এবং হাই-কোয়ালিটি ভার্সন আপনাকে বুঝিয়ে দেই',
               },
             ].map((item, index) => (
               <div key={index} className="relative">
-                <div className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-800">
                   <div className="text-4xl font-bold text-[#6efd0b]/20 mb-4">
                     {item.step}
                   </div>
@@ -335,52 +345,6 @@ export default function PhotographyPage() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section - Updated for Graphics */}
-      <section className="py-20 bg-white dark:bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 rounded-3xl p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Elevate Your Brand?
-                </h2>
-                <p className="text-lg text-gray-300 mb-8">
-                  Let's discuss your design needs. Get in touch with us today for a free consultation.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Phone className="w-5 h-5 text-[#6efd0b]" />
-                    <span>+880 1632 363235</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Mail className="w-5 h-5 text-[#6efd0b]" />
-                    <span>help@deltadigivast.com</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white"
-                  />
-                  <textarea
-                    placeholder="Describe your project"
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-white dark:bg-black border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white"
-                  ></textarea>
-                  <button className="w-full py-3 px-6 bg-[#6efd0b] text-gray-900 font-semibold rounded-md hover:bg-[#4fd100] transition-all">
-                    Get Free Quote
-                  </button>
-                </form>
-              </div>
-            </div>
           </div>
         </div>
       </section>

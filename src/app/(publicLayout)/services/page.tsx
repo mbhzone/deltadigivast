@@ -23,7 +23,7 @@ export default function ServicePage() {
       description:
         'রাজশাহীতে নিজস্ব professional studio ও professional ক্যামেরা সেটাপে তৈরি promotional video আপনার product, service বা brand-কে নিয়ে যাবে Next Level-এ ',
       href: '/services/videography',
-  
+
       icon: Video,
       features: [
         'Promotional & Commercial Video',
@@ -97,20 +97,19 @@ export default function ServicePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white transition-colors duration-500">
+    <div className="min-h-screen  text-gray-900 dark:text-white transition-colors duration-500">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-black py-20">
-        {/* Subtle side gradients */}
-        <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/5 to-transparent dark:from-[#6efd0b]/10"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#FAFFF7] to-white dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        {/* Premium Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,#6efd0b02_25%,transparent_25%,transparent_75%,#6efd0b02_75%,#6efd0b02),linear-gradient(45deg,#6efd0b02_25%,transparent_25%,transparent_75%,#6efd0b02_75%,#6efd0b02)] bg-[size:60px_60px] bg-[position:0_0,30px_30px] opacity-30"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-0 py-10 md:py-20 text-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-sm font-medium mb-6">
             <Sparkles size={16} />
             আমাদের Services
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-2xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
             রাজশাহীর Business-এর জন্য যা যা প্রয়োজন
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6efd0b] to-[#2e9e00]">
               {' '}
@@ -118,10 +117,10 @@ export default function ServicePage() {
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-gray-600 dark:text-gray-400 mb-10">
-            Video Production, Graphics Design, Facebook Ads, Website , Full Marketing — রাজশাহীর প্রতিটি business-এর জন্য আ
-            মাদের কাছে আছে সঠিক solution 
-            
+          <p className="max-w-3xl mx-auto  text-gray-600 dark:text-gray-400 ">
+            Video Production, Graphics Design, Facebook Ads, Website , Full
+            Marketing — রাজশাহীর প্রতিটি business-এর জন্য আ মাদের কাছে আছে সঠিক
+            solution
           </p>
 
           {/* Trust Badges */}
@@ -151,6 +150,8 @@ export default function ServicePage() {
             </div>
           </div> */}
         </div>
+        {/* Premium Bottom Decorative Line */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#6efd0b]/30 to-transparent"></div>
       </section>
 
       {/* Services Grid */}
@@ -160,7 +161,7 @@ export default function ServicePage() {
             <Link
               key={index}
               href={service.href}
-              className="group block bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
+              className="group block  rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
             >
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
@@ -196,8 +197,10 @@ export default function ServicePage() {
                 </div>
 
                 {/* Learn More Link */}
-                <div className="
-                  flex items-center gap-2 text-[#6efd0b] font-medium group-hover:gap-3 transition-all">
+                <div
+                  className="
+                  flex items-center gap-2 text-[#6efd0b] font-medium group-hover:gap-3 transition-all"
+                >
                   <span>আরো জানুন</span>
                   <ArrowRight size={16} />
                 </div>
@@ -208,7 +211,7 @@ export default function ServicePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-50 dark:bg-black/50 py-16 border-y border-gray-200 dark:border-gray-700">
+      <section className=" py-16 border-y border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
