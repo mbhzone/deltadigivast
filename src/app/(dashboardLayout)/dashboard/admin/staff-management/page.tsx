@@ -193,7 +193,7 @@ export default function StaffManagement() {
       case 'ACTIVE':
         return 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400';
       case 'INACTIVE':
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
       case 'ON_LEAVE':
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400';
       default:
@@ -209,7 +209,7 @@ export default function StaffManagement() {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             Staff Management
           </h1>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
             Total Staff: {staff.length} | Active:{' '}
             {staff.filter(s => s.status === 'ACTIVE').length}
           </p>
@@ -372,31 +372,31 @@ export default function StaffManagement() {
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-800/50">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     id
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Name
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Contact
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Role
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Department
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Salary
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Joining Date
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Actions
                   </th>
                 </tr>
@@ -413,7 +413,7 @@ export default function StaffManagement() {
                     <td className="px-6 py-4 font-medium text-gray-900 dark:text-white">
                       {member.name}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400 flex flex-col gap-1">
+                    <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-300 flex flex-col gap-1">
                       <span className="flex items-center gap-2">
                         <Mail size={14} />
                         {member.email}
@@ -475,7 +475,7 @@ export default function StaffManagement() {
           {!isFetching && filteredStaff.length === 0 && (
             <div className="text-center py-12">
               <UserCheck size={48} className="mx-auto text-gray-400 mb-4" />
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-gray-500 dark:text-gray-300">
                 No staff members found
               </p>
             </div>

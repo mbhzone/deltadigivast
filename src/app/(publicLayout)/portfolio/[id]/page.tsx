@@ -78,9 +78,12 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* Back Button */}
         <Link
           href="/portfolio"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors mb-8 group"
+          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors mb-8 group"
         >
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft
+            size={16}
+            className="group-hover:-translate-x-1 transition-transform"
+          />
           সব প্রজেক্ট দেখুন
         </Link>
 
@@ -97,7 +100,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             {project.title}
           </h1>
 
-          <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-300">
             <div className="flex items-center gap-1">
               <Calendar size={14} />
               <span>{formatDate(project.createdAt)}</span>
@@ -152,15 +155,15 @@ export default async function ProjectDetailPage({ params }: Props) {
 
         {/* Action Button */}
         <div className="mt-10 pt-10 border-t border-gray-100 dark:border-gray-800">
-            <a
+          <a
             href={project.videoUrl || project.imageUrl || '#'}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#6efd0b] text-gray-900 rounded-xl hover:bg-[#4fd100] transition-all font-bold shadow-lg shadow-[#6efd0b]/20"
-            >
+          >
             <ExternalLink size={18} />
             {isVideo ? 'ভিডিওটি দেখুন' : 'ছবিটি বড় করে দেখুন'}
-            </a>
+          </a>
         </div>
       </div>
     </div>

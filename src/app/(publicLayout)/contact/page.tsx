@@ -56,7 +56,7 @@ export default function ContactPage() {
             </div>
 
             {/* Premium Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
               আপনার project বা প্রশ্ন যাই হোক — আমরা ২৪ ঘন্টার মধ্যে reply করি।
               একটা message থেকে শুরু হোক আপনার ব্যবসার ডিজিটাল যাত্রা।
             </p>
@@ -78,7 +78,7 @@ export default function ContactPage() {
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">
               Phone & WhatsApp
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 font-medium">
+            <p className="text-gray-600 dark:text-gray-300 font-medium">
               +88016 3236 3235
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function ContactPage() {
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">
               Business Email
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 font-medium">
+            <p className="text-gray-600 dark:text-gray-300 font-medium">
               help@deltadigivast.com
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">
               Office Address
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
               49/2 rajib chattar Old Shimla Boalia Rajshahi
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             আমাদের কাছে Message পাঠান
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-gray-600 dark:text-gray-300">
             আপনার project-এর details জানান — আমরা সেরা solution নিয়ে reply করব।
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
             আমাদের Office — রাজশাহী
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 flex items-center justify-center gap-2">
+          <p className="text-gray-600 dark:text-gray-300 mb-8 flex items-center justify-center gap-2">
             <Clock size={16} /> সরাসরি studio visit করতে চাইলে আগে একটু call
             করুন।
           </p>

@@ -122,7 +122,7 @@ export default function HeroManagement() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
           Hero Section Management
         </h1>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
           Edit the content of your banner hero section
         </p>
       </div>

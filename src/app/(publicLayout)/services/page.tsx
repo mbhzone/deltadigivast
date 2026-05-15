@@ -117,7 +117,7 @@ export default function ServicePage() {
             </span>
           </h1>
 
-          <p className="max-w-3xl mx-auto  text-gray-600 dark:text-gray-400 ">
+          <p className="max-w-3xl mx-auto  text-gray-600 dark:text-gray-300 ">
             Video Production, Graphics Design, Facebook Ads, Website , Full
             Marketing — রাজশাহীর প্রতিটি business-এর জন্য আ মাদের কাছে আছে সঠিক
             solution
@@ -134,7 +134,7 @@ export default function ServicePage() {
                   ></div>
                 ))}
               </div>
-              <span className="text-sm text-gray-600 dark:text-gray-400">
+              <span className="text-sm text-gray-600 dark:text-gray-300">
                 Trusted by 300+ clients
               </span>
             </div>
@@ -144,7 +144,7 @@ export default function ServicePage() {
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-gray-600 dark:text-gray-400 ml-1">
+              <span className="text-sm text-gray-600 dark:text-gray-300 ml-1">
                 (4.9/5 from 200+ reviews)
               </span>
             </div>
@@ -179,7 +179,7 @@ export default function ServicePage() {
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {service.description}
                 </p>
 
@@ -188,7 +188,7 @@ export default function ServicePage() {
                   {service.features.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                      className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"
                     >
                       <CheckCircle className="w-4 h-4 text-[#6efd0b]" />
                       {feature}
@@ -222,7 +222,7 @@ export default function ServicePage() {
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                <div className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {stat.label}
                 </div>
               </div>

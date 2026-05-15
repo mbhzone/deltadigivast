@@ -85,7 +85,7 @@ const Contact2 = ({
               <h1 className="mb-4 text-4xl font-bold lg:text-5xl text-gray-900 dark:text-white">
                 {title}
               </h1>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                 {description}
               </p>
             </div>

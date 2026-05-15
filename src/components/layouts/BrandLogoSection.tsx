@@ -23,7 +23,7 @@ export default function BrandLogoSection() {
           <h2 className="text-xl md:text-3xl font-bold text-gray-800 dark:text-white">
             Trusted by Rajshahi&apos;s Leading Brands
           </h2>
-          <p className="mt-2 text-sm md:text-xl text-gray-500 dark:text-gray-400">
+          <p className="mt-2 text-sm md:text-xl text-gray-500 dark:text-gray-300">
             Powering success for brands across various industries
           </p>
         </div>

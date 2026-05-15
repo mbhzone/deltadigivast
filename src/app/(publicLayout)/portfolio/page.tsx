@@ -70,7 +70,7 @@ export default async function PortfolioPage() {
             </div>
 
             {/* Premium Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
               রাজশাহীর বিভিন্ন ব্র্যান্ড এবং ব্যবসার জন্য আমাদের করা ভিডিও
               প্রোডাকশন, গ্রাফিক্স ডিজাইন এবং ওয়েব প্রজেক্টগুলোর একটি সংগ্রহ।
               আমরা শুধু কাজ করি না, আমরা রেজাল্ট তৈরি করি।

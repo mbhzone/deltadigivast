@@ -199,7 +199,7 @@ export default function AttendanceManagement() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             Attendance Management
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-gray-600 dark:text-gray-300 mt-1">
             Track and manage employee attendance records
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function AttendanceManagement() {
           {(searchTerm || dateFilter) && (
             <div className="flex items-center gap-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
               <Filter size={16} className="text-gray-400 dark:text-gray-500" />
-              <span className="text-sm text-gray-600 dark:text-gray-400">
+              <span className="text-sm text-gray-600 dark:text-gray-300">
                 Active Filters:
               </span>
 
@@ -292,13 +292,13 @@ export default function AttendanceManagement() {
               <table className="w-full">
                 <thead className="bg-gray-50 dark:bg-gray-700/50">
                   <tr>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                       Employee
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                       ID
                     </th>
-                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                       Designation
                     </th>
                     <th className="px-6 py-4">Date</th>

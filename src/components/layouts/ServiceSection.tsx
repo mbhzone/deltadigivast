@@ -49,7 +49,7 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
             <h2 className="text-3xl font-bold tracking-tight md:text-5xl text-gray-900 dark:text-white">
               আমাদের সার্ভিসসমূহ
             </h2>
-            <p className="mx-auto max-w-2xl text-lg tracking-tight text-gray-600 dark:text-gray-400 md:text-xl">
+            <p className="mx-auto max-w-2xl text-lg tracking-tight text-gray-600 dark:text-gray-300 md:text-xl">
               রাজশাহীর local business-এর ডিজিটাল গ্রোথ নিশ্চিত করতে আমরা দিচ্ছি
               আধুনিক ও কার্যকরী সব ডিজিটাল সার্ভিস।
             </p>
@@ -69,7 +69,7 @@ const ServiceSection = ({ className }: ServiceSectionProps) => {
                     {service.title}
                   </h3>
                 </div>
-                <p className="leading-relaxed text-gray-600 dark:text-gray-400 text-sm">
+                <p className="leading-relaxed text-gray-600 dark:text-gray-300 text-sm">
                   {service.description}
                 </p>
                 <div className="space-y-2 pt-2">

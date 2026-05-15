@@ -124,7 +124,7 @@ export default function WebDevelopmentPage() {
         {/* Background Glowing Effects */}
         <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#6efd0b]/10 to-transparent dark:from-[#6efd0b]/20 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#6efd0b]/10 to-transparent dark:from-[#6efd0b]/20 pointer-events-none"></div>
-        
+
         <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -142,8 +142,10 @@ export default function WebDevelopmentPage() {
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                একটি প্রফেশনাল ওয়েবসাইট মানেই কাস্টমারের বিশ্বাস। রাজশাহীর local business-এর জন্য আমরা তৈরি করি Mobile-responsive, Fast এবং SEO-friendly ওয়েবসাইট।
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                একটি প্রফেশনাল ওয়েবসাইট মানেই কাস্টমারের বিশ্বাস। রাজশাহীর local
+                business-এর জন্য আমরা তৈরি করি Mobile-responsive, Fast এবং
+                SEO-friendly ওয়েবসাইট।
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -152,7 +154,7 @@ export default function WebDevelopmentPage() {
                   ওয়েবসাইট প্রজেক্ট শুরু করুন →
                 </button>
               </div>
-              
+
               <div className="mt-8 text-sm text-gray-500 dark:text-gray-500">
                 <span className="bg-[#6efd0b]/20 text-[#6efd0b] px-3 py-1 rounded-full text-xs font-bold mr-2">
                   20+ Website launched In Rajshahi
@@ -186,8 +188,12 @@ export default function WebDevelopmentPage() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-[#6efd0b]/10 rounded-md mb-3">
                   <stat.icon className="w-5 h-5 text-[#6efd0b]" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat.label}</div>
+                <div className="text-3xl font-bold text-gray-900 dark:text-white">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-500 dark:text-gray-300 mt-1">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -201,7 +207,7 @@ export default function WebDevelopmentPage() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               আমরা কোন Web Services দিই
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               ছোট ব্যবসা থেকে বড় এন্টারপ্রাইজ — সবার জন্য কাস্টম ওয়েব সলিউশন
             </p>
           </div>
@@ -213,7 +219,9 @@ export default function WebDevelopmentPage() {
                 className="group bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 hover:border-[#6efd0b]/50 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center`}>
+                  <div
+                    className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-md flex items-center justify-center`}
+                  >
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <span className="px-3 py-1 bg-[#6efd0b]/10 text-[#6efd0b] rounded-full text-xs font-bold">
@@ -223,12 +231,15 @@ export default function WebDevelopmentPage() {
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {service.description}
                 </p>
                 <div className="grid grid-cols-2 gap-2">
                   {service.features.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 text-xs text-gray-500">
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-gray-500"
+                    >
                       <CheckCircle className="w-3 h-3 text-[#6efd0b]" />
                       {f}
                     </div>
@@ -243,7 +254,9 @@ export default function WebDevelopmentPage() {
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">কেন আমরা রাজশাহীর সেরা?</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            কেন আমরা রাজশাহীর সেরা?
+          </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (
               <div
@@ -253,8 +266,12 @@ export default function WebDevelopmentPage() {
                 <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-[#6efd0b]" />
                 </div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -264,18 +281,45 @@ export default function WebDevelopmentPage() {
       {/* Process Section */}
       <section className="py-20 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">আমরা কীভাবে কাজ করি</h2>
+          <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+            আমরা কীভাবে কাজ করি
+          </h2>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '01', title: 'Planning', desc: 'আপনার ব্যবসার চাহিদা বুঝে সাইটের ম্যাপ তৈরি করা।' },
-              { step: '02', title: 'Design', desc: 'মডার্ন এবং ক্লিন ইউজার ইন্টারফেস ডিজাইন।' },
-              { step: '03', title: 'Development', desc: 'এসইও ফ্রেন্ডলি ক্লিন কোডের মাধ্যমে সাইট তৈরি।' },
-              { step: '04', title: 'Delivery', desc: 'সাইট লাইভ করা এবং ব্যবহার করার ট্রেনিং প্রদান।' },
+              {
+                step: '01',
+                title: 'Planning',
+                desc: 'আপনার ব্যবসার চাহিদা বুঝে সাইটের ম্যাপ তৈরি করা।',
+              },
+              {
+                step: '02',
+                title: 'Design',
+                desc: 'মডার্ন এবং ক্লিন ইউজার ইন্টারফেস ডিজাইন।',
+              },
+              {
+                step: '03',
+                title: 'Development',
+                desc: 'এসইও ফ্রেন্ডলি ক্লিন কোডের মাধ্যমে সাইট তৈরি।',
+              },
+              {
+                step: '04',
+                title: 'Delivery',
+                desc: 'সাইট লাইভ করা এবং ব্যবহার করার ট্রেনিং প্রদান।',
+              },
             ].map((item, index) => (
-              <div key={index} className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-700 shadow-sm">
-                <div className="text-4xl font-bold text-[#6efd0b]/20 mb-2">{item.step}</div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+              <div
+                key={index}
+                className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-700 shadow-sm"
+              >
+                <div className="text-4xl font-bold text-[#6efd0b]/20 mb-2">
+                  {item.step}
+                </div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>

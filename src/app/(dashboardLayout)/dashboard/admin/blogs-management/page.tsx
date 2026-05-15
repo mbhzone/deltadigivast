@@ -323,7 +323,7 @@ export default function BlogManagement() {
               <h3 className="font-semibold text-gray-900 dark:text-white">
                 Delete Blog Post
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 This action cannot be undone.
               </p>
             </div>
@@ -431,7 +431,7 @@ export default function BlogManagement() {
               <BookOpen className="text-[#6efd0b]" size={32} />
               Blog Management
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
               Manage your blog posts and content
             </p>
           </div>
@@ -553,7 +553,7 @@ export default function BlogManagement() {
                                         transition-colors duration-200"
                           >
                             <Upload size={20} className="text-gray-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400 truncate">
+                            <span className="text-sm text-gray-600 dark:text-gray-300 truncate">
                               {imageFile
                                 ? imageFile.name
                                 : imagePreview
@@ -610,7 +610,7 @@ export default function BlogManagement() {
 
                     {/* Description Preview */}
                     {newPost.excerpt && (
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                      <p className="text-sm text-gray-600 dark:text-gray-300">
                         {newPost.excerpt}
                       </p>
                     )}
@@ -664,14 +664,14 @@ export default function BlogManagement() {
                 <table className="w-full">
                   <thead className="bg-gray-50 dark:bg-gray-800/50">
                     <tr>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Image
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Title
                       </th>
 
-                      <th className="px-6 py-4 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Actions
                       </th>
                     </tr>
@@ -707,7 +707,7 @@ export default function BlogManagement() {
                           <p className="font-medium text-gray-900 dark:text-white">
                             {post.title}
                           </p>
-                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">
+                          <p className="text-sm text-gray-500 dark:text-gray-300 mt-1 line-clamp-2">
                             {post.description}
                           </p>
                         </td>
@@ -745,7 +745,7 @@ export default function BlogManagement() {
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
                     No blog posts found
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {searchTerm
                       ? 'Try adjusting your search term'
                       : 'Get started by creating your first blog post'}
@@ -770,7 +770,7 @@ export default function BlogManagement() {
                 />
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-300">
                   Total Posts
                 </p>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -792,7 +792,7 @@ export default function BlogManagement() {
                 />
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-300">
                   With Images
                 </p>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">

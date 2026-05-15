@@ -138,7 +138,7 @@ export default function DashboardNavbar({
           <button
             onClick={onSidebarToggle}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 
-                     text-gray-600 dark:text-gray-400 transition-colors flex-shrink-0 mr-2"
+                     text-gray-600 dark:text-gray-300 transition-colors flex-shrink-0 mr-2"
           >
             {isMobile ? (
               <Menu size={20} />
@@ -153,7 +153,7 @@ export default function DashboardNavbar({
             <p className="text-sm font-medium text-gray-900 dark:text-white">
               {formattedTime}
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-gray-500 dark:text-gray-300">
               {formattedDate}
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function DashboardNavbar({
           <button
             onClick={toggleTheme}
             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 
-                     text-gray-600 dark:text-gray-400 transition-colors
+                     text-gray-600 dark:text-gray-300 transition-colors
                      hidden sm:block"
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
@@ -175,7 +175,7 @@ export default function DashboardNavbar({
           <button
             onClick={toggleFullscreen}
             className="hidden lg:block p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 
-                     text-gray-600 dark:text-gray-400 transition-colors"
+                     text-gray-600 dark:text-gray-300 transition-colors"
           >
             {isFullscreen ? <Minimize2 size={20} /> : <Maximize2 size={20} />}
           </button>
@@ -213,7 +213,7 @@ export default function DashboardNavbar({
                 <p className="text-sm font-medium text-gray-900 dark:text-white truncate max-w-[120px]">
                   {user?.name || 'User'}
                 </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 capitalize truncate">
+                <p className="text-xs text-gray-500 dark:text-gray-300 capitalize truncate">
                   {user?.role || 'Administrator'}
                 </p>
               </div>

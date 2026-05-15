@@ -58,7 +58,7 @@ export default function BlogCard({ blog }: Props) {
           {blog.title}
         </h3>
 
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+        <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
           {blog.description}
         </p>
 

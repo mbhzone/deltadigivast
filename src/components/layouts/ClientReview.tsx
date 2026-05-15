@@ -60,7 +60,7 @@ const ClientReview = () => {
         <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
           Client Reviews
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
           আমাদের কাজের মান সম্পর্কে ক্লায়েন্টরা যা বলছেন
         </p>
       </div>

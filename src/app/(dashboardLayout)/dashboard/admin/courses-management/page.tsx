@@ -207,7 +207,7 @@ export default function CoursesManagement() {
       case 'DRAFT':
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400';
       case 'ARCHIVED':
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
       default:
         return 'bg-gray-100 text-gray-700';
     }
@@ -221,7 +221,7 @@ export default function CoursesManagement() {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
             Courses Management
           </h1>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
             Total Courses: {courses.length} | Published:{' '}
             {courses.filter(c => c.status === 'PUBLISHED').length} | Drafts:{' '}
             {courses.filter(c => c.status === 'DRAFT').length}
@@ -462,25 +462,25 @@ export default function CoursesManagement() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800/50">
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Thumbnail
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Course
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Category
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Instructor
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Details
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Status
                   </th>
-                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Actions
                   </th>
                 </tr>
@@ -504,7 +504,7 @@ export default function CoursesManagement() {
                         <p className="font-medium text-gray-900 dark:text-white">
                           {course.title}
                         </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                           {course.description}
                         </p>
                       </div>
@@ -545,7 +545,7 @@ export default function CoursesManagement() {
                   <tr>
                     <td
                       colSpan={6}
-                      className="px-6 py-4 text-center text-gray-500 dark:text-gray-400"
+                      className="px-6 py-4 text-center text-gray-500 dark:text-gray-300"
                     >
                       No courses found
                     </td>

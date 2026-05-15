@@ -138,7 +138,7 @@ export default function WebDevelopmentPage() {
                 </span>
               </h1>
 
-              <p className=" text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              <p className=" text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 একটি প্রফেশনাল ওয়েবসাইট মানেই কাস্টমারের বিশ্বাস। রাজশাহীর local
                 business-এর জন্য আমরা তৈরি করি Mobile-responsive, Fast এবং
                 SEO-friendly ওয়েবসাইট।
@@ -191,7 +191,7 @@ export default function WebDevelopmentPage() {
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                <div className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function WebDevelopmentPage() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               আমরা কোন Web Services দিই
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               ছোট ব্যবসা থেকে বড় এন্টারপ্রাইজ — সবার জন্য কাস্টম ওয়েব সলিউশন
             </p>
           </div>

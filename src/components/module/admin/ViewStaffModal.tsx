@@ -66,7 +66,7 @@ export default function ViewStaffModal({
       case 'ACTIVE':
         return 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400';
       case 'INACTIVE':
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
       case 'ON_LEAVE':
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400';
       default:
@@ -151,7 +151,7 @@ export default function ViewStaffModal({
                   </h2>
                   <BadgeCheck size={20} className="text-[#4fd100]" />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
+                <p className="text-sm text-gray-600 dark:text-gray-300 flex items-center gap-2">
                   <Briefcase size={14} />
                   {staff.designation || staff.role}
                 </p>
@@ -183,7 +183,7 @@ export default function ViewStaffModal({
               <div className="grid grid-cols-2 gap-3">
                 {/* Email */}
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <label className="text-xs text-gray-500 dark:text-gray-400 mb-2 block">
+                  <label className="text-xs text-gray-500 dark:text-gray-300 mb-2 block">
                     Email Address
                   </label>
                   <div className="flex items-center justify-between">
@@ -206,7 +206,7 @@ export default function ViewStaffModal({
 
                 {/* Phone */}
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <label className="text-xs text-gray-500 dark:text-gray-400 mb-2 block">
+                  <label className="text-xs text-gray-500 dark:text-gray-300 mb-2 block">
                     Phone Number
                   </label>
                   <div className="flex items-center justify-between">
@@ -238,7 +238,7 @@ export default function ViewStaffModal({
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                     Department
                   </p>
                   <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function ViewStaffModal({
                   </p>
                 </div>
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                     Role
                   </p>
                   <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">
@@ -256,7 +256,7 @@ export default function ViewStaffModal({
                   </p>
                 </div>
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                     Experience
                   </p>
                   <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">
@@ -265,7 +265,7 @@ export default function ViewStaffModal({
                   </p>
                 </div>
                 <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                     Join Date
                   </p>
                   <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">
@@ -313,7 +313,7 @@ export default function ViewStaffModal({
                 <div className="space-y-2">
                   {staff.location && (
                     <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                      <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                         Location
                       </p>
                       <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">
@@ -324,7 +324,7 @@ export default function ViewStaffModal({
                   )}
                   {staff.education && (
                     <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                      <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                         Education
                       </p>
                       <p className="text-sm text-gray-900 dark:text-white flex items-center gap-2">

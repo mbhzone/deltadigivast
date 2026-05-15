@@ -92,7 +92,7 @@ export default function EmployeeDashboard() {
               Welcome back, {user?.name} 👋
             </h1>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl">
               Here’s what’s happening in your agency today. Track performance,
               manage leads, and stay on top of your projects.
             </p>
@@ -132,40 +132,40 @@ export default function EmployeeDashboard() {
                 <table className="min-w-[700px] w-full">
                   <thead className="bg-gray-50 dark:bg-gray-700/50">
                     <tr>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         Date
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiUser className="w-3 h-3" />
                           <span>Name</span>
                         </div>
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiHash className="w-3 h-3" />
                           <span>ID</span>
                         </div>
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiBriefcase className="w-3 h-3" />
                           <span>Designation</span>
                         </div>
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiLogIn className="w-3 h-3" />
                           <span>Check In</span>
                         </div>
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiLogOut className="w-3 h-3" />
                           <span>Check Out</span>
                         </div>
                       </th>
-                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                      <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                         <div className="flex items-center space-x-1">
                           <FiClock className="w-3 h-3" />
                           <span>Duration</span>
@@ -186,7 +186,7 @@ export default function EmployeeDashboard() {
                       <tr>
                         <td
                           colSpan={7}
-                          className="px-6 py-8 text-center text-gray-500 dark:text-gray-400"
+                          className="px-6 py-8 text-center text-gray-500 dark:text-gray-300"
                         >
                           No attendance records found
                         </td>
@@ -290,7 +290,7 @@ export default function EmployeeDashboard() {
                 <p className="text-sm text-[#4fd100] font-medium">
                   {user.role}
                 </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mt-1">
                   {user.department}
                 </p>
               </div>
@@ -299,20 +299,20 @@ export default function EmployeeDashboard() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Mail size={16} className="text-gray-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-gray-600 dark:text-gray-300">
                       {user.email}
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone size={16} className="text-gray-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-gray-600 dark:text-gray-300">
                       {user.phone}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-3">
                     <Calendar size={16} className="text-gray-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-gray-600 dark:text-gray-300">
                       Joined {new Date(user.createdAt).toLocaleDateString()}
                     </span>
                   </div>

@@ -68,7 +68,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             <h2 className="text-3xl font-bold bg-gradient-to-r from-[#6efd0b] via-[#8bff3a] to-[#4fd100] bg-clip-text text-transparent">
               Delta Digivast Login
             </h2>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
               Sign in to continue to your account
             </p>
           </div>
@@ -132,7 +132,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
                   onChange={e => setRememberMe(e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300 dark:border-gray-600 text-[#6efd0b] focus:ring-[#6efd0b]/50 bg-gray-50 dark:bg-gray-700/50"
                 />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+                <span className="text-sm text-gray-600 dark:text-gray-300">
                   Remember me
                 </span>
               </label>

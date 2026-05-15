@@ -86,7 +86,7 @@ export default function VideographyPage() {
                 </span>
               </h1>
 
-              <p className=" text-gray-600 dark:text-gray-400 mb-8">
+              <p className=" text-gray-600 dark:text-gray-300 mb-8">
                 একটি ভালো video আপনার business-এর গল্প বদলে দিতে পারে। আমাদের
                 নিজস্ব studio বা Outdoor shoot, professional editing এবং result
                 driven
@@ -153,7 +153,7 @@ export default function VideographyPage() {
                 </div>
 
                 {/* Label - Improved visibility */}
-                <div className="text-sm text-gray-600 dark:text-gray-400 leading-tight mt-0.5 sm:mt-1">
+                <div className="text-sm text-gray-600 dark:text-gray-300 leading-tight mt-0.5 sm:mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function VideographyPage() {
                   {service.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   {service.description}
                 </p>
               </div>

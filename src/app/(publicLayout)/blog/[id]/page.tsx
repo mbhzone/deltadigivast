@@ -55,7 +55,7 @@ export default async function BlogDetailPage({ params }: Props) {
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
             ব্লগটি খুঁজে পাওয়া যায়নি
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
             দুঃখিত, আপনি যে ব্লগ পোস্টটি খুঁজছেন তা বর্তমানে নেই অথবা সরিয়ে ফেলা
             হয়েছে।
           </p>
@@ -89,7 +89,7 @@ export default async function BlogDetailPage({ params }: Props) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors group"
+          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors group"
         >
           <ArrowLeft
             size={16}
@@ -112,7 +112,7 @@ export default async function BlogDetailPage({ params }: Props) {
         </h1>
 
         {/* Meta Information */}
-        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-8">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-300 mb-8">
           <div className="flex items-center gap-1">
             <Calendar size={16} />
             <span>{formatDate(blog.createdAt)}</span>
@@ -126,11 +126,11 @@ export default async function BlogDetailPage({ params }: Props) {
         {/* Action Bar */}
         <div className="flex items-center justify-between border-y border-gray-200 dark:border-gray-800 py-4 mb-8">
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
+            <button className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
               <Heart size={18} />
               <span className="text-sm">Like</span>
             </button>
-            <button className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
+            <button className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-[#6efd0b] dark:hover:text-[#6efd0b] transition-colors">
               <Share2 size={18} />
               <span className="text-sm">Share</span>
             </button>
@@ -145,7 +145,7 @@ export default async function BlogDetailPage({ params }: Props) {
               href="#"
               className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
             >
-              <Twitter size={16} className="text-gray-600 dark:text-gray-400" />
+              <Twitter size={16} className="text-gray-600 dark:text-gray-300" />
             </a>
             <a
               href="#"
@@ -153,7 +153,7 @@ export default async function BlogDetailPage({ params }: Props) {
             >
               <Facebook
                 size={16}
-                className="text-gray-600 dark:text-gray-400"
+                className="text-gray-600 dark:text-gray-300"
               />
             </a>
             <a
@@ -162,7 +162,7 @@ export default async function BlogDetailPage({ params }: Props) {
             >
               <Linkedin
                 size={16}
-                className="text-gray-600 dark:text-gray-400"
+                className="text-gray-600 dark:text-gray-300"
               />
             </a>
           </div>

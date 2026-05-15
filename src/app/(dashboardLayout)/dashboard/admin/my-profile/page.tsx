@@ -41,7 +41,7 @@ export default function MyProfile() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-gray-200 dark:border-gray-700 border-t-[#6efd0b] rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-gray-600 dark:text-gray-400">Loading profile...</p>
+          <p className="text-gray-600 dark:text-gray-300">Loading profile...</p>
         </div>
       </div>
     );
@@ -137,7 +137,7 @@ export default function MyProfile() {
       case 'ACTIVE':
         return 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400';
       case 'INACTIVE':
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
       case 'ON_LEAVE':
         return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400';
       default:
@@ -328,7 +328,7 @@ export default function MyProfile() {
                     {user.name}
                     <BadgeCheck size={18} className="text-[#4fd100]" />
                   </h2>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                     {user.designation}
                   </p>
                   <div className="flex items-center justify-center gap-2 mt-3">
@@ -418,7 +418,7 @@ export default function MyProfile() {
             {/* Work Information Grid */}
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Employee ID
                 </p>
                 <p className="text-sm font-medium text-gray-900 dark:text-white">
@@ -426,7 +426,7 @@ export default function MyProfile() {
                 </p>
               </div>
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Department
                 </p>
                 {editMode ? (
@@ -444,7 +444,7 @@ export default function MyProfile() {
                 )}
               </div>
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Experience
                 </p>
                 {editMode ? (
@@ -463,7 +463,7 @@ export default function MyProfile() {
                 )}
               </div>
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Joined
                 </p>
                 <p className="text-sm font-medium text-gray-900 dark:text-white">

@@ -112,7 +112,7 @@ export default async function AboutUs() {
             </div>
 
             {/* Premium Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
               আমরা শুধু একটা agency না। আমরা রাজশাহীর business owner-দের সেই
               মানুষগুলো যারা আপনার sales বাড়াতে রাতদিন কাজ করি।
             </p>
@@ -136,20 +136,20 @@ export default async function AboutUs() {
                 <span className="text-[#6efd0b]"> Business-এর জন্য কাজ</span>
               </h2>
 
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 Delta Digivast ২০২৫ সালের মে মাসে রাজশাহীতে প্রতিষ্ঠিত হয়েছে।
                 আমাদের লক্ষ্য একটাই — রাজশাহীর প্রতিটি ভালো business-কে online-এ
                 সেভাবে present করা যেভাবে সে deserve করে।
               </p>
 
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 আমাদের কাছে আছে নিজস্ব professional studio, experienced video
                 production team, creative graphics designers, এবং certified
                 digital marketing specialists। রাজশাহীতে বসে রাজশাহীর
                 business-এর জন্য কাজ করি — এটাই আমাদের পরিচয়।
               </p>
 
-              <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 আমরা বিশ্বাস করি — ভালো product বা service থাকলেই হয় না, সেটা
                 মানুষের কাছে সঠিকভাবে পৌঁছাতে হয়। আমরা সেই সেতুবন্ধনটাই তৈরি
                 করি।
@@ -215,7 +215,7 @@ export default async function AboutUs() {
                   {value.title}
                 </h3>
 
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -236,7 +236,7 @@ export default async function AboutUs() {
               Meet the Team
             </h2>
 
-            <p className="text-xl text-gray-600 dark:text-gray-400">
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               The talented people behind our success in Rajshahi
             </p>
           </div>
@@ -269,11 +269,11 @@ export default async function AboutUs() {
                     {member.designation}
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-0.5">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mb-0.5">
                     অভিজ্ঞতা: {member.experience} বছর
                   </p>
 
-                  <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 line-clamp-2">
                     দক্ষতা: {member.skills}
                   </p>
                 </div>

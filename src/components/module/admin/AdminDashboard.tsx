@@ -145,7 +145,7 @@ export default function AdminDashboard() {
               Welcome back, {user?.name} 👋
             </h1>
 
-            <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+            <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl">
               Here’s what’s happening in your agency today. Track performance,
               manage leads, and stay on top of your projects.
             </p>
@@ -190,7 +190,7 @@ export default function AdminDashboard() {
                   </div>
                 </div>
 
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-300 mb-1">
                   {stat.title}
                 </h3>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -227,7 +227,7 @@ export default function AdminDashboard() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Revenue Overview
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 Monthly revenue vs expenses
               </p>
             </div>
@@ -318,7 +318,7 @@ export default function AdminDashboard() {
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
             Team Performance
           </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+          <p className="text-sm text-gray-500 dark:text-gray-300 mb-6">
             Efficiency by department
           </p>
 
@@ -358,7 +358,7 @@ export default function AdminDashboard() {
                     className="w-3 h-3 rounded-full"
                     style={{ backgroundColor: dept.color }}
                   />
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
+                  <span className="text-sm text-gray-600 dark:text-gray-300">
                     {dept.name}
                   </span>
                 </div>

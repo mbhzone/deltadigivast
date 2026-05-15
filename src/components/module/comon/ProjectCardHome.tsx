@@ -50,7 +50,7 @@ export default function ProjectCardHome({ projects }: Props) {
                   allowFullScreen
                 />
               ) : (
-                <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400">
+                <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-300">
                   No Preview
                 </div>
               )}

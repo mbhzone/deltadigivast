@@ -167,7 +167,7 @@ export default function MarketingPage() {
               </h1>
 
               {/* Description */}
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg">
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
                 Facebook Ads, Instagram Boost, Social Media Marketing — রাজশাহীর
                 local audience targeting-এ আমরা specialist।
               </p>
@@ -213,7 +213,7 @@ export default function MarketingPage() {
                       <p className="text-xs font-semibold text-gray-900 dark:text-white">
                         Trusted by 30+ Businesses
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">
+                      <p className="text-xs text-gray-500 dark:text-gray-300">
                         in Rajshahi
                       </p>
                     </div>
@@ -244,7 +244,7 @@ export default function MarketingPage() {
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                <div className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -264,7 +264,7 @@ export default function MarketingPage() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               আমরা কোন Digital Marketing Services দিই
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               সঠিক পরিকল্পনার মাধ্যমে আপনার ব্যবসার অনলাইন উপস্থিতি বৃদ্ধি করি
             </p>
           </div>
@@ -290,7 +290,7 @@ export default function MarketingPage() {
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                     {service.description}
                   </p>
 
@@ -298,7 +298,7 @@ export default function MarketingPage() {
                     {service.features.map((feature, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                        className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"
                       >
                         <CheckCircle className="w-4 h-4 text-[#6efd0b] flex-shrink-0" />
                         <span>{feature}</span>
@@ -333,7 +333,7 @@ export default function MarketingPage() {
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -361,7 +361,7 @@ export default function MarketingPage() {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {item.description}
                   </p>
                 </div>

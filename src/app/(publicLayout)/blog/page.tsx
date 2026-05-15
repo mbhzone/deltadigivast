@@ -67,7 +67,7 @@ export default async function BlogPage() {
             </div>
 
             {/* Premium Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
               ডিজিটাল মার্কেটিং, ভিডিও প্রোডাকশন এবং রাজশাহীর লোকাল মার্কেট
               ট্রেন্ড নিয়ে আমাদের টিম অফ এক্সপার্টদের নিয়মিত গাইড ও ইনসাইট।
               আপনার ব্যবসার ডিজিটাল যাত্রা সহজ করতে আমাদের সাথেই থাকুন।

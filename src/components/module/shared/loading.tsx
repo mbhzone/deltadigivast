@@ -56,7 +56,7 @@ export default function Loading() {
 //           ></div>
 //         </div>
 
-//         <p className="text-gray-600 dark:text-gray-400 animate-pulse">
+//         <p className="text-gray-600 dark:text-gray-300 animate-pulse">
 //           Loading...
 //         </p>
 //       </div>

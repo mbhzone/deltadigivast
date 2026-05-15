@@ -51,9 +51,9 @@ export default function LeadViewModal({ lead, onClose }: Props) {
       case 'qualified':
         return 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400';
       case 'lost':
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
       default:
-        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-400';
+        return 'bg-gray-100 text-gray-700 dark:bg-gray-500/20 dark:text-gray-300';
     }
   };
 
@@ -104,7 +104,7 @@ export default function LeadViewModal({ lead, onClose }: Props) {
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                 {displayName}
               </h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+              <p className="text-sm text-gray-500 dark:text-gray-300 flex items-center gap-1">
                 <Building2 size={14} />
                 {displayCompany}
               </p>
@@ -160,7 +160,7 @@ export default function LeadViewModal({ lead, onClose }: Props) {
             {/* Status and Source */}
             <div className="">
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Address
                 </p>
                 <span
@@ -173,7 +173,7 @@ export default function LeadViewModal({ lead, onClose }: Props) {
             {/* Message */}
             <div className="">
               <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-                <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                   Message
                 </p>
                 <span className={`px-3 py-1 rounded-full text-xs font-medium `}>
@@ -184,7 +184,7 @@ export default function LeadViewModal({ lead, onClose }: Props) {
 
             {/* Date */}
             <div className="p-3 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
-              <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+              <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">
                 Created
               </p>
               <p className="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2">

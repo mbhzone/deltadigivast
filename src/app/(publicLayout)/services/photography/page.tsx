@@ -181,7 +181,7 @@ export default function PhotographyPage() {
             </div>
 
             {/* Premium Description */}
-            <p className="text-gray-600 dark:text-gray-400 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
+            <p className="text-gray-600 dark:text-gray-300 text-base text-sm md:text-xl max-w-2xl mx-auto leading-relaxed md:mb-10">
               Logo থেকে social media post, banner থেকে packaging — আপনার
               business-এর visual identity আমরাই তৈরি করি। রাজশাহীর সব ধরনের
               business-এর জন্য।
@@ -205,7 +205,7 @@ export default function PhotographyPage() {
                 <div className="text-3xl font-bold text-gray-900 dark:text-white">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                <div className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -241,7 +241,7 @@ export default function PhotographyPage() {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {service.description}
                 </p>
 
@@ -249,7 +249,7 @@ export default function PhotographyPage() {
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400"
+                      className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300"
                     >
                       <CheckCircle className="w-4 h-4 text-[#6efd0b]" />
                       {feature}
@@ -269,7 +269,7 @@ export default function PhotographyPage() {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Why Choose Us
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               What sets our graphics services apart
             </p>
           </div>
@@ -286,7 +286,7 @@ export default function PhotographyPage() {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   {item.description}
                 </p>
               </div>
@@ -333,13 +333,13 @@ export default function PhotographyPage() {
             ].map((item, index) => (
               <div key={index} className="relative">
                 <div className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-800">
-                  <div className="text-4xl font-bold text-[#6efd0b]/20 mb-4">
+                  <div className="text-4xl font-bold text-[#6efd0b] mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
                     {item.description}
                   </p>
                 </div>

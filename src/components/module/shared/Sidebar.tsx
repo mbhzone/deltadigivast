@@ -97,7 +97,7 @@ export default function Sidebar({
               >
                 Delta Digivast
               </h2>
-              <p className="text-xs text-gray-500 dark:text-gray-400 capitalize truncate">
+              <p className="text-xs text-gray-500 dark:text-gray-300 capitalize truncate">
                 {user.role}
               </p>
             </motion.div>
@@ -148,7 +148,7 @@ export default function Sidebar({
     ${
       isActive
         ? 'text-[#4fd100] dark:text-[#6efd0b]'
-        : 'text-gray-500 dark:text-gray-400 group-hover:text-[#6efd0b]'
+        : 'text-gray-500 dark:text-gray-300 group-hover:text-[#6efd0b]'
     }
     transition-colors duration-200 flex-shrink-0
   `}
@@ -213,7 +213,7 @@ export default function Sidebar({
         >
           <HelpCircle
             size={20}
-            className="text-gray-500 dark:text-gray-400 
+            className="text-gray-500 dark:text-gray-300 
                                          group-hover:text-[#6efd0b] transition-colors flex-shrink-0"
           />
           {!isCollapsed && (

@@ -58,7 +58,7 @@ export default function CoursesPage() {
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           Courses
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
           {courses.length} courses available
         </p>
       </div>
@@ -103,17 +103,17 @@ export default function CoursesPage() {
               </h2>
 
               {/* Description */}
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
                 {course.description}
               </p>
 
               {/* Instructor */}
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <p className="text-sm text-gray-500 dark:text-gray-300 mb-3">
                 By {course.instructor}
               </p>
 
               {/* Course Details */}
-              <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-4">
+              <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300 mb-4">
                 <span>📚 {course.duration}</span>
                 <span>👥 {course.students} students</span>
               </div>
@@ -148,7 +148,7 @@ export default function CoursesPage() {
       {/* Empty State */}
       {courses.length === 0 && !loading && (
         <div className="text-center py-12">
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-gray-500 dark:text-gray-300">
             No courses available
           </p>
         </div>

@@ -139,7 +139,7 @@ export default function MyAttendance() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             My Attendance
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-gray-600 dark:text-gray-300 mt-1">
             Track your daily attendance and work hours
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function MyAttendance() {
                 <FiClock className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-300">
                   Current Time
                 </p>
                 <p className="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -163,7 +163,7 @@ export default function MyAttendance() {
                     hour12: true,
                   })}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-500 dark:text-gray-300">
                   {currentTime.toLocaleDateString('en-US', {
                     weekday: 'long',
                     year: 'numeric',
@@ -229,40 +229,40 @@ export default function MyAttendance() {
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-700/50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     Date
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiUser className="w-3 h-3" />
                       <span>Name</span>
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiHash className="w-3 h-3" />
                       <span>ID</span>
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiBriefcase className="w-3 h-3" />
                       <span>Designation</span>
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiLogIn className="w-3 h-3" />
                       <span>Check In</span>
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiLogOut className="w-3 h-3" />
                       <span>Check Out</span>
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
                     <div className="flex items-center space-x-1">
                       <FiClock className="w-3 h-3" />
                       <span>Duration</span>
@@ -283,7 +283,7 @@ export default function MyAttendance() {
                   <tr>
                     <td
                       colSpan={7}
-                      className="px-6 py-8 text-center text-gray-500 dark:text-gray-400"
+                      className="px-6 py-8 text-center text-gray-500 dark:text-gray-300"
                     >
                       No attendance records found
                     </td>
@@ -362,10 +362,10 @@ export default function MyAttendance() {
           {/* Summary Footer */}
           <div className="bg-gray-50 dark:bg-gray-700/50 px-6 py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between text-sm">
-              <span className="text-gray-600 dark:text-gray-400">
+              <span className="text-gray-600 dark:text-gray-300">
                 Total Records: {attendances.length}
               </span>
-              <span className="text-gray-600 dark:text-gray-400">
+              <span className="text-gray-600 dark:text-gray-300">
                 Today: {new Date().toLocaleDateString()}
               </span>
             </div>

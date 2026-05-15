@@ -130,7 +130,7 @@ export default function MyProfile() {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
             My Profile
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 mt-1">
+          <p className="text-gray-600 dark:text-gray-300 mt-1">
             Manage your personal information
           </p>
         </div>
@@ -203,7 +203,7 @@ export default function MyProfile() {
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                     {user?.name}
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-400 mt-1">
+                  <p className="text-gray-600 dark:text-gray-300 mt-1">
                     {user?.designation || 'No designation'}
                   </p>
                 </>
@@ -215,8 +215,8 @@ export default function MyProfile() {
               {/* Email */}
               <div>
                 <div className="flex items-center space-x-2 mb-1">
-                  <FiMail className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <FiMail className="w-4 h-4 text-gray-500 dark:text-gray-300" />
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     Email
                   </span>
                 </div>
@@ -237,8 +237,8 @@ export default function MyProfile() {
               {/* Phone */}
               <div>
                 <div className="flex items-center space-x-2 mb-1">
-                  <FiPhone className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <FiPhone className="w-4 h-4 text-gray-500 dark:text-gray-300" />
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     Phone
                   </span>
                 </div>
@@ -259,8 +259,8 @@ export default function MyProfile() {
               {/* Department */}
               <div>
                 <div className="flex items-center space-x-2 mb-1">
-                  <FiCpu className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <FiCpu className="w-4 h-4 text-gray-500 dark:text-gray-300" />
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     Department
                   </span>
                 </div>
@@ -281,8 +281,8 @@ export default function MyProfile() {
               {/* Experience */}
               <div>
                 <div className="flex items-center space-x-2 mb-1">
-                  <FiCalendar className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <FiCalendar className="w-4 h-4 text-gray-500 dark:text-gray-300" />
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     Experience
                   </span>
                 </div>
@@ -305,8 +305,8 @@ export default function MyProfile() {
               {/* Salary */}
               <div>
                 <div className="flex items-center space-x-2 mb-1">
-                  <FaMoneyBill className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <FaMoneyBill className="w-4 h-4 text-gray-500 dark:text-gray-300" />
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     Salary
                   </span>
                 </div>
@@ -317,7 +317,7 @@ export default function MyProfile() {
               {/* Skills Section */}
               <div className="mt-8">
                 <div className="flex items-center space-x-2 mb-3">
-                  <FiAward className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+                  <FiAward className="w-5 h-5 text-gray-500 dark:text-gray-300" />
                   <h3 className="font-medium text-gray-900 dark:text-white">
                     Skills
                   </h3>
@@ -345,14 +345,14 @@ export default function MyProfile() {
                           </span>
                         ))
                     ) : (
-                      <p className="text-gray-500 dark:text-gray-400 italic">
+                      <p className="text-gray-500 dark:text-gray-300 italic">
                         No skills added
                       </p>
                     )}
                   </div>
                 )}
                 {edit && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-300 mt-2">
                     Separate skills with commas
                   </p>
                 )}

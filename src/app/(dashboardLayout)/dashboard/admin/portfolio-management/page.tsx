@@ -249,7 +249,7 @@ export default function PortfolioManagement() {
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
               Portfolio Management
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
               Manage your agency s creative work samples
             </p>
           </div>
@@ -385,7 +385,7 @@ export default function PortfolioManagement() {
                                           transition-colors duration-200"
                             >
                               <Upload size={20} className="text-gray-500" />
-                              <span className="text-sm text-gray-600 dark:text-gray-400 truncate">
+                              <span className="text-sm text-gray-600 dark:text-gray-300 truncate">
                                 {file ? file.name : 'Choose image file'}
                               </span>
                             </div>
@@ -457,7 +457,7 @@ export default function PortfolioManagement() {
                           {newItem.title}
                         </p>
                         {newItem.description && (
-                          <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
                             {newItem.description}
                           </p>
                         )}
@@ -568,7 +568,7 @@ export default function PortfolioManagement() {
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
           <div className="bg-white dark:bg-gray-900 rounded-md p-4 border border-gray-200 dark:border-gray-800">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-500 dark:text-gray-300">
               Total Items
             </p>
             <p className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -583,7 +583,7 @@ export default function PortfolioManagement() {
             }
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Video</p>
+            <p className="text-sm text-gray-500 dark:text-gray-300">Video</p>
             {/* Video */}
             <p className="text-2xl font-bold text-red-600">
               {
@@ -593,7 +593,7 @@ export default function PortfolioManagement() {
             </p>
           </div>
           <div className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800">
-            <p className="text-sm text-gray-500 dark:text-gray-400">Campaign</p>
+            <p className="text-sm text-gray-500 dark:text-gray-300">Campaign</p>
             {/* Campaign */}
             <p className="text-2xl font-bold text-yellow-600">
               {
@@ -669,7 +669,7 @@ export default function PortfolioManagement() {
                     {item.title}
                   </h3>
                   {item.description && (
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
                       {item.description}
                     </p>
                   )}
@@ -715,19 +715,19 @@ export default function PortfolioManagement() {
             <table className="w-full">
               <thead className="bg-gray-50 dark:bg-gray-800/50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Title
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Category
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Type
                   </th>
-                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Preview
                   </th>
-                  <th className="px-6 py-4 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                  <th className="px-6 py-4 text-right text-xs font-medium text-gray-500 dark:text-gray-300 uppercase">
                     Actions
                   </th>
                 </tr>
@@ -744,7 +744,7 @@ export default function PortfolioManagement() {
                           {item.title}
                         </p>
                         {item.description && (
-                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                          <p className="text-sm text-gray-500 dark:text-gray-300 mt-1">
                             {item.description}
                           </p>
                         )}
@@ -806,7 +806,7 @@ export default function PortfolioManagement() {
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
               No portfolio items found
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
               {searchTerm || categoryFilter !== 'all'
                 ? 'Try adjusting your search or filters'
                 : 'Get started by adding your first portfolio item'}
