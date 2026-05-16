@@ -114,7 +114,7 @@ const Hero = ({
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl text-base text-muted-foreground sm:text-lg lg:text-xl">
+            <p className="text-xl font-bold tracking-tight text-balance md:text-2xl bg-gradient-to-r from-lime-300 dark:from-lime-100 to-[#4fd100] bg-clip-text text-transparent">
               {description}
             </p>
 

@@ -39,7 +39,7 @@ export default async function HomePage() {
       <Hero
         badge="Trusted by 50+ Brands In Rajshahi"
         heading={hero?.title}
-        // description={hero?.description}
+        description={hero?.description}
         image={{
           src: hero?.imageUrl,
           alt: hero?.heading,
