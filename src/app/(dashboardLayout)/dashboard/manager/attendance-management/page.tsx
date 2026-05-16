@@ -197,7 +197,7 @@ export default function AttendanceManagement() {
         </div>
 
         {/* Filters Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 p-6 mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             {/* Search */}
             <div className="flex-1 relative">
@@ -246,7 +246,7 @@ export default function AttendanceManagement() {
 
           {/* Active Filters */}
           {(searchTerm || dateFilter) && (
-            <div className="flex items-center gap-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-2 mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
               <Filter size={16} className="text-gray-400 dark:text-gray-500" />
               <span className="text-sm text-gray-600 dark:text-gray-300">
                 Active Filters:
@@ -268,8 +268,8 @@ export default function AttendanceManagement() {
         </div>
 
         {/* Attendance Table */}
-        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
               Attendance Records ({filteredAttendance.length})
             </h2>

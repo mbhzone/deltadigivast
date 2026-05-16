@@ -262,13 +262,13 @@ export default function CoursesManagement() {
             placeholder="Search courses..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
           />
         </div>
         {/* <select
           value={categoryFilter}
           onChange={e => setCategoryFilter(e.target.value)}
-          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
         >
           {categories.map(cat => (
             <option key={cat} value={cat}>
@@ -279,7 +279,7 @@ export default function CoursesManagement() {
         <select
           value={statusFilter}
           onChange={e => setStatusFilter(e.target.value)}
-          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+          className="px-4 py-2 rounded-lg bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
         >
           <option value="all">All Status</option>
           <option value="PUBLISHED">Published</option>
@@ -306,7 +306,7 @@ export default function CoursesManagement() {
                   setNewCourse({ ...newCourse, title: e.target.value })
                 }
                 placeholder="Course title"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
 
@@ -338,7 +338,7 @@ export default function CoursesManagement() {
                   setNewCourse({ ...newCourse, category: e.target.value })
                 }
                 placeholder="Category"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
 
@@ -353,7 +353,7 @@ export default function CoursesManagement() {
                   setNewCourse({ ...newCourse, instructor: e.target.value })
                 }
                 placeholder="Instructor"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
 
@@ -368,7 +368,7 @@ export default function CoursesManagement() {
                   setNewCourse({ ...newCourse, duration: e.target.value })
                 }
                 placeholder="8 weeks"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
 
@@ -383,7 +383,7 @@ export default function CoursesManagement() {
                   setNewCourse({ ...newCourse, price: Number(e.target.value) })
                 }
                 placeholder="0"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
 
@@ -402,7 +402,7 @@ export default function CoursesManagement() {
                       | 'ARCHIVED',
                   })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               >
                 <option value="DRAFT">Draft</option>
                 <option value="PUBLISHED">Published</option>
@@ -421,7 +421,7 @@ export default function CoursesManagement() {
                 }
                 rows={3}
                 placeholder="Course description"
-                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
               />
             </div>
           </div>

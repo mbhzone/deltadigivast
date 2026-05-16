@@ -63,7 +63,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         transition={{ duration: 0.5 }}
         className="relative w-full max-w-md"
       >
-        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 space-y-6 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 space-y-6 border border-gray-200 dark:border-gray-800">
           <div className="text-center">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-[#6efd0b] via-[#8bff3a] to-[#4fd100] bg-clip-text text-transparent">
               Delta Digivast Login

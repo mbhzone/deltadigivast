@@ -119,7 +119,7 @@ export default function CoursesPage() {
               </div>
 
               {/* Price and Status */}
-              <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800">
                 <div>
                   <span className="text-2xl font-bold text-gray-900 dark:text-white">
                     {course.price} Tk

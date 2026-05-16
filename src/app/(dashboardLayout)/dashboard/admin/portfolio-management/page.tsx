@@ -299,7 +299,7 @@ export default function PortfolioManagement() {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 rounded-xl
                                  bg-gray-50 dark:bg-gray-800
-                                 border border-gray-300 dark:border-gray-700
+                                 border border-gray-300 dark:border-gray-800
                                  text-gray-900 dark:text-white
                                  placeholder-gray-400 dark:placeholder-gray-500
                                  focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent
@@ -318,7 +318,7 @@ export default function PortfolioManagement() {
                           name="category"
                           value={newItem.category}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+                          className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                         >
                           <option value="Graphical Content">
                             Graphical Content
@@ -341,7 +341,7 @@ export default function PortfolioManagement() {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 rounded-xl 
       bg-gray-50 dark:bg-gray-800 
-      border border-gray-300 dark:border-gray-700 
+      border border-gray-300 dark:border-gray-800 
       text-gray-900 dark:text-white 
       focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
                         >
@@ -363,7 +363,7 @@ export default function PortfolioManagement() {
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 rounded-xl
                                    bg-gray-50 dark:bg-gray-800
-                                   border border-gray-300 dark:border-gray-700
+                                   border border-gray-300 dark:border-gray-800
                                    text-gray-900 dark:text-white
                                    placeholder-gray-400 dark:placeholder-gray-500
                                    focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
@@ -380,7 +380,7 @@ export default function PortfolioManagement() {
                             <div
                               className="flex items-center gap-3 px-4 py-3 rounded-xl
                                           bg-gray-50 dark:bg-gray-800
-                                          border border-gray-300 dark:border-gray-700
+                                          border border-gray-300 dark:border-gray-800
                                           hover:bg-gray-100 dark:hover:bg-gray-700
                                           transition-colors duration-200"
                             >
@@ -411,7 +411,7 @@ export default function PortfolioManagement() {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 rounded-xl
                                  bg-gray-50 dark:bg-gray-800
-                                 border border-gray-300 dark:border-gray-700
+                                 border border-gray-300 dark:border-gray-800
                                  text-gray-900 dark:text-white
                                  placeholder-gray-400 dark:placeholder-gray-500
                                  focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
@@ -427,7 +427,7 @@ export default function PortfolioManagement() {
                     </h3>
 
                     {newItem.type === 'image' && imagePreview && (
-                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-700">
+                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-800">
                         <img
                           src={imagePreview}
                           alt="Preview"
@@ -437,14 +437,14 @@ export default function PortfolioManagement() {
                     )}
 
                     {newItem.type === 'video content' && newItem.url && (
-                      <div className="aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-700 bg-gray-900 flex items-center justify-center">
+                      <div className="aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-800 bg-gray-900 flex items-center justify-center">
                         <Video size={48} className="text-gray-600" />
                       </div>
                     )}
 
                     {!imagePreview && !newItem.url && (
                       <div
-                        className="aspect-video rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 
+                        className="aspect-video rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-800 
                                     flex items-center justify-center bg-gray-100 dark:bg-gray-800"
                       >
                         <FolderOpen size={48} className="text-gray-400" />
@@ -516,7 +516,7 @@ export default function PortfolioManagement() {
               onChange={e => setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-3 rounded-md
                        bg-white dark:bg-gray-900
-                       border border-gray-300 dark:border-gray-700
+                       border border-gray-300 dark:border-gray-800
                        text-gray-900 dark:text-white
                        placeholder-gray-400 dark:placeholder-gray-500
                        focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
@@ -529,7 +529,7 @@ export default function PortfolioManagement() {
               onChange={e => setCategoryFilter(e.target.value)}
               className="px-4 py-3 rounded-md
                        bg-white dark:bg-gray-900
-                       border border-gray-300 dark:border-gray-700
+                       border border-gray-300 dark:border-gray-800
                        text-gray-900 dark:text-white
                        focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             >
@@ -540,7 +540,7 @@ export default function PortfolioManagement() {
               <option value="Website">Website</option>
             </select>
 
-            <div className="flex bg-white dark:bg-gray-900 rounded-md border border-gray-300 dark:border-gray-700 overflow-hidden">
+            <div className="flex bg-white dark:bg-gray-900 rounded-md border border-gray-300 dark:border-gray-800 overflow-hidden">
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-3 transition-colors ${

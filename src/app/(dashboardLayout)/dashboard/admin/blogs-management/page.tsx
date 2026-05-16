@@ -467,7 +467,7 @@ export default function BlogManagement() {
               onChange={e => setSearchTerm(e.target.value)}
               className="w-full pl-12 pr-4 py-3 rounded-md
                        bg-white dark:bg-gray-900
-                       border border-gray-300 dark:border-gray-700
+                       border border-gray-300 dark:border-gray-800
                        text-gray-900 dark:text-white
                        placeholder-gray-400 dark:placeholder-gray-500
                        focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent
@@ -510,7 +510,7 @@ export default function BlogManagement() {
                         }
                         className="w-full px-4 py-3 rounded-md
                                  bg-gray-50 dark:bg-gray-800
-                                 border border-gray-300 dark:border-gray-700
+                                 border border-gray-300 dark:border-gray-800
                                  text-gray-900 dark:text-white
                                  placeholder-gray-400 dark:placeholder-gray-500
                                  focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent
@@ -531,7 +531,7 @@ export default function BlogManagement() {
                         }
                         className="w-full px-4 py-3 rounded-md
                                  bg-gray-50 dark:bg-gray-800
-                                 border border-gray-300 dark:border-gray-700
+                                 border border-gray-300 dark:border-gray-800
                                  text-gray-900 dark:text-white
                                  placeholder-gray-400 dark:placeholder-gray-500
                                  focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent
@@ -548,7 +548,7 @@ export default function BlogManagement() {
                           <div
                             className="flex items-center gap-3 px-4 py-3 rounded-md
                                         bg-gray-50 dark:bg-gray-800
-                                        border border-gray-300 dark:border-gray-700
+                                        border border-gray-300 dark:border-gray-800
                                         hover:bg-gray-100 dark:hover:bg-gray-700
                                         transition-colors duration-200"
                           >
@@ -592,7 +592,7 @@ export default function BlogManagement() {
 
                     {/* Image Preview */}
                     {(imagePreview || imageFile) && (
-                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-700 mb-4">
+                      <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-gray-200 dark:border-gray-800 mb-4">
                         <img
                           src={imagePreview || ''}
                           alt="Preview"
@@ -686,7 +686,7 @@ export default function BlogManagement() {
                       >
                         <td className="px-6 py-4">
                           {post.imageUrl ? (
-                            <div className="relative w-16 h-16 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                            <div className="relative w-16 h-16 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800">
                               <img
                                 src={post.imageUrl}
                                 alt={post.title}

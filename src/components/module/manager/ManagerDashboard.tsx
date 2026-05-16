@@ -66,7 +66,7 @@ export default function ManagerDashboard() {
       dark:from-gray-800 dark:to-gray-900
       p-6 sm:p-8 flex-1
       shadow-sm dark:shadow-none
-      border border-gray-200 dark:border-gray-700
+      border border-gray-200 dark:border-gray-800
     "
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#6efd0b]/20 to-[#4fd100]/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32" />

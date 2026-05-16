@@ -110,7 +110,7 @@ export default function EditPortfolioModal({
               name="title"
               value={formData.title}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
 
@@ -122,7 +122,7 @@ export default function EditPortfolioModal({
               name="category"
               value={formData.category}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
             >
               <option value="Graphical Content">Graphical Content</option>
               <option value="Video Content">Video Content</option>
@@ -139,7 +139,7 @@ export default function EditPortfolioModal({
               name="type"
               value={formData.type}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
             >
               <option value="image">Image</option>
               <option value="video">Video</option>
@@ -163,7 +163,7 @@ export default function EditPortfolioModal({
                 name="url"
                 value={formData.url}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
               />
             </div>
           )}
@@ -177,7 +177,7 @@ export default function EditPortfolioModal({
               value={formData.description}
               onChange={handleInputChange}
               rows={2}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
             />
           </div>
         </div>

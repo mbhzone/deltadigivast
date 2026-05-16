@@ -233,7 +233,7 @@ export default function DashboardNavbar({
                   exit={{ opacity: 0, y: -10 }}
                   className="absolute right-0 mt-2 w-56
                            bg-white dark:bg-gray-800 rounded-lg shadow-xl
-                           border border-gray-200 dark:border-gray-700
+                           border border-gray-200 dark:border-gray-800
                            overflow-hidden z-50"
                 >
                   <h1>Hello </h1>

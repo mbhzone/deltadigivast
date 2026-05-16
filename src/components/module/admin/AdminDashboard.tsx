@@ -121,7 +121,7 @@ export default function AdminDashboard() {
       dark:from-gray-800 dark:to-gray-900
       p-6 sm:p-8 flex-1
       shadow-sm dark:shadow-none
-      border border-gray-200 dark:border-gray-700
+      border border-gray-200 dark:border-gray-800
     "
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#6efd0b]/20 to-[#4fd100]/20 rounded-full blur-3xl transform translate-x-32 -translate-y-32" />
@@ -235,7 +235,7 @@ export default function AdminDashboard() {
               <select
                 value={timeRange}
                 onChange={e => setTimeRange(e.target.value)}
-                className="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
+                className="px-3 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 rounded-lg text-sm text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50"
               >
                 <option value="week">Last 7 days</option>
                 <option value="month">Last 30 days</option>

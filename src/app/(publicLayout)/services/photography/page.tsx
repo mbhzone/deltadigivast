@@ -21,6 +21,7 @@ import {
   Layout,
   ArrowUpRight,
 } from 'lucide-react';
+import CtaSection from '@/components/module/shared/CtaSection';
 
 export default function PhotographyPage() {
   const services = [
@@ -348,6 +349,8 @@ export default function PhotographyPage() {
           </div>
         </div>
       </section>
+      {/* CTA section */}
+      <CtaSection></CtaSection>
     </div>
   );
 }

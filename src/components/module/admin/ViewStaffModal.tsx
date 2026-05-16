@@ -291,7 +291,7 @@ export default function ViewStaffModal({
                           <span
                             key={index}
                             className="px-3 py-1.5 bg-white dark:bg-gray-900 
-                                     border border-gray-200 dark:border-gray-700
+                                     border border-gray-200 dark:border-gray-800
                                      rounded-lg text-xs font-medium text-gray-700 dark:text-gray-300"
                           >
                             {skill}

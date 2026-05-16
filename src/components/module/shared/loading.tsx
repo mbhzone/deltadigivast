@@ -49,7 +49,7 @@ export default function Loading() {
 //       <div className="text-center">
 //         {/* Simple Spinner with your gradient */}
 //         <div className="relative w-16 h-16 mx-auto mb-4">
-//           <div className="absolute inset-0 rounded-full border-4 border-gray-200 dark:border-gray-700"></div>
+//           <div className="absolute inset-0 rounded-full border-4 border-gray-200 dark:border-gray-800"></div>
 //           <div
 //             className="absolute inset-0 rounded-full border-4 border-transparent
 //                         border-t-[#6efd0b] border-r-[#8bff3a] animate-spin"

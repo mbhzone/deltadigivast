@@ -19,6 +19,7 @@ import {
   Video,
   MessageSquare,
 } from 'lucide-react';
+import CtaSection from '@/components/module/shared/CtaSection';
 
 export default function MarketingPage() {
   const services = [
@@ -194,7 +195,7 @@ export default function MarketingPage() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#6efd0b]/10 via-transparent to-transparent"></div>
 
                 {/* Floating trust badge */}
-                <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm rounded-xl p-3 shadow-lg border border-gray-200 dark:border-gray-800">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-[#6efd0b]/10 rounded-full flex items-center justify-center">
                       <svg
@@ -354,7 +355,7 @@ export default function MarketingPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {process.map((item, index) => (
               <div key={index} className="relative">
-                <div className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                <div className=" p-6 rounded-xs shadow-lg border border-gray-200 dark:border-gray-800 h-full">
                   <div className="text-4xl font-bold text-[#6efd0b] mb-2">
                     {item.step}
                   </div>
@@ -373,6 +374,8 @@ export default function MarketingPage() {
           </div>
         </div>
       </section>
+      {/* CTA section */}
+      <CtaSection></CtaSection>
     </div>
   );
 }

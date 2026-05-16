@@ -15,6 +15,7 @@ import {
   Clock,
   Star,
 } from 'lucide-react';
+import CtaSection from '@/components/module/shared/CtaSection';
 
 export default function ServicePage() {
   const services = [
@@ -161,7 +162,7 @@ export default function ServicePage() {
             <Link
               key={index}
               href={service.href}
-              className="group block  rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:-translate-y-1"
+              className="group block  rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-800 hover:-translate-y-1"
             >
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
@@ -209,9 +210,10 @@ export default function ServicePage() {
           ))}
         </div>
       </section>
-
+      {/* CTA section */}
+      <CtaSection></CtaSection>
       {/* Stats Section */}
-      <section className=" py-16 border-y border-gray-200 dark:border-gray-700">
+      <section className=" py-16 border-y border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (

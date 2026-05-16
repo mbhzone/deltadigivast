@@ -235,7 +235,7 @@ export default function StaffManagement() {
             placeholder="Search by name, email, role, or department..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-md bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 rounded-md bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
           />
         </div>
       </div>
@@ -254,7 +254,7 @@ export default function StaffManagement() {
               placeholder="Employee ID"
               value={formData.employeeId}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="text"
@@ -262,7 +262,7 @@ export default function StaffManagement() {
               placeholder="Full Name *"
               value={formData.name}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="email"
@@ -271,7 +271,7 @@ export default function StaffManagement() {
               value={formData.email}
               onChange={handleInputChange}
               readOnly={!!editingStaff} // <-- Read-only if editing
-              className={`px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent ${editingStaff ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent ${editingStaff ? 'opacity-50 cursor-not-allowed' : ''}`}
             />
             <input
               type="password"
@@ -280,7 +280,7 @@ export default function StaffManagement() {
               value={formData.password}
               onChange={handleInputChange}
               readOnly={!!editingStaff} // <-- Read-only if editing
-              className={`px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent ${editingStaff ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent ${editingStaff ? 'opacity-50 cursor-not-allowed' : ''}`}
             />
             <input
               type="text"
@@ -288,7 +288,7 @@ export default function StaffManagement() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="text"
@@ -296,7 +296,7 @@ export default function StaffManagement() {
               placeholder="Role"
               value={formData.role}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="text"
@@ -304,7 +304,7 @@ export default function StaffManagement() {
               placeholder="Department"
               value={formData.department}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="text"
@@ -312,7 +312,7 @@ export default function StaffManagement() {
               placeholder="Designation"
               value={formData.designation}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="text"
@@ -320,7 +320,7 @@ export default function StaffManagement() {
               placeholder="Skills (comma separated)"
               value={formData.skills}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="number"
@@ -328,14 +328,14 @@ export default function StaffManagement() {
               placeholder="Experience (years)"
               value={formData.experience}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
             <input
               type="date"
               name="joiningDate"
               value={formData.joiningDate?.slice(0, 10) || ''}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800"
             />
             <input
               type="number"
@@ -343,7 +343,7 @@ export default function StaffManagement() {
               placeholder="Salary (BDT)"
               value={formData.salary}
               onChange={handleInputChange}
-              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
+              className="px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
             />
           </div>
           <div className="flex items-center justify-end gap-3 mt-4">

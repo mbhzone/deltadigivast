@@ -133,7 +133,7 @@ export default function MyProfile() {
         </div>
 
         {/* Profile Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden">
           {/* Cover Photo */}
           <div className="h-32 bg-gradient-to-r from-blue-500 to-purple-600 dark:from-blue-600 dark:to-purple-700"></div>
 
@@ -401,7 +401,7 @@ export default function MyProfile() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
               {edit ? (
                 <>
                   <button

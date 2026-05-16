@@ -180,7 +180,7 @@ export default function WebDevelopmentPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-50 dark:bg-black py-16 border-y border-gray-200 dark:border-gray-700">
+      <section className="bg-gray-50 dark:bg-black py-16 border-y border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -216,7 +216,7 @@ export default function WebDevelopmentPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 hover:border-[#6efd0b]/50 transition-all duration-300"
+                className="group bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 hover:border-[#6efd0b]/50 transition-all duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div
@@ -261,7 +261,7 @@ export default function WebDevelopmentPage() {
             {whyChooseUs.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 text-center hover:-translate-y-1 transition-all"
+                className="bg-white dark:bg-black p-6 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 text-center hover:-translate-y-1 transition-all"
               >
                 <div className="w-12 h-12 bg-[#6efd0b]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-[#6efd0b]" />
@@ -309,7 +309,7 @@ export default function WebDevelopmentPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-700 shadow-sm"
+                className="p-6 bg-white dark:bg-black rounded-md border border-gray-200 dark:border-gray-800 shadow-sm"
               >
                 <div className="text-4xl font-bold text-[#6efd0b]/20 mb-2">
                   {item.step}

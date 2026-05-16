@@ -145,7 +145,7 @@ export default function MyAttendance() {
         </div>
 
         {/* Current Time & Status Card */}
-        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 p-6 mb-8">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 p-6 mb-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="flex items-center space-x-4">
               <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl">
@@ -218,8 +218,8 @@ export default function MyAttendance() {
         )}
 
         {/* Attendance Records */}
-        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden">
+          <div className="p-6 border-b border-gray-200 dark:border-gray-800">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
               Attendance History
             </h2>
@@ -360,7 +360,7 @@ export default function MyAttendance() {
           </div>
 
           {/* Summary Footer */}
-          <div className="bg-gray-50 dark:bg-gray-700/50 px-6 py-4 border-t border-gray-200 dark:border-gray-700">
+          <div className="bg-gray-50 dark:bg-gray-700/50 px-6 py-4 border-t border-gray-200 dark:border-gray-800">
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-600 dark:text-gray-300">
                 Total Records: {attendances.length}

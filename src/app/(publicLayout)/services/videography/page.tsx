@@ -14,6 +14,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import Link from 'next/link';
+import CtaSection from '@/components/module/shared/CtaSection';
 
 export default function VideographyPage() {
   const [isPlaying, setIsPlaying] = React.useState(false);
@@ -195,6 +196,8 @@ export default function VideographyPage() {
           </div>
         </div>
       </section>
+      {/* CTA section */}
+      <CtaSection></CtaSection>
     </div>
   );
 }

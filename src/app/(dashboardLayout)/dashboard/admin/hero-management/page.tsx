@@ -140,7 +140,7 @@ export default function HeroManagement() {
               name="title"
               value={heroData.title}
               onChange={handleInputChange}
-              className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 transition-all duration-200"
+              className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 transition-all duration-200"
             />
           </div>
 
@@ -154,7 +154,7 @@ export default function HeroManagement() {
               rows={4}
               value={heroData.description}
               onChange={handleInputChange}
-              className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 transition-all duration-200"
+              className="w-full px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50 transition-all duration-200"
             />
           </div>
 
@@ -164,7 +164,7 @@ export default function HeroManagement() {
               Hero Image
             </label>
             <div className="flex items-start gap-4">
-              <div className="relative w-32 h-32 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-800">
+              <div className="relative w-32 h-32 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-800 flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-gray-800">
                 {imagePreview ? (
                   <Image
                     src={imagePreview}
@@ -190,7 +190,7 @@ export default function HeroManagement() {
                   className={`inline-flex items-center gap-2 px-4 py-2 
   ${isUploading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
   bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 
-  border border-gray-300 dark:border-gray-700 rounded-lg 
+  border border-gray-300 dark:border-gray-800 rounded-lg 
   hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200`}
                 >
                   {isUploading ? (

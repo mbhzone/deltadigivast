@@ -40,7 +40,7 @@ export default function MyProfile() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-gray-200 dark:border-gray-700 border-t-[#6efd0b] rounded-full animate-spin mx-auto mb-4" />
+          <div className="w-12 h-12 border-4 border-gray-200 dark:border-gray-800 border-t-[#6efd0b] rounded-full animate-spin mx-auto mb-4" />
           <p className="text-gray-600 dark:text-gray-300">Loading profile...</p>
         </div>
       </div>
@@ -307,7 +307,7 @@ export default function MyProfile() {
                     name="name"
                     value={user.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 text-center border border-gray-300 dark:border-gray-700 
+                    className="w-full px-4 py-2 text-center border border-gray-300 dark:border-gray-800 
                              rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                     placeholder="Full Name"
@@ -316,7 +316,7 @@ export default function MyProfile() {
                     name="designation"
                     value={user.designation}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 text-center border border-gray-300 dark:border-gray-700 
+                    className="w-full px-4 py-2 text-center border border-gray-300 dark:border-gray-800 
                              rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                              focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                     placeholder="Designation"
@@ -356,7 +356,7 @@ export default function MyProfile() {
                       name="email"
                       value={user.email}
                       onChange={handleChange}
-                      className="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 
+                      className="w-full px-2 py-1 border border-gray-300 dark:border-gray-800 
                                rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                                focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                     />
@@ -389,7 +389,7 @@ export default function MyProfile() {
                       name="phone"
                       value={user.phone}
                       onChange={handleChange}
-                      className="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 
+                      className="w-full px-2 py-1 border border-gray-300 dark:border-gray-800 
                                rounded bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                                focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                       placeholder="Phone number"
@@ -434,7 +434,7 @@ export default function MyProfile() {
                     name="department"
                     value={user.department}
                     onChange={handleChange}
-                    className="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-700 
+                    className="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-800 
                              rounded bg-white dark:bg-gray-800"
                   />
                 ) : (
@@ -453,7 +453,7 @@ export default function MyProfile() {
                     value={user.experience}
                     onChange={handleChange}
                     type="number"
-                    className="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-700 
+                    className="w-full px-2 py-1 text-sm border border-gray-300 dark:border-gray-800 
                              rounded bg-white dark:bg-gray-800"
                   />
                 ) : (
@@ -483,7 +483,7 @@ export default function MyProfile() {
                   name="skills"
                   value={user.skills}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-800 
                            rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white
                            focus:ring-2 focus:ring-[#6efd0b]/50 focus:border-transparent"
                   placeholder="e.g., React, Node.js, TypeScript"
@@ -495,7 +495,7 @@ export default function MyProfile() {
                       <span
                         key={i}
                         className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 
-                                 border border-gray-200 dark:border-gray-700
+                                 border border-gray-200 dark:border-gray-800
                                  rounded-lg text-xs text-gray-700 dark:text-gray-300"
                       >
                         {skill}
