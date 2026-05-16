@@ -31,6 +31,9 @@ export default function ProjectGrid({ projects }: Props) {
   const filteredProjects =
     filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
+  const imageProjects = filteredProjects.filter(p => p.imageUrl);
+  const videoProjects = filteredProjects.filter(p => p.videoUrl);
+
   return (
     <section className="max-w-7xl mx-auto ">
       {/* Filter - Clean One Line */}
@@ -62,9 +65,51 @@ export default function ProjectGrid({ projects }: Props) {
         </div>
       </div>
 
-      {/* Grid */}
+      {/* video Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pb-3">
-        {filteredProjects.map(project => (
+        {videoProjects.map(project => (
+          // <Link
+          //   key={project.id}
+          //   href={`/portfolio/${project.id}`}
+          //   className="group block bg-white dark:bg-black rounded-md shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-border"
+          // >
+          <div key={project.id} className="">
+            <div className="relative  overflow-hidden">
+              {project.imageUrl ? (
+                <div className="relative w-full  aspect-square">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ) : project.videoUrl ? (
+                <div className="h-52 md:h-60 ">
+                  <iframe
+                    src={
+                      project.videoUrl.includes('youtu.be')
+                        ? `https://www.youtube.com/embed/${project.videoUrl.split('/').pop()}`
+                        : project.videoUrl
+                    }
+                    title={project.title}
+                    className="w-full h-full rounded-md "
+                    allowFullScreen
+                  />
+                </div>
+              ) : (
+                <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-300">
+                  No Preview
+                </div>
+              )}
+            </div>
+          </div>
+          // </Link>
+        ))}
+      </div>
+      {/* images Grid */}
+      <div className="grid grid-cols-3 lg:grid-cols-8 gap-5 pb-3">
+        {imageProjects.map(project => (
           // <Link
           //   key={project.id}
           //   href={`/portfolio/${project.id}`}
