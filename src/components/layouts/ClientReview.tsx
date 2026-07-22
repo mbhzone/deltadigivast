@@ -42,14 +42,14 @@ const realReviews = [
     author: 'Md Nayeem Hasan',
     position: 'Owner, Rajshahi Cooling Refrigeration',
     rating: 5,
-    image: 'https://randomuser.me/api/portraits/women/1.jpg',
+    image: 'https://i.ibb.co.com/QF3ww5rZ/rajshahi-cooling.jpg',
   },
   {
     text: 'আরো এগিয়ে যান সফলতার পথে সবসময় অফুরন্ত ভালোবাসা থাকবে ❤️',
-    author: 'Abid Hasan Rakib',
-    position: 'Satisfied Client',
+    author: 'MD Shihab Uddin',
+    position: 'Co-Founder, Rifi Bazar',
     rating: 5,
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
+    image: 'https://i.ibb.co.com/b5kn7njM/rifi-bazar.jpg',
   },
 ];
 
