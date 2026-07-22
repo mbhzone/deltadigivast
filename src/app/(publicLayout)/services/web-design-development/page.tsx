@@ -165,7 +165,7 @@ export default function WebDevelopmentPage() {
             <div className="relative">
               <div className="relative rounded-xs overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000"
+                  src="https://i.ibb.co.com/3YGQvmgY/coding-jpg.jpg"
                   alt="Web Development"
                   width={600}
                   height={400}
