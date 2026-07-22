@@ -58,13 +58,13 @@ const Navbar = ({ className }: NavbarProps) => {
   }, []);
   const features = [
     {
-      title: 'Videography',
+      title: 'Video Production',
       description:
         'Professional video production services for commercials, events, corporate shoots, and creative storytelling.',
       href: '/services/videography',
     },
     {
-      title: 'Photography',
+      title: 'Graphics Design',
       description:
         'High-quality photography services including product, event, corporate, and lifestyle shoots.',
       href: '/services/photography',
