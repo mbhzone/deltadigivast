@@ -92,7 +92,7 @@ export default function ContactPage() {
               Business Email
             </h3>
             <p className="text-gray-600 dark:text-gray-300 font-medium">
-              help@deltadigivast.com
+              info@deltadigivast.com
             </p>
           </div>
 
@@ -105,7 +105,7 @@ export default function ContactPage() {
               Office Address
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              49/2 rajib chattar Old Shimla Boalia Rajshahi
+              49/2 rajib chattar Old bilShimla Boalia Rajshahi
             </p>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
             আমাদের Office — রাজশাহী
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-8 flex items-center justify-center gap-2">
-            <Clock size={16} /> সরাসরি studio visit করতে চাইলে আগে একটু call
+            <Clock size={16} /> সরাসরি studio visit করতে চাইলে আগে call
             করুন।
           </p>
         </div>
