@@ -184,7 +184,7 @@ export default function MarketingPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 dark:ring-gray-800">
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000"
+                    src="https://i.ibb.co.com/FLF2rgM6/website-meeting-image-jpg.jpg"
                     alt="Digital Marketing Team"
                     fill
                     className="object-cover"
@@ -263,7 +263,7 @@ export default function MarketingPage() {
               Our Services
             </span>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              আমরা কোন Digital Marketing Services দিই
+              আমরা যেসব Digital Marketing Services দিই
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               সঠিক পরিকল্পনার মাধ্যমে আপনার ব্যবসার অনলাইন উপস্থিতি বৃদ্ধি করি
