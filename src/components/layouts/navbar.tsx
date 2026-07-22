@@ -67,7 +67,7 @@ const Navbar = ({ className }: NavbarProps) => {
       title: 'Graphics Design',
       description:
         'High-quality photography services including product, event, corporate, and lifestyle shoots.',
-      href: '/services/photography',
+      href: '/services/graphics-design',
     },
     {
       title: 'Digital Marketing',
