@@ -212,7 +212,7 @@ export default function MarketingPage() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-900 dark:text-white">
-                        Trusted by 30+ Businesses
+                        Trusted by 50+ Businesses
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-300">
                         in Rajshahi
