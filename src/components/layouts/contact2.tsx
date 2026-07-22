@@ -21,12 +21,12 @@ const Contact2 = ({
   title = 'যোগাযোগ করুন',
   description = 'আপনার ব্যবসা বা প্রজেক্ট নিয়ে আমাদের সাথে সরাসরি কথা বলুন। রাজশাহীতে আপনার ডিজিটাল যাত্রা শুরু করতে আমরা সর্বদা প্রস্তুত।',
   phone = '+88016 3236 3235',
-  email = 'help@deltadigivast.com',
+  email = 'info@deltadigivast.com',
   web = {
-    label: 'deltadigivast.vercel.app',
-    url: 'https://deltadigivast.vercel.app',
+    label: 'deltadigivast.com',
+    url: 'https://deltadigivast.com',
   },
-  address = '৪৯/২ রাজিব চত্ত্বর, ওল্ড শিমলা, বোয়ালিয়া, রাজশাহী।',
+  address = '৪৯/২ রাজিব চত্ত্বর, পুরাতুন বিলশিমলা, বোয়ালিয়া, রাজশাহী।',
   className,
 }: Contact2Props) => {
   const [loading, setLoading] = useState(false);
