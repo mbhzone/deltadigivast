@@ -59,8 +59,8 @@ const Footer = ({
     {
       title: 'Services',
       links: [
-        { name: 'Videography', href: '/services/videography' },
-        { name: 'Photography', href: '/services/photography' },
+        { name: 'Video Production', href: '/services/videography' },
+        { name: 'Graphics Design', href: '/services/photography' },
         { name: 'Digital Marketing', href: '/services/digital-marketing' },
         {
           name: 'Web Design & Development',
