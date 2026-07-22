@@ -14,7 +14,7 @@ const realReviews = [
     author: 'Mahbud Hasan Sobuj',
     position: 'Senior Manager, Perfect Living Properties Ltd.',
     rating: 5,
-    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    image: 'https://i.ibb.co.com/Q7BNGRxw/perfect.jpg',
   },
   {
     text: 'খুবই ভালো উদ্যোগ ভাই,,দোয়া করি সামনে এগিয়ে যান। পাশে আছি...🥰 ইনশাআল্লাহ। ❤️',
