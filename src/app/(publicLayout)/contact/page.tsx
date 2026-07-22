@@ -148,7 +148,7 @@ export default function ContactPage() {
       {/* Footer-like Branding (Optional) */}
       <section className="py-12 bg-gray-50 dark:bg-black border-t border-gray-100 dark:border-gray-800 text-center">
         <p className="text-sm text-gray-500 flex items-center justify-center gap-2">
-          <Globe size={14} /> deltadigivast.vercel.app |{' '}
+          <Globe size={14} /> www.deltadigivast.com |{' '}
           <Facebook size={14} className="text-blue-600" />{' '}
           facebook.com/deltadigivast
         </p>
