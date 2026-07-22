@@ -5,14 +5,23 @@ import React from 'react';
 
 export default function BrandLogoSection() {
   const logoData = [
-    { logo: '/image/landing/1.jpg', alt: 'RANGS' },
-    { logo: '/image/landing/2.jpg', alt: 'Claraz' },
-    { logo: '/image/landing/3.jpeg', alt: 'Ojler SAP' },
-    { logo: '/image/landing/4.png', alt: 'Othoba' },
-    { logo: '/image/landing/5.png', alt: 'SME 1' },
-    { logo: '/image/landing/6.png', alt: 'SME 3' },
-    { logo: '/image/landing/7.png', alt: 'SME 5' },
-    { logo: '/image/landing/8.png', alt: 'SME 6' },
+    { logo: '/image/landing/perfect.jpg', alt: 'Perfect Living' },
+    { logo: '/image/landing/nb.jpg', alt: 'NB' },
+    { logo: '/image/landing/rifi.jpg', alt: 'Rifi' },
+    { logo: '/image/landing/rajshai florist.jpg', alt: 'Rajshahi Florist' },
+    { logo: '/image/landing/toha.jpg', alt: 'Toha' },
+    { logo: '/image/landing/chowkat.jpg', alt: 'Chowkat' },
+    { logo: '/image/landing/Probity.jpg', alt: 'Probity' },
+    { logo: '/image/landing/alpha edu.jpg', alt: 'Alpha Edu' },
+    { logo: '/image/landing/am bazar.jpg', alt: 'Am Bazar' },
+    { logo: '/image/landing/anfa.jpg', alt: 'Anfa' },
+    { logo: '/image/landing/enomic.jpg', alt: 'Enomic' },
+    { logo: '/image/landing/mim.jpg', alt: 'Mim' },
+    { logo: '/image/landing/nefrone.jpg', alt: 'Nefrone' },
+    { logo: '/image/landing/one code.jpg', alt: 'One Code' },
+    { logo: '/image/landing/rajshai cooling.jpg', alt: 'Rajshahi Cooling' },
+    { logo: '/image/landing/style shoes.jpg', alt: 'Style Shoes' },
+    { logo: '/image/landing/tori.jpg', alt: 'Tori' },
   ];
 
   return (
