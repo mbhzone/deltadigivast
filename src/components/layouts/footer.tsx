@@ -32,8 +32,8 @@ const Footer = ({
     title: 'Delta Digivast',
   },
   socialLinks = [
-    { icon: <FaInstagram className="size-5" />, href: '#', label: 'Instagram' },
-    { icon: <FaFacebook className="size-5" />, href: '#', label: 'Facebook' },
+    { icon: <FaInstagram className="size-5" />, href: 'https://www.instagram.com/deltadigivast', label: 'Instagram' },
+    { icon: <FaFacebook className="size-5" />, href: 'https://www.facebook.com/deltadigivast', label: 'Facebook' },
     { icon: <FaTwitter className="size-5" />, href: '#', label: 'Twitter' },
     { icon: <FaLinkedin className="size-5" />, href: '#', label: 'LinkedIn' },
   ],
