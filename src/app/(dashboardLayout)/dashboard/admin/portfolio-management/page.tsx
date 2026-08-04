@@ -31,7 +31,7 @@ import Loading from '@/components/module/shared/loading';
 const getYouTubeId = (url: string) => {
   const regExp =
     /(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^?&]+)/;
-  const match = url.match(regExp);
+  const match = url?.match(regExp);
   return match ? match[1] : null;
 };
 
