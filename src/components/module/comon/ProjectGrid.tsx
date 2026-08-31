@@ -2,37 +2,38 @@
 import React from 'react';
 import Image from 'next/image';
 import { Layers } from 'lucide-react';
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  imageUrl: string | null;
-  videoUrl: string | null;
-  createdAt: string;
-  updatedAt: string;
-};
+import { Project } from '@/types/portfolio';
 
 type Props = {
   projects: Project[];
 };
 
 const categories = [
-  'Video Content',
   'Graphical Content',
+  'Video Content',
   'Campaign Result',
   'Website',
 ];
 
 export default function ProjectGrid({ projects }: Props) {
-  const [filter, setFilter] = React.useState<string>('Video Content');
+  console.log(projects);
+  const [filter, setFilter] = React.useState<string>('Graphical Content');
 
   const filteredProjects =
     filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
   const imageProjects = filteredProjects.filter(p => p.imageUrl);
   const videoProjects = filteredProjects.filter(p => p.videoUrl);
+
+  const getWebsiteUrl = (url: string) => {
+    if (!url) return '#';
+
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      return url;
+    }
+
+    return `https://${url}`;
+  };
 
   return (
     <section className="max-w-7xl mx-auto ">
@@ -108,7 +109,7 @@ export default function ProjectGrid({ projects }: Props) {
         ))}
       </div>
       {/* images Grid */}
-      <div className="grid grid-cols-3 lg:grid-cols-8 gap-5 pb-3">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-1.5 pb-3">
         {imageProjects.map(project => (
           // <Link
           //   key={project.id}
@@ -145,7 +146,18 @@ export default function ProjectGrid({ projects }: Props) {
                 </div>
               )}
             </div>
+            {project.category === 'Website' && project.websiteLiveLink && (
+              <a
+                href={getWebsiteUrl(project.websiteLiveLink)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 mt-3 px-4 py-2 rounded-lg bg-[#6efd0b] text-gray-900 font-medium hover:bg-[#5ee000] transition-colors"
+              >
+                Live Preview
+              </a>
+            )}
           </div>
+
           // </Link>
         ))}
       </div>

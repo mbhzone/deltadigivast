@@ -22,7 +22,9 @@ async function getProjects(): Promise<Project[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/portfolio`,
     {
-      cache: 'no-store',
+      next: {
+        revalidate: 30,
+      },
     },
   );
   const data = await res.json();

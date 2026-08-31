@@ -31,7 +31,7 @@ import Loading from '@/components/module/shared/loading';
 const getYouTubeId = (url: string) => {
   const regExp =
     /(?:youtu\.be\/|youtube\.com\/watch\?v=|youtube\.com\/embed\/)([^?&]+)/;
-  const match = url.match(regExp);
+  const match = url?.match(regExp);
   return match ? match[1] : null;
 };
 
@@ -51,6 +51,7 @@ export default function PortfolioManagement() {
     type: 'image',
     url: '',
     description: '',
+    websiteLiveLink: '',
   });
 
   const [editItem, setEditItem] = useState<PortfolioItem | null>(null);
@@ -153,6 +154,8 @@ export default function PortfolioManagement() {
         description: newItem.description || '',
         imageUrl: newItem.type === 'image' ? imageUrl : null,
         videoUrl: newItem.type === 'video content' ? newItem.url : null,
+        websiteLiveLink:
+          newItem.category === 'Website' ? newItem.websiteLiveLink : null,
       };
 
       const res = await axios.post(API_BASE, body, {
@@ -397,6 +400,29 @@ export default function PortfolioManagement() {
                             />
                           </label>
                         </div>
+                      </div>
+                    )}
+
+                    {newItem.category === 'Website' && (
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Website Live Link *
+                        </label>
+
+                        <input
+                          type="url"
+                          name="websiteLiveLink"
+                          value={newItem.websiteLiveLink || ''}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-xl
+                 bg-gray-50 dark:bg-gray-800
+                 border border-gray-300 dark:border-gray-800
+                 text-gray-900 dark:text-white
+                 placeholder-gray-400 dark:placeholder-gray-500
+                 focus:outline-none focus:ring-2 focus:ring-[#6efd0b]/50
+                 focus:border-transparent"
+                          placeholder="https://example.com"
+                        />
                       </div>
                     )}
 

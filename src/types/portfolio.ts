@@ -11,4 +11,21 @@ export interface PortfolioItem {
   type: 'image' | 'video content';
   url: string;
   description?: string;
+  websiteLiveLink?: string;
+  imageUrl?: string;
+  videoUrl?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  imageUrl: string | null;
+  videoUrl: string | null;
+  websiteLiveLink: string | null;
+  createdAt: string;
+  updatedAt: string;
 }

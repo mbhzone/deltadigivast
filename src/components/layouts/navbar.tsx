@@ -67,7 +67,7 @@ const Navbar = ({ className }: NavbarProps) => {
       title: 'Graphics Design',
       description:
         'High-quality photography services including product, event, corporate, and lifestyle shoots.',
-      href: '/services/photography',
+      href: '/services/graphic-design',
     },
     {
       title: 'Digital Marketing',
@@ -308,14 +308,14 @@ const Navbar = ({ className }: NavbarProps) => {
             {/* Desktop actions */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Theme Toggle */}
-              <button
+              {/* <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 
                                    text-gray-600 dark:text-gray-300 transition-colors
                                    hidden sm:block"
               >
-                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-              </button>
+                {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
+              </button> */}
               {/* <Button
                 className="
     bg-gradient-to-r
@@ -415,14 +415,14 @@ const Navbar = ({ className }: NavbarProps) => {
             {/* Mobile actions */}
             <div className="flex items-center gap-2 lg:hidden">
               {/* Theme Toggle */}
-              <button
+              {/* <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 
                                    text-gray-600 dark:text-gray-300 transition-colors
                                    sm:hidden block"
               >
-                {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
-              </button>
+                {theme === 'light' ? <Sun size={20} /> : <Moon size={20} />}
+              </button> */}
 
               <div className=" sm:hidden block">
                 {mounted && user && (

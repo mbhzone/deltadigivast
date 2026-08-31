@@ -41,7 +41,7 @@ export default function ServicePage() {
       title: 'Graphics Design',
       description:
         'Brand-এর visual identity তৈরি থেকে শুরু করে প্রতিদিনের social media post পর্যন্ত — সব ধরনের graphic design service ও রাজশাহীর business-দের জন্য affordable মাসিক package',
-      href: '/services/photography',
+      href: '/services/graphic-design',
       icon: Camera,
       features: [
         'Social Media Post Design',
@@ -156,7 +156,7 @@ export default function ServicePage() {
       </section>
 
       {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-16">
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Link

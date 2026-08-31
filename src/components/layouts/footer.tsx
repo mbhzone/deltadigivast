@@ -32,8 +32,16 @@ const Footer = ({
     title: 'Delta Digivast',
   },
   socialLinks = [
-    { icon: <FaInstagram className="size-5" />, href: 'https://www.instagram.com/deltadigivast', label: 'Instagram' },
-    { icon: <FaFacebook className="size-5" />, href: 'https://www.facebook.com/deltadigivast', label: 'Facebook' },
+    {
+      icon: <FaInstagram className="size-5" />,
+      href: 'https://www.instagram.com/deltadigivast',
+      label: 'Instagram',
+    },
+    {
+      icon: <FaFacebook className="size-5" />,
+      href: 'https://www.facebook.com/deltadigivast',
+      label: 'Facebook',
+    },
     { icon: <FaTwitter className="size-5" />, href: '#', label: 'Twitter' },
     { icon: <FaLinkedin className="size-5" />, href: '#', label: 'LinkedIn' },
   ],
@@ -60,13 +68,12 @@ const Footer = ({
       title: 'Services',
       links: [
         { name: 'Video Production', href: '/services/videography' },
-        { name: 'Graphics Design', href: '/services/photography' },
+        { name: 'Graphics Design', href: '/services/graphic-design' },
         { name: 'Digital Marketing', href: '/services/digital-marketing' },
         {
           name: 'Web Design & Development',
           href: '/services/web-design-development',
         },
-        { name: 'VSMM', href: '/services/vsmm' },
       ],
     },
   ];

@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  Phone,
-  MessageCircle,
-  ArrowRight,
-  Clock,
-  Shield,
-  Award,
-} from 'lucide-react';
+import { Phone, ArrowRight, Clock, Shield, Award } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const CtaSection = () => {
@@ -16,13 +9,13 @@ const CtaSection = () => {
 
   return (
     <section className="bg-[#FAFFF7] dark:bg-gray-950 pb-10 md:pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-0">
         {/* Premium Card */}
         <div className="relative overflow-hidden rounded-md bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-xl">
           {/* Subtle Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#6efd0b]/5 to-transparent"></div>
 
-          <div className="relative p-8 md:p-12">
+          <div className="relative p-4 md:p-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Side - Content */}
               <div className="space-y-6">

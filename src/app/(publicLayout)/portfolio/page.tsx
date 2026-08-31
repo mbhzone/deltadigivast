@@ -1,23 +1,16 @@
 import ProjectGrid from '@/components/module/comon/ProjectGrid';
 import React from 'react';
-import { ArrowRight, ArrowUpRight, Sparkles } from 'lucide-react';
-
-type Project = {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  imageUrl: string | null;
-  videoUrl: string | null;
-  createdAt: string;
-  updatedAt: string;
-};
+import { ArrowUpRight, Sparkles } from 'lucide-react';
+import CtaSection from '@/components/module/shared/CtaSection';
+import { Project } from '@/types/portfolio';
 
 async function getProjects(): Promise<Project[]> {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/portfolio`,
     {
-      cache: 'no-store',
+      next: {
+        revalidate: 30,
+      },
     },
   );
   const data = await res.json();
@@ -86,6 +79,8 @@ export default async function PortfolioPage() {
       <section className="max-w-7xl mx-auto px-3 md:px-0 pb-5 md:pb-24 ">
         <ProjectGrid projects={projects} />
       </section>
+      {/* CTA section */}
+      <CtaSection></CtaSection>
     </div>
   );
 }
