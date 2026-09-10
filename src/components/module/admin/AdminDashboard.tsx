@@ -335,33 +335,31 @@ export default function AdminDashboard() {
                 <div className="mt-4 flex items-center gap-2 min-w-0">
                   <div
                     className="
-                h-1.5
-                flex-1
-                min-w-[40px]
-                bg-gray-100 dark:bg-gray-800
-                rounded-full
-                overflow-hidden
-              "
+      h-1.5
+      flex-1
+      min-w-[40px]
+      bg-gray-100 dark:bg-gray-800
+      rounded-full
+      overflow-hidden
+    "
                   >
                     <div
                       className={`
-                  h-full
-                  bg-gradient-to-r ${stat.color}
-                  rounded-full
-                `}
-                      style={{
-                        width: `${stat.progress ?? 75}%`,
-                      }}
+        h-full
+        bg-gradient-to-r ${stat.color}
+        rounded-full
+      `}
+                      style={{ width: '75%' }}
                     />
                   </div>
 
                   <span
                     className="
-                shrink-0
-                text-[10px] sm:text-xs
-                text-gray-400
-                whitespace-nowrap
-              "
+      shrink-0
+      text-[10px] sm:text-xs
+      text-gray-400
+      whitespace-nowrap
+    "
                   >
                     vs last month
                   </span>
