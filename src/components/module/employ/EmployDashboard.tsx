@@ -4,7 +4,7 @@
 import { getStoredUser } from '@/utils/auth.utils';
 import axios from 'axios';
 import { motion } from 'framer-motion';
-import { Calendar, Filter, Phone, Mail } from 'lucide-react';
+import { Calendar, Phone, Mail, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -56,17 +56,19 @@ export default function EmployeeDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Header Section with Welcome and Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5">
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-5">
+        {/* Welcome Card */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="
-      relative overflow-hidden rounded-md 
-      bg-gradient-to-br 
+      relative overflow-hidden rounded-md
+      bg-gradient-to-br
       from-white to-gray-100
       dark:from-gray-800 dark:to-gray-900
-      p-6 sm:p-8 flex-1
+      p-6 sm:p-8
+      flex-1
       shadow-sm dark:shadow-none
       border border-gray-200 dark:border-gray-800
     "
@@ -76,7 +78,7 @@ export default function EmployeeDashboard() {
           <div className="relative">
             <div className="flex items-center gap-3 mb-2">
               <span className="px-3 py-1 bg-[#6efd0b]/20 dark:text-[#6efd0b] rounded-full text-xs font-medium">
-                EMPLOY DASHBOARD
+                EMPLOYEE DASHBOARD
               </span>
 
               <span className="px-3 py-1 bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300 rounded-full text-xs">
@@ -96,6 +98,73 @@ export default function EmployeeDashboard() {
               Here’s what’s happening in your agency today. Track performance,
               manage leads, and stay on top of your projects.
             </p>
+          </div>
+        </motion.div>
+
+        {/* Support Card */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1 }}
+          className="
+      relative overflow-hidden
+      rounded-md
+      bg-white dark:bg-gray-800
+      border border-gray-200 dark:border-gray-800
+      p-6
+      w-full lg:w-[320px]
+      shadow-sm dark:shadow-none
+    "
+        >
+          {/* Background Glow */}
+          <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#6efd0b]/10 rounded-full blur-3xl" />
+
+          <div className="relative flex flex-col h-full">
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#6efd0b]/15 flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-[#6efd0b]" />
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Need Support?
+                </h3>
+
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  We’re here to help
+                </p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-5">
+              Have any questions or facing an issue? Contact our support team
+              directly on WhatsApp.
+            </p>
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/01700938429"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+          mt-auto
+          flex items-center justify-center gap-2
+          w-full
+          rounded-md
+          bg-[#25D366]
+          hover:bg-[#20bd5a]
+          text-white
+          font-medium
+          py-2.5
+          transition-all duration-200
+          hover:shadow-lg hover:shadow-[#25D366]/20
+        "
+            >
+              <MessageCircle className="w-5 h-5" />
+              Chat on WhatsApp
+            </a>
           </div>
         </motion.div>
       </div>

@@ -75,7 +75,7 @@ const Hero = ({
           <div className="relative  order-1 lg:order-2">
             <div className="relative rounded-md overflow-hidden animate-slow-spin">
               <Image
-                src={image.src}
+                src={image?.src || '/placeholder.png'}
                 alt={image?.alt || 'Hero banner image'}
                 width={1920}
                 height={1080}

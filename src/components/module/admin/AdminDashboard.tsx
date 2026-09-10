@@ -10,6 +10,7 @@ import {
   ArrowDownRight,
   Download,
   BookOpen,
+  MessageCircle,
 } from 'lucide-react';
 import {
   AreaChart,
@@ -109,17 +110,19 @@ export default function AdminDashboard() {
 
   return (
     <div className="space-y-6">
-      {/* Header Section with Welcome and Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5">
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row gap-4 mb-5">
+        {/* Welcome Card */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="
-      relative overflow-hidden rounded-md 
-      bg-gradient-to-br 
+      relative overflow-hidden rounded-md
+      bg-gradient-to-br
       from-white to-gray-100
       dark:from-gray-800 dark:to-gray-900
-      p-6 sm:p-8 flex-1
+      p-6 sm:p-8
+      flex-1
       shadow-sm dark:shadow-none
       border border-gray-200 dark:border-gray-800
     "
@@ -128,7 +131,7 @@ export default function AdminDashboard() {
 
           <div className="relative">
             <div className="flex items-center gap-3 mb-2">
-              <span className="px-3 py-1 bg-[#6efd0b]/20 dark:text-[#6efd0b]  rounded-full text-xs font-medium">
+              <span className="px-3 py-1 bg-[#6efd0b]/20 dark:text-[#6efd0b] rounded-full text-xs font-medium">
                 ADMIN DASHBOARD
               </span>
 
@@ -151,13 +154,81 @@ export default function AdminDashboard() {
             </p>
           </div>
         </motion.div>
+
+        {/* Support Card */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1 }}
+          className="
+      relative overflow-hidden
+      rounded-md
+      bg-white dark:bg-gray-800
+      border border-gray-200 dark:border-gray-800
+      p-6
+      w-full lg:w-[320px]
+      shadow-sm dark:shadow-none
+    "
+        >
+          {/* Background Glow */}
+          <div className="absolute -top-16 -right-16 w-40 h-40 bg-[#6efd0b]/10 rounded-full blur-3xl" />
+
+          <div className="relative flex flex-col h-full">
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#6efd0b]/15 flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-[#6efd0b]" />
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Need Support?
+                </h3>
+
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  We’re here to help
+                </p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-5">
+              Have any questions or facing an issue? Contact our support team
+              directly on WhatsApp.
+            </p>
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/01700938429"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+          mt-auto
+          flex items-center justify-center gap-2
+          w-full
+          rounded-md
+          bg-[#25D366]
+          hover:bg-[#20bd5a]
+          text-white
+          font-medium
+          py-2.5
+          transition-all duration-200
+          hover:shadow-lg hover:shadow-[#25D366]/20
+        "
+            >
+              <MessageCircle className="w-5 h-5" />
+              Chat on WhatsApp
+            </a>
+          </div>
+        </motion.div>
       </div>
 
       {/* Stats Cards with Improved Design */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-2 md:gap-4">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-4">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           const TrendIcon = stat.trend === 'up' ? ArrowUpRight : ArrowDownRight;
+
           const trendColor =
             stat.trend === 'up' ? 'text-green-500' : 'text-red-500';
 
@@ -168,44 +239,132 @@ export default function AdminDashboard() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -4 }}
-              className="group relative bg-white dark:bg-gray-900 rounded-md p-6 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="
+          group relative min-w-0
+          bg-white dark:bg-gray-900
+          rounded-md
+          p-4 sm:p-5 lg:p-6
+          border border-gray-200 dark:border-gray-800
+          shadow-sm hover:shadow-xl
+          transition-all duration-300
+          overflow-hidden
+        "
             >
               {/* Background Gradient */}
               <div
-                className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br ${stat.color}`}
+                className={`
+            absolute inset-0
+            opacity-0 group-hover:opacity-10
+            transition-opacity duration-300
+            bg-gradient-to-br ${stat.color}
+          `}
               />
 
-              <div className="relative">
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-xl ${stat.bgColor}`}>
-                    <Icon className={`${stat.textColor}`} size={24} />
-                  </div>
+              <div className="relative min-w-0">
+                {/* Top Section */}
+                <div className="flex items-start justify-between gap-3 mb-4">
+                  {/* Icon */}
                   <div
-                    className={`flex items-center gap-1 px-2 py-1 rounded-full ${stat.trend === 'up' ? 'bg-green-50 dark:bg-green-500/10' : 'bg-red-50 dark:bg-red-500/10'}`}
+                    className={`
+                shrink-0
+                p-2.5 sm:p-3
+                rounded-xl
+                ${stat.bgColor}
+              `}
                   >
-                    <TrendIcon size={16} className={trendColor} />
-                    <span className={`text-xs font-medium ${trendColor}`}>
+                    <Icon className={stat.textColor} size={22} />
+                  </div>
+
+                  {/* Trend */}
+                  <div
+                    className={`
+                shrink-0
+                flex items-center gap-1
+                px-2 py-1
+                rounded-full
+                ${
+                  stat.trend === 'up'
+                    ? 'bg-green-50 dark:bg-green-500/10'
+                    : 'bg-red-50 dark:bg-red-500/10'
+                }
+              `}
+                  >
+                    <TrendIcon size={14} className={trendColor} />
+
+                    <span
+                      className={`
+                  text-[11px] sm:text-xs
+                  font-medium
+                  whitespace-nowrap
+                  ${trendColor}
+                `}
+                    >
                       {stat.change}
                     </span>
                   </div>
                 </div>
 
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-300 mb-1">
+                {/* Title */}
+                <h3
+                  className="
+              text-xs sm:text-sm
+              font-medium
+              text-gray-500 dark:text-gray-300
+              mb-1
+              truncate
+            "
+                  title={stat.title}
+                >
                   {stat.title}
                 </h3>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white">
+
+                {/* Value */}
+                <p
+                  className="
+              text-xl sm:text-2xl
+              font-bold
+              text-gray-900 dark:text-white
+              truncate
+            "
+                  title={String(stat.value)}
+                >
                   {stat.value}
                 </p>
 
-                {/* Mini Chart Indicator */}
-                <div className="mt-3 flex items-center gap-2">
-                  <div className="h-1 flex-1 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                {/* Mini Chart */}
+                <div className="mt-4 flex items-center gap-2 min-w-0">
+                  <div
+                    className="
+                h-1.5
+                flex-1
+                min-w-[40px]
+                bg-gray-100 dark:bg-gray-800
+                rounded-full
+                overflow-hidden
+              "
+                  >
                     <div
-                      className={`h-full bg-gradient-to-r ${stat.color} rounded-full`}
-                      style={{ width: `${Math.random() * 40 + 60}%` }}
+                      className={`
+                  h-full
+                  bg-gradient-to-r ${stat.color}
+                  rounded-full
+                `}
+                      style={{
+                        width: `${stat.progress ?? 75}%`,
+                      }}
                     />
                   </div>
-                  <span className="text-xs text-gray-400">vs last month</span>
+
+                  <span
+                    className="
+                shrink-0
+                text-[10px] sm:text-xs
+                text-gray-400
+                whitespace-nowrap
+              "
+                  >
+                    vs last month
+                  </span>
                 </div>
               </div>
             </motion.div>

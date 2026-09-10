@@ -1,6 +1,6 @@
 export const getHeroData = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/hero/1245e851-4ef4-4ea6-a3f2-84e8fe7ba65b`,
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/hero/14add2d7-1979-4613-bff1-03284ca24760`,
     {
       next: {
         revalidate: 30,

@@ -24,7 +24,7 @@ export default function ProjectCardHome({ projects }: Props) {
     <section className="container mx-auto px-4 ">
       {/* Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pb-3">
-        {projects.slice(0, 6).map(project => (
+        {projects?.slice(0, 6).map(project => (
           <div
             key={project.id}
             // href={`/portfolio/${project.id}`}
